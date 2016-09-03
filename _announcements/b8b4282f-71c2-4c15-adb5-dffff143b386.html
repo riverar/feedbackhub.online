@@ -1,0 +1,71 @@
+---
+layout: page
+title: 'Made by you - Context menu scan options for Windows Defender '
+contentId: b8b4282f-71c2-4c15-adb5-dffff143b386
+date: 2016-02-04T00:00:00-08:00
+---
+<p>Hello Windows Insiders, and greetings from the Windows Defender team! As all may have seen, starting with Windows 10 Insider Preview Build 10571 we added built in context menu (Right Click) scan for Windows Defender. Yes, that is right, it is back!!! The most missed Windows 8 feature has returned by popular demand to Windows 10 platform because users like you gave and upvoted feedback using the <a href="windows-feedback:?categoryid=1">Feedback App</a>.</p>
+
+<p>Some example of feedback we heard: </p>
+
+<p><a href="windows-feedback:?contextid=242&amp;feedbackid=1e4a9dec-155e-48ef-8908-637943651f3f&amp;form=1&amp;src=2">Add back the ‘Scan with Defender..’ command to right-click menu for files/folders in File Explorer. This option should never have been removed with the switch from MS Security Essentials to Defender in Windows 8.</a></p>
+
+<p><a href="windows-feedback:?contextid=242&amp;feedbackid=98a3efc1-1842-4a4c-b4b8-c7b97d4a0863&amp;form=1&amp;src=2">“It would be nice if users could choose to right click and select a scan of individual files and folders directly from that menu!”</a></p>
+
+<p>In this article we wanted to spend some time talking about the feature work we did to enable content menu scan options and how you can perform this scan. </p>
+
+<h3>Context menu scan overview</h3>
+
+<p>This feature allows you to specify which files and folder to scan. This is really helpful when you want to determine whether a particular file or folder is malicious or not, but not find and open the UI.</p>
+
+<p>This option has advantages over the custom scan exposed via Windows Defender UI. It lets you pick files in the parent folder without scanning subsequent folders.</p>
+
+<p>You can use this option to scan network or external devices <font color="#000000">manually, if </font><a><font color="#000000">needed</font></a><font color="#000000">.</font></p>
+
+<p>With the release of Windows 10 November Update, we have gotten positive feedback, and we thank you for it. We also want you to continue providing feedback via the Feedback App to help drive changes that are important to you.</p>
+
+<h3>Performing a scan with right click context menu scan</h3>
+
+<p>1. Select a file(s)/folder(s)</p>
+
+<p>2. Right click mouse option on the selection</p>
+
+<p>3. From the context menu scan select “Scan with Windows Defender”</p>
+
+<p>4. Wait for scan to finish and see results in UI</p>
+
+<p>5. If result detects any malicious file(s) then follow the steps in Windows Defender UI and clean the system</p>
+
+<p><img src="http://compass.microsoft.com/assets/b9/23/b9237f67-48cb-4a58-a5bc-ae0b9873e552.png?n=Windows%20Defender%20PC%20Status.png" width="597" height="314" /></p>
+
+<p>Details</p>
+
+<p>1. This feature does honor Windows Defender exclusions which means it is not going to scan objects marked for exclusion.</p>
+
+<p>2. For context menu option will only be available only when&nbsp;Windows Defender is enabled&nbsp;and it’s UI is not locked.</p>
+
+<p><b>Note: if you have 3<sup>rd</sup> party software which adds context menu scan for Windows Defender, then please uninstall them manually. This feature will not uninstall your 3<sup>rd</sup> party extensions.</b></p>
+
+<p><b>Having two context menu scans may cause unwanted behavior for Windows Defender scans. </b></p>
+
+<h3>Expected Behavior</h3>
+
+<p>Some time when scanning single office files it might say more than 1 items scanned. This is because this scans ends up scanning macro, java scripts, embedded objects in the office file</p>
+
+<p>Same is expected for container files (like rar, zip etc .). This scan will do a deep scanning on container files.</p>
+
+<h3>In Closing</h3>
+
+<p>As we look toward upcoming release of Windows Defender, your <a href="windows-feedback:?categoryid=242">feedback</a> is very important to us. Your votes will help drive the important features to the top of our product planning.</p>
+
+<p><img src="http://compass.microsoft.com/assets/6e/c5/6ec54318-6f4e-493c-ac9c-9890ce2362b4.png?n=WindowsDefenderFeedback.png" width="317" height="285" /></p>
+
+<p>Thanks for helping us build Windows Defender, and keep that <a href="windows-feedback:?categoryid=1">feedback</a> coming!</p>
+
+<p>Thanks,</p>
+
+<p>Windows Defender Team</p>
+
+<p>‘Made by you’ articles highlight how we are addressing feedback from Windows Insiders, how we investigated this feedback to shape Windows, and why we have made these improvements.</p>
+
+<p>If you have feedback on this type of content or other aspects of the Windows Insider Program, please let us know via the <a href="windows-feedback:?contextid=529">Feedback App</a>.&nbsp;</p>

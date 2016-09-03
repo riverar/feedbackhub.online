@@ -1,0 +1,73 @@
+---
+layout: page
+title: 'Made by you – A centralized dark mode switch for apps'
+contentId: 42ccebb4-f5c4-43d9-9046-05d26fcbeebb
+date: 2016-04-13T00:00:00-07:00
+---
+<p>Hello Insiders! </p>
+
+<p>You asked for it, and the Core UX team is very happy that dark theme is now an option in Settings as of the Windows 10 Insider Preview Build 14316.</p>
+
+<p><img src="http://compass.microsoft.com/assets/c7/af/c7af600a-778a-420a-a4a2-095f6f4d25af.png?n=DarkThemeFeedback2.png" width="448" height="312" /></p>
+
+<h4>Some history</h4>
+
+<p>The concept of light and dark themes for Windows originated with the Windows Phone 7 series. Dark theme was not only a welcome visual preference, but it also helped to save battery on OLED screens popular on mobile devices, as well as reduce eye strain in low-light environments. 
+  <table cellSpacing="0" cellPadding="0" width="344" border="1" unselectable="on"><tbody>
+      <tr>
+        <td vAlign="top" width="183">
+          <p>Windows Phone Light</p>
+        </td>
+
+        <td vAlign="top" width="159">
+          <p>Windows Phone Dark</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="183">
+          <p><img src="http://compass.microsoft.com/assets/a0/1d/a01d3ec5-6b75-4fc0-bfb1-81694a79de60.png?n=DarkThemePhoneLight.png" width="310" height="552" /></p>
+        </td>
+
+        <td vAlign="top" width="159">
+          <p><img src="http://compass.microsoft.com/assets/1c/dd/1cddadd4-890c-40ed-b660-da06e4d0fd6a.png?n=DarkThemePhoneDark.png" width="311" height="552" /></p>
+        </td>
+      </tr>
+    </tbody></table>
+</p>
+
+<p>Increased support for dark theme has been an ongoing feedback request across the majority of our apps, and as such many of the Universal Windows Platform apps (<a href="https://msdn.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp">UWP</a> apps) currently are enabled for both dark and light theming. </p>
+
+<h4>How light and dark theme work </h4>
+
+<p>We touched on how theming as a whole works in the Made by You about <a href="http://insiderhub:/announcements/c215f5a3-1e8b-4cd1-9aa5-245b9c8dbbcf">how we’ve been evolving the Shell based on your feedback</a>. Dark theme is a similar story. </p>
+
+<p>In essence, UWP apps that support theming will typically do it via the use of something called a “Theme Dictionary”. This dictionary describes how the pieces of the app’s <a href="https://en.wikipedia.org/wiki/User_interface">UI</a> will behave with different themes – including dark, light, or high contrast. Interested in more specifics? Check out the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx">MSDN Documentation</a>. When the app is launched, or if it hears a theming event, it will use these theme dictionaries to determine how everything should look.</p>
+
+<h4>Bringing dark theme to Desktop</h4>
+
+<p>As some of our savvy Insiders concluded, with the dawn of the Universal Windows Platform, any UWP app that supported dark theme on phone would theoretically be able support it on desktop as well. Some of UWP apps, like Edge, have settings within the app that enable this. </p>
+
+<p>But it wasn’t until now that the “Choose your mode” switch in settings from Windows phone was brought to Windows desktop. Why? You might ask. On desktop, there are many system components, apps, and programs that don’t yet support dark theme. We didn’t want to set the expectation that dark theme would be system wide. However, when we saw all the feedback requests for it, we decided to go ahead with the switch, and use this as an opportunity to hear from you where you’d like to see dark mode added next. </p>
+
+<h4>Going forward</h4>
+
+<p>As we mentioned before, prior to build 14316, Desktop only exposed the "light" dictionaries as defined by those applications. Now, if you’re on the Insider Fast ring, you’ve received a build with the new light/dark switch we’ve added to Settings. :D </p>
+
+<p>If an app supports dark theme and is listening to theming events, it will automatically switch to the selected theme. This means you’ll now be able to get dark theme for Settings, Alarms &amp; Clocks, Calculator, and more!</p>
+
+<p>Here’s what it looks like:</p>
+
+<p><img src="http://compass.microsoft.com/assets/72/c0/72c0daf6-8e06-4659-9e43-d1295574711d.png?n=DarkThemePersonalization.png" width="923" height="558" /></p>
+
+<h4>That’s all for now</h4>
+
+<p>Thank you for all the enthusiasm and feedback! Have a specific app you want to support dark theme? Submit that feedback in the Feedback Hub. </p>
+
+<p>If you have any questions, feel free to reach out to us. Our community champion Jen Gentleman can be found <a href="https://www.reddit.com/user/jenmsft/">on Reddit</a> or <a href="https://twitter.com/JenMsft">on Twitter</a>, and our program managers include <a href="http://twitter.com/peterskillman">Peter Skillman</a>, <a href="https://twitter.com/rachelnizh">Rachel Nizhnikova</a> and <a href="https://twitter.com/h_mcafee">Hayden McAfee</a>. We’re so happy to bring you this news. Keep giving us feedback. We are listening. </p>
+
+<p>&nbsp;</p>
+
+<p>‘Made by you’ articles highlight how we are addressing feedback from Windows Insiders, how we investigated this feedback to shape Windows, and why we have made these improvements.</p>
+
+<p>If you have feedback on this type of content or other aspects of the Windows Insider Program, please let us know via the <a href="windows-feedback:?contextid=529">Feedback App</a>.&nbsp;</p>

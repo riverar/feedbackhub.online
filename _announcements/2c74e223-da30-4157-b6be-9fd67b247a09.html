@@ -1,0 +1,111 @@
+---
+layout: page
+title: 'Context Menu improvements based on Insider feedback '
+contentId: 2c74e223-da30-4157-b6be-9fd67b247a09
+date: 2015-11-12T00:00:00-08:00
+---
+<p>You asked us to pick a menu and stick with it, and we heard you loud and clear. We want to share a snapshot of where we are today thanks to our design/engineering teams, and of course our Windows fans. Keep in touch and let us know what works (and what doesn't).&nbsp; </p>
+
+<p>Consistency is tricky when you have menus built using different frameworks and principles, so we went back to the drawing board with questions that needed answers. For example:&nbsp; </p>
+
+<p>1. How do desktop menus currently look and feel across the system? </p>
+
+<ol>Answer: Unsurprisingly, we found many differences based on where you accessed menus in the system. Some were light, others dark. Some used large fonts, others smaller. Some were touch-friendly, others were not. Locally these menus did the job, but globally they felt jarring.&nbsp;</ol>
+
+<p>2. Which menus could use more love?&nbsp; </p>
+
+<blockquote>
+  <p>&nbsp;Answer: Legacy menus from desktop experiences and apps (e.g. wallpaper, file explorer, Edge) needed a facelift. Modern menus (e.g. right click menus in taskbar, start) required minor tweaks.&nbsp; </p>
+</blockquote>
+
+<p>3. How do we deliver modern, consistent menus across Windows?&nbsp; </p>
+
+<blockquote>
+  <p>Answer: Different teams build different menus for Windows. To achieve meaningful consistency we needed to bring everything together and agree on principles and design direction. </p>
+</blockquote>
+
+<h3>The "North Star" Context Menu&nbsp; </h3>
+
+<p>Historically, navigators use the North Star to understand where they are relative to where they need to go. Similarly, different Microsoft teams used the context menus below to situate themselves, understand the gaps, and formulate a plan. </p>
+
+<p>You may notice that we reference a "light theme" vs. "dark theme." Context menus should maintain context (seems logical right?) to the surface they are invoked from. Some Windows surfaces (e.g. file explorer) prefer light menus for a continuous experience while others opt for darker menus to maintain continuity.&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" width="550" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="157">Mouse – Light Theme</td>
+
+      <td vAlign="top" width="151">
+        <p>Mouse – Dark Theme&nbsp; </p>
+      </td>
+
+      <td vAlign="top" width="119">
+        <p>Touch – Light Theme&nbsp; </p>
+      </td>
+
+      <td vAlign="top" width="121">
+        <p>Touch – Dark&nbsp; </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="157"><img src="http://compass.microsoft.com/assets/96/22/962295ec-fbf8-4b63-91a6-754a2ea1611f.jpg?n=Mouse-light%20theme.jpg" width="150" height="205" /></td>
+
+      <td vAlign="top" width="151"><img src="http://compass.microsoft.com/assets/20/d5/20d5bee0-480c-443f-9bfc-b4029362b777.jpg?n=Mouse%20-%20dark%20theme.jpg" width="144" height="203" /></td>
+
+      <td vAlign="top" width="119"><img src="http://compass.microsoft.com/assets/ce/01/ce010907-4450-4873-955d-88d98e42e302.jpg?n=touch%20-%20light%20theme.jpg" width="112" height="204" /></td>
+
+      <td vAlign="top" width="121"><img src="http://compass.microsoft.com/assets/fb/6b/fb6b91a4-7b7e-4846-98cd-c3a64d9ec4b2.jpg?n=touch%20-%20dark%20theme.jpg" width="114" height="204" /></td>
+    </tr>
+  </tbody></table>
+
+<p>&nbsp;</p>
+
+<h3>Where we are today&nbsp; </h3>
+
+<p>Here’s a snapshot of where we are today, in build 10586 and higher, thanks to your feedback and the multiple individuals involved in this effort. Again, it's a start in the right direction, and there is plenty of room for exploration.&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" width="400" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="163">Right click in Edge address bar </td>
+
+      <td vAlign="top" width="235"><img src="http://compass.microsoft.com/assets/8c/96/8c969e2c-3255-4554-9b42-f766cc264681.jpg?n=Edge%20Address%20bar.jpg" width="170" height="184" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="159">Right click in Cortana pane </td>
+
+      <td vAlign="top" width="239"><img src="http://compass.microsoft.com/assets/89/55/8955ef81-2d9d-4f67-9dd8-a280e67c86c6.jpg?n=Cortana%20pane.jpg" width="224" height="165" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="156">Right click icon in taskbar&nbsp; </td>
+
+      <td vAlign="top" width="242"><img src="http://compass.microsoft.com/assets/c2/cf/c2cf8e82-4dfc-4a34-8322-c5b794a6df79.jpg?n=icons%20in%20taskbar.jpg" width="228" height="300" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="154">Right click on Start tile</td>
+
+      <td vAlign="top" width="244"><img src="http://compass.microsoft.com/assets/3c/9d/3c9d3c5c-e7b4-4c37-aadd-05c4d65d1cb0.jpg?n=start%20tile.jpg" width="226" height="100" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="153">Right click on taskbar&nbsp;</td>
+
+      <td vAlign="top" width="245"><img src="http://compass.microsoft.com/assets/55/e0/55e0b619-3fe8-492f-95e2-d8da7ed87fc3.jpg?n=taskbar.jpg" width="225" height="346" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="153">Right click in file explorer </td>
+
+      <td vAlign="top" width="248"><img src="http://compass.microsoft.com/assets/6e/8f/6e8f77ce-23a9-4598-a251-5f8970612d04.jpg?n=file%20explorer.jpg" width="227" height="387" /></td>
+    </tr>
+  </tbody></table>
+
+<h3>Keep in touch&nbsp; </h3>
+
+<p>The next time you right click or press and hold to find one of these menus—keep us in the loop and <a href="windows-feedback:?contextid=67" target="_blank">let us know what you think</a>. We created the North Star context menu with you mind, and a little feedback goes a long way.&nbsp; </p>
+
+<p>Thanks, </p>
+
+<p>Akshatha Kommalapati – Program Manager in the Windows Core User Experience (UX) team&nbsp; </p>

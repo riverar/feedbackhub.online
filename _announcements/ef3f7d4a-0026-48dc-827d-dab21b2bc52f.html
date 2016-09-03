@@ -1,0 +1,36 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 11102'
+contentId: ef3f7d4a-0026-48dc-827d-dab21b2bc52f
+date: 2016-01-21T00:00:00-08:00
+---
+<p>Hi everyone,</p>
+
+<p>Today we are releasing Build 11102 to Windows Insiders in the Fast ring. If you’re a PC gamer or use accessibility software, I highly recommend taking note of the known issues for this build (below) as there are issues that will impact your PC gaming experience. </p>
+
+<h4><b>Here’s what’s new:</b></h4>
+
+<p><b>New history menu in Microsoft Edge:</b><b> </b>A highly requested feature by Insiders, you can now right-click on the back and forward buttons in Microsoft Edge for quick access to your recently visited websites in the current tab. Give it a try and let us know what you think.<b> </b></p>
+
+<p><img src="http://compass.microsoft.com/assets/0e/91/0e917bda-3ca3-46f5-a19d-4679a8986c7a.png?n=WIP_11102_travel-log-edge.png" width="539" height="372" /></p>
+
+<h4><b>Known issues:</b></h4>
+
+<p>When we went live with last week’s PC build, Insiders discovered a bug where the cache for Insider Hub wasn’t properly refreshing – preventing new content from showing up in a timely manner. We’ll include known issues with our blog posts as well as in Insider Hub until the bug is resolved.</p>
+
+<ul>
+  <li>Some PC games will crash switching from windowed mode to full screen, upon game resolution change, or upon launch due to a bug in Windows graphics stack. We have observed this with The Witcher 3, Fallout 4, Tomb Raider, Assassin's Creed, and Metal Gear Solid V but it may occur with other titles as well. </li>
+
+  <li>With this build (and with the last build), applications such as Narrator, Magnifier, and third-party assistive technologies may experience intermittent issues or crashes. If you rely on screen readers or other software, you should not use this build. This issue will be fixed with the next build.</li>
+
+  <li>You might see a WSClient.dll error dialog after logging in. We’re working on a fix for this but as a workaround, you can run the following in Command Prompt with administrative rights: schtasks /delete /TN "\Microsoft\Windows\WS\WSRefreshBannedAppsListTask" /F</li>
+
+  <li>While attempting to update to this build, your PC may show a message that your wireless card is not compatible with Windows 10. The workaround is to visit the support page for your PC or wireless card and install the newest driver that is available. </li>
+
+  <li>The Connect button does not show up in Action Center. </li>
+</ul>
+
+<p>As always - thank you for being Windows Insiders and make sure to send us feedback on any issues you run into with this build in the Windows Feedback app. </p>
+
+<p>Thanks,
+  <br />g</p>

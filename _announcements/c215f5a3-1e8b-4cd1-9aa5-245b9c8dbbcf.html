@@ -1,0 +1,454 @@
+---
+layout: page
+title: 'Made by You - Evolving the Shell based on your feedback'
+contentId: c215f5a3-1e8b-4cd1-9aa5-245b9c8dbbcf
+date: 2016-02-26T00:00:00-08:00
+---
+<p>Hey Windows Insiders :)&nbsp;&nbsp; </p>
+
+<p>My name's <strong>Jen Gentleman</strong> - some of you might know me as <a href="https://www.reddit.com/user/jenmsft/">/u/jenmsft</a> on Reddit or <a href="https://twitter.com/JenMsft">@jenmsft</a> on Twitter. I'm a software engineer and one of the Community Champions for Shell and today I'm here to share some of how we've been using your feedback on our team.&nbsp; </p>
+
+<h3><font color="#0080c0">But first: What is Shell?</font></h3>
+
+<p><em><img style="FLOAT: left; DISPLAY: inline" src="http://compass.microsoft.com/assets/5e/6e/5e6ed2ff-188f-42b0-87a0-07674c462832.png?n=collage.png" width="299" align="left" height="235" />"In computing, a shell is a user interface for access to an operating system's services"</em>&nbsp;– <a href="https://en.wikipedia.org/wiki/Shell_(computing)">Wikipedia</a></p>
+
+<p>In essence, the Shell team develops the things you see when you're interacting with the core features of your phone or PC.&nbsp;&nbsp;&nbsp; </p>
+
+<p>There are a lot of different user interface (UI) pieces that we work on across the system, but you're probably familiar with some of the bigger ones:&nbsp;&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" border="0" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="154">
+        <ul>
+          <li>
+            <div align="left">Lock screen</div>
+          </li>
+
+          <li>
+            <div align="left">Theming</div>
+          </li>
+
+          <li>
+            <div align="left">Start</div>
+          </li>
+
+          <li>
+            <div align="left">Tablet Mode</div>
+          </li>
+        </ul>
+      </td>
+
+      <td vAlign="top" width="10">
+        <ul>
+          <li>
+            <div align="left">Action Center</div>
+          </li>
+
+          <li>
+            <div align="left">Notifications</div>
+          </li>
+
+          <li>
+            <div align="left">File Explorer</div>
+          </li>
+
+          <li>
+            <div align="left">Virtual Desktops</div>
+          </li>
+        </ul>
+      </td>
+
+      <td vAlign="top" width="110">
+        <ul>
+          <li>
+            <div align="left">Settings</div>
+          </li>
+
+          <li>
+            <div align="left">Cortana</div>
+          </li>
+
+          <li>
+            <div align="left">Touch Keyboard</div>
+          </li>
+
+          <li>
+            <div align="left">Taskbar</div>
+          </li>
+        </ul>
+      </td>
+
+      <td vAlign="top" width="93">
+        <ul>
+          <li>Input Switcher </li>
+
+          <li>Continuum </li>
+
+          <li>Task View </li>
+
+          <li>Share </li>
+        </ul>
+      </td>
+
+      <td vAlign="top" width="115">
+        <ul>
+          <li>Alt-Tab </li>
+
+          <li>Quick Access </li>
+
+          <li>Network Flyout </li>
+
+          <li>Login page </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody></table>
+
+<h3><font color="#0080c0">The story begins…</font>&nbsp;&nbsp; </h3>
+
+<p>This is actually my one year anniversary since becoming a community champion (almost 1.5 years since we started the Windows Insider Program!). So much has changed in the last 12 months - it's been a blast watching our features and processes evolve, and being there in the community to celebrate as it happened. Since we just recently flighted our 25th desktop flight, I thought the best way to kick off our Made by You story would be to walk through some highlights of the changes we made based on your feedback since that first build back in October 2014.&nbsp;&nbsp;&nbsp; </p>
+
+<p>Cue the music! </p>
+
+<h3><font color="#0080c0">Action Center</font>&nbsp; </h3>
+
+<p>Often called "info center" or "notification center" in feedback, the Action Center is one of our favorite places to start when showcasing how feedback can help improve a feature. In this case, a picture is worth a thousand words: </p>
+
+<table cellSpacing="0" cellPadding="2" width="400" border="0" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="200"><img src="http://compass.microsoft.com/assets/4d/d8/4dd89bab-433a-4781-aa96-9652bf9d8a6e.png?n=actioncenter_old.png" /></td>
+
+      <td vAlign="top" width="200"><img src="http://compass.microsoft.com/assets/e6/ad/e6ad0c45-2270-4d0a-82f0-d1b38d57bf70.png?n=actioncenter_new.png" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="200">Windows 10 Insiders Preview (Build 9926) January 2015 </td>
+
+      <td vAlign="top" width="200">Windows 10 Version 1507 (Build 10240) July 2015&nbsp;&nbsp; </td>
+    </tr>
+  </tbody></table>
+
+<p><strong>A bit of history:</strong> Action center was originally conceived and implemented for Windows Phone 8.1. It was very well received, and so one of our goals for Windows 10 was porting that functionality over to desktop so users on PC could benefit from it as well. The idea was simple, and followed the logic for phone - if the user receives a notification and doesn't get a chance to interact with it before it times out and dismisses, save it in the Action Center to be perused later. Feedback was still only in the beginning stages of ramping up back then, but even so we quickly started getting feedback in four areas:&nbsp;&nbsp; </p>
+
+<ol>
+  <li>Certain notifications were greyed out and disabled in the action center, even though they contained messages like "Click here" or "View messages"&nbsp;&nbsp; </li>
+
+  <li>Certain notifications were very noisy, and ended up showing many saved duplicates, even though they all were effectively saying the same thing&nbsp;&nbsp; </li>
+
+  <li>Certain apps flooded the action center with notifications, so you couldn't see the ones you were actually interested in&nbsp;&nbsp; </li>
+
+  <li>Certain apps didn't clear their notifications, so you ended up having to spend a lot of time cleaning up stale notifications in the action center. </li>
+</ol>
+
+<p><img src="http://compass.microsoft.com/assets/2c/92/2c920454-f804-4bb1-9cd4-43e8df2a28b1.png?n=notificationfeedback.png" /></p>
+
+<p><strong>How this came about:</strong> Unlike phone, on desktop there was never a concept of notifications being stored, so no one sending notifications had ever had to think through what it meant to be a "good citizen" in terms of notification frequency and relevance. The disabled notifications (older system notifications not plumbed out to be clicked through after the initial toast) were also a reflection of the POR (plan of record) that every toast should be saved so the user could go look at them later, but what we discovered from feedback was that the confusion and frustration it caused outweighed the benefit.&nbsp;&nbsp; </p>
+
+<p><strong>How we addressed it:</strong> After those first initial flights, there was a lot of work done to improve this experience going forward. First off, we worked together with the system notification owners and either updated the notifications to be clickable (and clear away duplicate notifications), or stopped showing it in the action center all together. We also added a cap of 20 notifications max stored per app, and improved our documentation for app developers to help them learn more about the notification system and guidelines for implementing them (if you're interested, check out <a href="https://blogs.windows.com/buildingapps/2015/08/18/engaging-customers-with-live-tiles-and-toast-notifications-10-by-10/">the article the notification platform team wrote for the 10x10 series</a> for an overview, and <a href="http://blogs.msdn.com/b/tiles_and_toasts/">the notification team blog</a> for more in depth discussions - fascinating stuff!)&nbsp;&nbsp; </p>
+
+<p>Along the way, outside of our interactive notification work (which was for developers, but resulted in some awesome app updates for Insiders), we also did work to add some quick action buttons that you guys had been asking for - namely Brightness, Wi-Fi, Bluetooth, Project, Airplane Mode, and a few others :)&nbsp;&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="987">
+        <p><strong><img style="FLOAT: left; DISPLAY: inline" src="http://compass.microsoft.com/assets/3d/a5/3da5b41f-07fc-4578-8cc2-a55e9c1a261c.png?n=notificationSettings.png" align="left" />Top Tips:</strong>&nbsp;&nbsp;&nbsp; </p>
+
+        <p>* If you want to go directly to notification settings for a particular app, just right click the app name in the Action center and an option will appear to take you there&nbsp;&nbsp; </p>
+
+        <p>* If you're not getting notifications for a particular app and they're enabled in Settings, check to see if the app itself has settings for notifications as well.&nbsp;&nbsp;</p>
+      </td>
+    </tr>
+  </tbody></table>
+
+<h3><font color="#0080c0">Start Menu</font></h3>
+
+<p>It wouldn't be a highlights reel without talking about how your feedback has evolved the Start Menu.&nbsp; Build 9926 was when we unveiled the new <a href="https://en.wikipedia.org/wiki/Extensible_Application_Markup_Language">XAML</a>&nbsp;start menu. Ever since then, it's been all about using your feedback to prioritize what we implement and how to improve the experience.&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" width="400" border="0" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="200"><img src="http://compass.microsoft.com/assets/60/58/6058cf4e-f0d8-47b6-943a-25e080bb5859.png?n=startmenu_old.png" width="351" height="393" /></td>
+
+      <td vAlign="top" width="200"><img src="http://compass.microsoft.com/assets/a1/ea/a1ea7564-6447-4f38-9e2c-f1095bdbd8da.png?n=startmenu_new.png" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="200">&nbsp;</td>
+
+      <td vAlign="top" width="200">&nbsp;</td>
+    </tr>
+  </tbody></table>
+
+<p><strong><img style="FLOAT: right; DISPLAY: inline" src="http://compass.microsoft.com/assets/ef/aa/efaa276e-fdae-45c7-bd20-e819af55a143.png?n=startsettings.png" width="222" align="right" height="410" />By the time 10240 rolled out, thanks for your feedback we had:</strong>&nbsp;&nbsp;</p>
+
+<ul>
+  <li>
+    <p>Added the option to resize the Start Menu, then later added the option to size the tile area down to 0</p>
+  </li>
+
+  <li>
+    <p>Added a full screen Start Menu for tablet mode (with an option for desktop mode users to have it as well)</p>
+  </li>
+
+  <li>
+    <p>Added a Windows Phone style semantic zoom to the all apps list, so users could easily jump to a section</p>
+  </li>
+
+  <li>
+    <p>Moved Power to be closer to bottom of the Start Menu so it could be invoked faster</p>
+  </li>
+
+  <li>
+    <p>Verified placement of the Search Box on the bottom of Start.&nbsp;</p>
+  </li>
+
+  <li>
+    <p>Added more options for what to be included in the system pane (that's what we call the left side of the Start Menu), and settings to toggle them on and off&nbsp;</p>
+  </li>
+
+  <li>
+    <p>Added drag and drop to pin apps to the Start Screen from the system pane or the all apps list</p>
+  </li>
+
+  <li>
+    <p>Added and then improved a new 3d flip animation for live tiles, also added an option to turn off and on live tiles</p>
+  </li>
+
+  <li>
+    <p>Added theming and transparency options</p>
+  </li>
+
+  <li>
+    <p>Improved the integration between Start and Cortana by enabling WIN &lt;search term&gt; to get directed to Cortana</p>
+  </li>
+</ul>
+
+<p><strong>And then with 10586 came even more goodness:</strong>&nbsp;&nbsp; </p>
+
+<ul>
+  <li>
+    <p>Added access to JumpList files from pinned tiles and extended support to UWA apps so they can provide JumpLists too</p>
+  </li>
+
+  <li>
+    <p>Continued improving the integration between Start and Cortana by enabling type to search after the user had already interacted with the start menu and polishing the animation when transitioning between the two&nbsp;</p>
+  </li>
+
+  <li>
+    <p>Added logic for the start menu to automatically resize horizontally the next time start is opened if we detect that all tiles in a group have been unpinned</p>
+  </li>
+
+  <li>
+    <p>Enabled Win32 app developers to supply a unique color and/or icon if their app is pinned</p>
+  </li>
+
+  <li>
+    <p>Added an option for users to show more tiles</p>
+  </li>
+
+  <li>
+    <p>Updated pinned app context menu to include options to share and rate&amp;review, and added icons to help identify the available tile sizes</p>
+  </li>
+
+  <li>
+    <p>頂いたフィードバックに基づき日本語版では、アプリ名が漢字で始まる場合、スタートメニューの [すべてのアプリ] が五十音順で表示されるように改善されました。^_^ [translation] For Japanese customers, we updated the all apps list so that apps with kanji characters in their name would be sorted phonetically</p>
+  </li>
+</ul>
+
+<table cellSpacing="0" cellPadding="2" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="1219">
+        <p><strong><img style="FLOAT: left; DISPLAY: inline" src="http://compass.microsoft.com/assets/da/ba/daba4e54-5647-4f21-826d-88dad8021e65.png?n=PinnedThings.png" align="left" />&nbsp;</strong></p>
+
+        <h3><font color="#0080c0"><strong>Did you know?</strong>&nbsp;&nbsp; </font></h3>
+
+        <p>* Most Modern apps support pinning content to the start screen - this includes locations (Maps), websites (Edge), various settings (Settings), clocks (Alarms &amp; Clocks), accounts and folders (Mail) and notes (OneNote). We call these tiles "secondary tiles"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+      </td>
+    </tr>
+  </tbody></table>
+
+<h3><font color="#0000ff"><font color="#0080c0">Tablet Mode</font> </font></h3>
+
+<p><img src="http://compass.microsoft.com/assets/40/82/408228cf-b697-4009-8f77-779edc25be90.png?n=tabletmodesettings.png" width="208" height="180" /></p>
+
+<p>We poked fun at it in the picture earlier, but one of the first things we did to respond to feedback about tablet mode was to improve the logic for when to enter and exit tablet mode, and how often we should ask you about it&nbsp;&nbsp; </p>
+
+<p><strong>Beyond that, there was a lot of feedback about the tablet mode experience as a whole from our Insiders, and thanks to that we did a bunch of work to improve it for build 10240.</strong> Some of the things we did were:&nbsp;&nbsp; </p>
+
+<p>* Make it more obvious that you're in tablet mode by having an identifiable taskbar (and add context menu options to configure the taskbar elements) </p>
+
+<p>* Update taskbar so it would also auto-hide if in tablet mode, not just desktop mode </p>
+
+<p>* Improve the full screen Start Menu experience by making the UI more touch friendly </p>
+
+<p>* Enable full screen apps (without a title bar), and then add a gesture to for the title bar to show, as well as a swipe to close gesture </p>
+
+<p>* Add a back button to make it easier to switch between apps </p>
+
+<table cellSpacing="0" cellPadding="2" border="0" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="492">
+        <p><strong>In 10586, we continued working on the experience, and added:</strong>&nbsp;&nbsp; </p>
+
+        <ul>
+          <li>Swipe to close apps in task view </li>
+
+          <li>Drag to snap apps from task view </li>
+
+          <li>"Teeter" otherwise known as place mode (aka, when you have two snapped apps already, and you try to launch another app, this third app will now "teeter" on top of the other two, until you select which app you'd like to replace </li>
+
+          <li>Resolved some issues resulting in the touch keyboard not automatically invoking in certain apps&nbsp;&nbsp;&nbsp; </li>
+        </ul>
+      </td>
+
+      <td vAlign="top" width="392"><img src="http://compass.microsoft.com/assets/59/78/59783035-ecc4-4a2f-827e-9428f4ef9c2e.png?n=teeter.png" /></td>
+    </tr>
+  </tbody></table>
+
+<p>&nbsp;&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="400"><strong>
+          <h3><strong><font color="#0080c0">Fun Fact:</font></strong></h3>
+        </strong>Two of our features that were originally only for tablet mode ended up being so highly requested in feedback that we later added them for desktop mode users as well. 
+
+        <br />
+
+        <table cellSpacing="0" cellPadding="2" width="398" border="0" unselectable="on"><tbody>
+            <tr>
+              <td vAlign="top" width="199"><img src="http://compass.microsoft.com/assets/db/00/db009d36-df70-43d1-8d04-bb0d7942000b.png?n=tkbsettings.png" /></td>
+
+              <td vAlign="top" width="199"><img src="http://compass.microsoft.com/assets/ea/80/ea80fb3d-cd84-4fae-9ef2-c937de0df639.png?n=snapsettings.png" /></td>
+            </tr>
+          </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
+
+<h3><font color="#0000ff"><font color="#0080c0">Theming and Personalization</font>&nbsp;&nbsp; </font></h3>
+
+<p>Our last and final highlight section, and one that has generated its fair share of colorful feedback.</p>
+
+<table cellSpacing="0" cellPadding="2" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="80"><img src="http://compass.microsoft.com/assets/6d/81/6d819d0c-ef38-4241-93d1-913056d234b4.png?n=titlebar1.png" width="181" height="102" /></td>
+
+      <td vAlign="top" width="80"><img src="http://compass.microsoft.com/assets/0a/f9/0af998c9-8e0f-4cb8-9c9d-00198a4e350e.png?n=titlebar2.png" width="180" height="103" /></td>
+
+      <td vAlign="top" width="80"><img src="http://compass.microsoft.com/assets/99/0b/990b2c24-514a-4318-83a5-d2bb232df807.png?n=titlebar3.png" width="183" height="105" /></td>
+
+      <td vAlign="top" width="80"><img src="http://compass.microsoft.com/assets/65/5b/655b8c54-5a66-4d42-9445-d622d75a35e6.png?n=titlebar4.png" width="172" height="102" /></td>
+
+      <td vAlign="top" width="80"><img src="http://compass.microsoft.com/assets/2c/34/2c34f29f-ce1e-49f9-9283-d06e60befc38.png?n=titlebar5.png" width="179" height="102" /></td>
+    </tr>
+
+    <tr>
+      <td vAlign="top" width="80">Windows 8.1 -&gt; Build 9926</td>
+
+      <td vAlign="top" width="80">Build 10061</td>
+
+      <td vAlign="top" width="80">Build 10130</td>
+
+      <td vAlign="top" width="80">Build 10525</td>
+
+      <td vAlign="top" width="80">Build 10565&nbsp;&nbsp; </td>
+    </tr>
+  </tbody></table>
+
+<p>Terrible puns aside, this area has had a high volume of feedback since the very beginning. If you've been looking at the images throughout this article, it will come as no surprise for me to say that we've been continually making updates based on your feedback in order to increase and improve the personalization options, and we will continue to do so.&nbsp;&nbsp; </p>
+
+<p><strong>How does theming work?</strong></p>
+
+<p><img src="http://compass.microsoft.com/assets/b0/c1/b0c12a7b-dd6d-42f1-89ce-152f5c238aa5.png?n=colorsettings.png%202" /></p>
+
+<p>&nbsp;There are two parts to getting theming up and running across the system:&nbsp;&nbsp; </p>
+
+<ol>
+  <li>There needs to be a setting to control it </li>
+
+  <li>The piece of UI or the framework it's based on (XAML, for example) needs to support it&nbsp;&nbsp; </li>
+</ol>
+
+<p>At a very high level, the way theming works is that when you make a change to your system personalization settings or a change is otherwise detected, we send that message to all surfaces listening for it, and then that UI will update based on your new preferences</p>
+
+<p>When you implement UI in a given framework, there's generally some amount of centralized theming logic that comes with it. Adding theming isn't free, though - you'll still need to customize the theme so that it fits the needs and design of your specific surface, as well ensure that all of the UI elements (particularly icons and text) stand out and are readable against the chosen background. For example, if your theme is blue, rather than following your exact theming preferences, the Start Menu will use a slightly darker blue for its background in order to make the tiles (which are the actual colour you selected) more prominent. This is one of the reasons why theming tends to come in later on in the development cycle - the interactions and overall UI layout need to have more or less stabilized before you can start to work on polishing and adding customizations, otherwise it can add to the development cost if you have to redo it. It's also why theming for across the system didn't all come online in one shot, but instead started with start menu and taskbar, then action center and notifications, then a variety of apps, then title bars. Context menus are a similar, but slightly different story - many of the ones that have been around for a while were developed using an older menu framework, and these need to be individually modified in order to change their design from what it is currently. During the November release, we updated some of the most common ones invoked from the taskbar to use a new theme more in line with the taskbar jumplist</p>
+
+<p>When you log feedback requesting something relating to theming, if you do have a preference as to which we work on next, it's very important to cite the specific piece of UI you care about, as it helps us to prioritize.</p>
+
+<p><strong>Transparency and blur</strong> </p>
+
+<p>The current technique we use to add a blur to our transparent UI is called a "Gaussian Blur". There's actually <a href="https://en.wikipedia.org/wiki/Gaussian_blur">a great Wikipedia article on the subject</a> if you’re interested. The essence is that we make the UI transparent so you can see what's underneath, and then apply a per-pixel transformation called a Gaussian function to make each pixel display a weighted average of the pixels in the vicinity - the overall effect giving a more and more blurred look depending on how far you take it. For a stationary picture, it's a onetime cost, but for system UI, that means every time something on the screen moves underneath the transparency, we need to recalculate what the correct blurring should be, which is why it can have performance implications and why we need to be very careful to keep an eye out for performance regressions when we light up newly blurred surfaces. The blurring in the taskbar had to be removed for this reason, which you see it with the semi-transparent and no blur theming that it has today</p>
+
+<p>Currently we're working with the platform team, investigating options for further improving performance of the rendering logic.</p>
+
+<p></p>
+
+<p>&nbsp;&nbsp;<img style="FLOAT: left; DISPLAY: inline" src="http://compass.microsoft.com/assets/8b/92/8b9271e9-3a5e-4a7c-9c1d-57fd58260963.png?n=blurs.png" width="473" align="left" height="269" />&nbsp;&nbsp;&nbsp; </p>
+
+<table cellSpacing="0" cellPadding="2" width="1276" border="1" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="1274"><strong>
+          <h3><font color="#0080c0"><strong>Quick plug!</strong>&nbsp;&nbsp; </font></h3>
+
+          <br />Some of the other theming updates we've made based what you've been telling us:&nbsp;&nbsp; 
+
+          <br />* Added a shuffle option for desktop backgrounds 
+
+          <br />* Added an option to set desktop backgrounds for a specific monitor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+          <table cellSpacing="0" cellPadding="2" width="466" border="0" unselectable="on"><tbody>
+              <tr>
+                <td vAlign="top" width="199"><img src="http://compass.microsoft.com/assets/00/5a/005af726-35e5-4502-bd93-de4a5f86cc64.png?n=backgroundsettings.png" /></td>
+
+                <td vAlign="top" width="265"><img src="http://compass.microsoft.com/assets/92/ed/92ed8c2b-1662-4b45-9f08-3bc48bad3810.png?n=backgroundsettings2.png" /></td>
+              </tr>
+            </tbody></table>
+        </strong></td>
+    </tr>
+  </tbody></table>
+
+<h3><font color="#0080c0">Honorable Mentions</font> </h3>
+
+<p><strong>Didn't have a whole section for these, but wanted to thank you guys for being the driving force behind this work that happened leading up to 10240:</strong> </p>
+
+<table cellSpacing="0" cellPadding="2" width="400" border="0" unselectable="on"><tbody>
+    <tr>
+      <td vAlign="top" width="200"><img src="http://compass.microsoft.com/assets/00/c5/00c54516-47df-4e30-9ab1-45596b0cb65b.png?n=vdfeedback.png" /></td>
+
+      <td vAlign="top" width="200"><img src="http://compass.microsoft.com/assets/b8/3a/b83a3e32-3d48-40ee-90fc-55cb4e2c9b2e.png?n=networkfeedback.png" /></td>
+    </tr>
+  </tbody></table>
+
+<ul>
+  <li>Drag and drop to move windows in task view between virtual desktops </li>
+
+  <li>Taskbar filtering per virtual desktop (our first A/B study!) </li>
+
+  <li>The return of the network flyout (also called VAN UI, or "View Available Networks") </li>
+
+  <li>Added options in the taskbar context menu switch Cortana between text box, icon or hidden - also added an on/off switch for the task view button </li>
+
+  <li>Adding an "active alarm" icon to the lock screen </li>
+
+  <li>Adding a setting for turning off the hero image on the login screen </li>
+
+  <li>Adding a setting for if explorer windows should open to Quick Access or This PC </li>
+</ul>
+
+<h3><font color="#0080c0">And so the story continues… </font></h3>
+
+<p><img src="http://compass.microsoft.com/assets/18/7c/187c6a91-b43c-419d-8594-d33b5fb17c7b.png?n=Champs_sketch.png" width="606" height="355" /></p>
+
+<p>On behalf of the Shell Community Champions, thanks again for being an Insider! </p>
+
+<p>That’s all for now. Keep the feedback coming - we’re listening!</p>
+
+<p></p>
+
+<p>Cheers!&nbsp; </p>
+
+<p>-J </p>
+
+<p>‘Made by you’ articles highlight how we are addressing feedback from Windows Insiders, how we investigated this feedback to shape Windows, and why we have made these improvements.</p>
+
+<p>If you have feedback on this type of content or other aspects of the Windows Insider Program, please let us know via the <a href="windows-feedback:?contextid=529">Feedback App</a>.&nbsp;</p>

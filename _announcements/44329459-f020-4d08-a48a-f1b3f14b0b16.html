@@ -1,0 +1,54 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14251 '
+contentId: 44329459-f020-4d08-a48a-f1b3f14b0b16
+date: 2016-01-27T00:00:00-08:00
+---
+<p>Hi everyone, </p>
+
+<p>Today, we are releasing Build 14251 Windows Insiders in the Fast ring. </p>
+
+<p>Sharp-eyed Insiders likely noted the big jump in build numbers from our last preview build (11102). Historically, the codebase for mobile had a different OS version than the codebase for PC because they were developed by different teams on different schedules. With Windows 10, we became one Windows team and brought these two codebases together. We started by changing the version string displayed in the UI to be consistent, which is why you saw similarly labeled builds over the past year for both Mobile and PC, but the underlying binary version numbers were still different. As part of our work getting the common codebase ready for the next release, we decided to complete that work and sync the build numbers between mobile and PC. Because the mobile codebase used higher build numbers than PC, we needed to jump ahead a bunch of build numbers to ensure updates to future builds will continue to work. So that’s why build numbers went from 11105, 11106, and 11107 to 14251. </p>
+
+<p>This build doesn’t have notable new features in it but I encourage you to check out the <a href="https://blogs.windows.com/windowsexperience/2016/01/25/cortana-gets-better-at-helping-you-manage-your-busy-schedule/">new Cortana improvements</a> we released to Insiders earlier this week. The <a href="http://news.xbox.com/2016/01/19/xbox-one-february-system-update-preview/">January update to the Xbox Beta app for Windows 10</a> is also now available with some really nice improvements for Insiders to try out and give us feedback. </p>
+
+<p>This build <i>does</i> contain some really good bug fixes that Insiders will appreciate: </p>
+
+<ul>
+  <li>We fixed the issue where some PC games would crash switching from windowed mode to full screen, upon game resolution change, or upon launch due to a bug in Windows graphics stack. So play your games! If you run into any issues – please let us know by reporting in the Feedback app and include the game title. </li>
+
+  <li>We fixed the issue where applications such as Narrator, Magnifier, and third-party assistive technologies may experience intermittent issues or crashes. </li>
+
+  <li>We fixed an issue where File Explorer would crash frequently when DPI settings were at 175%. </li>
+</ul>
+
+<p>I also want to reiterate once again that with the change to release builds faster to Windows Insiders in the Fast ring, bugs like the ones we had in the last build (or the File Explorer copy UX from the prior build) are going to pop up. Sometimes it might be several builds before we get these bugs fixed. And there might be times where a build we release contains bugs we haven’t found in internal testing as well. </p>
+
+<p>We’re at the beginning of a new development cycle for our next feature update to Windows 10, and that means teams will be checking in lots of new code as they integrate their feature payloads. Being an Insider means you’re getting the latest code changes, and working with new builds that are relatively new even for Microsoft employees. If this worries you, you can switch to the Slow ring and stick with less frequent but more stable builds. </p>
+
+<h4>Known issues: </h4>
+
+<ul>
+  <ul>
+    <li>After choosing “Reset This PC” under Settings &gt; Update &amp; Security &gt; Recovery – your PC will be in a unusable state. There is no workaround if your PC gets into this state and you will need to reinstall Windows. </li>
+
+    <li>You might see a WSClient.dll error dialog after logging in. We’re working on a fix for this but as a workaround, you can run the following in Command Prompt with administrative rights: schtasks /delete /TN “\Microsoft\Windows\WS\WSRefreshBannedAppsListTask” /F </li>
+
+    <li>The Connect button does not show up in Action Center. The workaround is to press Windows key + P and then click “Connect to a wireless display”. </li>
+
+    <li>Due to a recent memory management change, you may see periodic app crashes or other memory related app errors.&nbsp;Rebooting your PC may correct the issue.&nbsp;Due to this issue, the Github client will not launch. If you need to use the Github client – the workaround is to rollback to the previous build. </li>
+
+    <li>F12 Developer Tools will not load in Microsoft Edge. Should be fixed in the next build.</li>
+  </ul>
+</ul>
+
+<p>As always – thank you for being Windows Insiders and make sure to send us feedback on any issues you run into with this build in the <a href="http://aka.ms/windowsfeedbackapp">Windows Feedback app</a>.</p>
+
+<h4>A note on Windows 10 Mobile </h4>
+
+<p>I know that a lot of Windows Insiders are eager to know what’s going on with Mobile builds. As you know we’ve already released the Lumia 950, 950XL, and 550 devices with Windows 10 preinstalled, and we’re still on track to release Windows 10 as an upgrade to existing devices early this year as we planned. The team is working now by looking at data and reports from Insiders who have upgraded their devices to preview builds, and ensuring that we deliver a great upgrade experience to customers. We’re excited about making the upgrade available, and will share new information with you just as soon as we can on how the rollout will happen.</p>
+
+<p>We’ve also been working on our shared core which spans across PC, Mobile, Xbox, HoloLens, and more – which we call OneCore. Our build systems produce new builds daily for all of these editions, so as we’ve been doing this work we have been producing new PC builds as well as mobile builds. Today we deliver our 4th PC preview build, and are nearly ready to start sharing new preview builds for Mobile as well. We will start by making these builds available to devices that shipped with Windows 10 – the 950, 950XL, and 550 – and expand from there as we release Windows 10 to other devices.</p>
+
+<p>Thanks, 
+  <br />g</p>

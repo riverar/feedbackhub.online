@@ -1,0 +1,33 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Insider Preview Build 14388 for PC'
+contentId: a5a224ff-ebfe-40d2-8dfc-f11bd33461b2
+date: 2016-07-12T00:00:00-07:00
+---
+<p>Known issues for PC </p>
+
+<ul>
+  <li>A recent fix went into place for the Hyper-V firmware that will that affect the ability to boot Windows Server 2016 Tech Preview 5 VMs with Secure Boot enabled. A fix for TP5 builds has been developed however, due to release schedules, the Insider Preview build changes will be released before the TP5 fix is released. During that time, if you try to boot a new TP5 VM with Secure Boot enabled, it will fail. The workaround is to disable Secure Boot during this period.&nbsp; </li>
+
+  <li>After you install this build on a PC using a non-EN-US language, you may get error code 0x80004005 when enabling Developer Mode on the “For Developers” Settings Page. Even after seeing this error message, your machine is in developer mode and you should still be able to use Visual Studio to develop Universal Windows Applications. In most cases, this error indicates that extra components required by the operating system to enable additional debugging features in Visual Studio or the Windows Device Portal could not be installed automatically.&nbsp; </li>
+</ul>
+
+<p>To fix this:&nbsp; </p>
+
+<ol>
+  <li>Go to Settings &gt; System. </li>
+
+  <li>Click on “Apps &amp; features” </li>
+
+  <li>Choose “Manage Optional features” </li>
+
+  <li>Press the button “Add a feature” </li>
+
+  <li>Select the package for Windows Developer Mode </li>
+
+  <li>Click “Install” </li>
+
+  <li>Reboot your PC #8. Launch Command Prompt as Administrator #9. Run: sc config debugregsvc start=auto </li>
+</ol>
+
+<p>Finally, return to the “For Developers” Settings page. You will still see the error code, 0x80004005 but you should now be able to enable Windows Device Portal and the Device Discovery features. </p>

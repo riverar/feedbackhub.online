@@ -1,0 +1,13 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Insider Preview Build 14267'
+contentId: 07711129-1559-4528-b162-2b0384344de4
+date: 2016-02-18T00:00:00-08:00
+---
+<h4><b></b></h4>
+
+<p>We have only one known issue for this build. If you’re using Hyper-V and upgrade to this build with more than one vswitch or have multiple virtual networking adapters (including legacy), you may lose networking connectivity after upgrade. To get network connectivity back, there are two workarounds available:</p>
+
+<p>· Remove all the virtual network adapters connected to the vswitch, delete the vswitch and recreate it, then reconnect their virtual NIC to the new vswitch.</p>
+
+<p>· Admin command prompt, do “netcfg -d” will nuke all the vswitch settings so that you can start from scratch.</p>

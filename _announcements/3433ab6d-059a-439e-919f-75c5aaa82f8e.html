@@ -1,0 +1,22 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Insider Preview Build 14295 for PC'
+contentId: 3433ab6d-059a-439e-919f-75c5aaa82f8e
+date: 2016-03-25T00:00:00-07:00
+---
+<h4><strong>Known issues for PC</strong></h4>
+
+<ul>
+  <li>We are aware of issues with Narrator and other screen reader apps being unable to read the menu options in the Feedback Hub, as well as issues with Narrator not reading selected text in the Feedback Hub, Cortana, and other apps. We’re working diligently to fix these bugs as soon as possible and apologize to Insiders impacted by this. </li>
+
+  <li>If you use Hyper-V and have a Virtual Switch configured for your network adapter, you may see an error indicator (red-colored “X”) for your network adapter in the notification area of your taskbar. The error indicator is incorrect and your network adapter should continue to work just fine. </li>
+
+  <li>On some PCs with TPM chips, such as the ASUS Zenbook UX31, you may experience glitchy audio and jumpy movement when using the trackpad due to the “tpm-maintenance” task running constantly in the background instead of once per boot-up like it should. As a temporary workaround, you can disable the tpm-maintenance task in Task Scheduler (under \microsoft\windows\tpm). </li>
+
+  <li>PCs that use Windows Hello or a PIN to sign-in to the device will launch the Microsoft Passport service. When this happens, there is an issue in this build where Bluetooth will then repeatedly scan for devices. This causes a few issues on the PC including reduced battery life, audio glitches, responsiveness issues with Bluetooth keyboards and mice, a decrease in Wi-Fi throughput on Wi-Fi/Bluetooth combo chipsets, and a decrease in throughput for Bluetooth file transfers. As a workaround, you can disable the Microsoft Passport (NgcSvc) service by opening an elevated Command Prompt, run “reg add HKLM\System\CurrentControlSet\Services\NgcSvc /v Start /t REG_DWORD /d 0x4 /f” and then reboot. However, you will not be able to use Windows Hello or a PIN to sign-in to your device. The service will be re-enabled again when you update to the next build. </li>
+
+  <li>After upgrading to this build from Build 14291, attempting to connect to a Miracast receiver the connection will fail. The workaround to get out of this state is to go to this registry key “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\
+    <br />Parameters” and select “StandaloneDhcpAddress” and change the value from “192.168.173.1” to “192.168.137.1” (value type is REG_SZ). Then retry the connection to the Miracast receiver. </li>
+
+  <li>We are seeing reports of some apps such as QQ crashing. We are currently investigating, and this bug may also impact older apps such as Windows Live Mail and Expression Encoder 4.</li>
+</ul>

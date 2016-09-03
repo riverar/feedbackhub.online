@@ -1,0 +1,43 @@
+---
+layout: page
+title: 'Announcing Windows 10 Mobile Insider Preview Build 10586'
+contentId: a7009bf1-d85e-4487-9f42-013e7591ab72
+date: 2015-11-18T00:00:00-08:00
+---
+<p>Hi everyone, </p>
+
+<p>Today we are releasing Windows 10 Mobile Insider Preview Build 10586 to Windows Insiders in the Fast ring. This build for mobile has a lots of good bug fixes and general improvements for you to check out. Overall this is a really great build, and we’re excited to get it out there for all of you to try. There is an important note for anyone who installed Build 10581 and then subsequently factory reset your phone, so please make sure to check out the known issues below. </p>
+
+<h4><font color="#0000ff"><font color="#0000ff">Here are some things we have fixed:</font> </font></h4>
+
+<ul>
+  <li>We have fixed the issue that caused the Start experience to become corrupted (garbled) after upgrading and restoring a backup from a phone that had a different resolution.&nbsp; </li>
+
+  <li>You should now be able to set your default save locations via Settings &gt; System &gt; Storage and it will correctly reflect the current storage settings. Your SD card should no longer show up as a garbled name in Storage settings either.&nbsp; </li>
+
+  <li>Moving apps to a SD card should no longer cause those apps to crash.&nbsp; </li>
+
+  <li>We’ve made improvements to the Messaging + Skype app – through both app updates via the Store and also on the server side.&nbsp; </li>
+
+  <li>This should be seeing less resuming/loading text when switching apps. </li>
+
+  <li>The physical camera button should be working again if it wasn’t working for you before.&nbsp; </li>
+
+  <li>Apps and games should download from the Store more reliably. </li>
+</ul>
+
+<h4><font color="#0000ff">Known issues: </font></h4>
+
+<ul>
+  <li>After we released Build 10581 to Windows Insiders in the Fast ring, we discovered a bug in the build that will cause the filesystem to become partially corrupted after doing a factory reset. For those of you who did a factory reset of your phone, you most likely did not notice this issue on Build 10581. Due to this bug however, upgrading to Build 10586 will cause your phone to go into a reboot loop after the upgrade completes – rebooting at the Windows or operator logo. To recover your phone, you can <a href="https://www.windowsphone.com/en-us/how-to/wp8/settings-and-personalization/reset-my-phone">use the hardware key combination</a>&nbsp;to reset your phone which will then put it at the OOBE experience on Build 10586. <strong>We highly recommend that you make sure you do a backup your phone *before* upgrading to Build 10586 due to this bug</strong>. Additionally, you can also recover your phone by using the <a href="http://go.microsoft.com/fwlink/p/?LinkId=522381">Windows Device Recovery Tool</a>&nbsp;to go back to Windows Phone 8.1 and then upgrade to Build 10586.&nbsp; </li>
+
+  <li>Deploying Silverlight apps through Visual Studio to your phone still won’t work in this build. This issue will be fixed with <a href="http://blogs.msdn.com/b/visualstudio/archive/2015/11/18/news-and-announcements-from-connect-2015.aspx">the release of Visual Studio 2015 Update 1 on Nov. 30th</a>. You can deploy UWP apps to your phone without any issues. </li>
+
+  <li>There is a known issue where the tile for Insider Hub still remains under All apps but doesn’t open. Insider Hub isn’t included in this build. There isn’t a way to get it back unfortunately. However, it’ll return in a future flight! In the meantime, use Insider Hub on the PC as a workaround.&nbsp; </li>
+</ul>
+
+<p>As always, please use the Windows Feedback app to send us any problem reports or suggestions for this build.&nbsp; </p>
+
+<p>Thanks for being a Windows Insider </p>
+
+<p>g </p>

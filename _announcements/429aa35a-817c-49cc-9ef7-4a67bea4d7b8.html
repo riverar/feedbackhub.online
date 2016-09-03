@@ -1,0 +1,25 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Mobile Insider Preview build 14291'
+contentId: 429aa35a-817c-49cc-9ef7-4a67bea4d7b8
+date: 2016-03-17T00:00:00-07:00
+---
+<ul>
+  <li>If you reset your phone on this build (Build 14291) and restore your phone from a backup, restore will fail to install apps from your backup’s apps list leaving blank grey titles on Start. If you delete the grey tiles and attempt to reinstall the same apps from the Store, you will not get app data restored. The next backup will over-write the app backup data as well. To avoid hitting this bug, avoid resetting your phone on this build. If for some reason you do need to reset your device on this build, don’t restore your phone from a backup and you should turn off backup for apps and OS data to avoid creating a corrupt backup via Settings &gt; Update &amp; Security &gt; Backup. </li>
+
+  <li>If you have a Microsoft Band 1 or 2 paired to your phone, it will no longer sync after updating to this build due to a system API failure that occurs after the update. If you want to get your Band syncing with your phone again – you can temporarily change the language of your phone as a short term workaround until we release a fix. Additionally, you can also choose to reset your phone to get out of this state – however you may experience this update issue again with the next build until we fix this issue. This issue may also impact Skype video and audio calls. </li>
+
+  <li>The Gadgets app will not detect the Microsoft Display Dock on phones running Windows 10 Mobile Insider Preview builds, and thus cannot update the firmware version. If you have a dock which has already been updated to version 4 then this will not affect you. If you have a dock that has not been updated, then you may experience some minor issues with USB-C stability. You will still be able to use your dock and Continuum. </li>
+
+  <li>There is a new option under Settings &gt; Update &amp; security for Windows Insider Program. This is a work-in-progress option to improve managing your Windows Insider Program settings on your device. Right now, if you go to this option it crashes the Settings app. Please continue to use the Windows Insider app to manage your settings for now.</li>
+</ul>
+
+<p>Here are a few known issues for Feedback Hub to take note of:</p>
+
+<ul>
+  <li>We have removed the screenshot capture feature and instead allow you to upload screenshots via the upload screenshot button.&nbsp;Hint: use VOL + POWER UP on mobile to take a screenshot, and on PC use Windows key + Print screen. </li>
+
+  <li>The Feedback Hub will crash if you submit feedback after you’ve launched the app using the hardware keys listed above. </li>
+
+  <li>If you have previously pinned the Windows Feedback app to Start, you will notice it remains as a “dead tile”.&nbsp; We are fixing this in future builds. You can unpin and re-pin the new Feedback Hub app to Start.</li>
+</ul>

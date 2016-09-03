@@ -1,0 +1,112 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14342 '
+contentId: bc87777e-01a1-459d-9080-e20c58b8ee05
+date: 2016-05-10T00:00:00-07:00
+---
+<p>Hi everyone,</p>
+
+<p>Today we are releasing Windows 10 Insider Preview Build 14342 to Windows Insiders in the Fast ring.</p>
+
+<p>The Language Packs for this build will be live later tomorrow (PST).</p>
+
+<h3><b>Here’s what’s new in Build 14342</b></h3>
+
+<p><b>Updates for Extensions in Microsoft Edge:</b> Instead of extracting and loading extensions from a local folder, all available extensions can now be downloaded directly from the Windows Store. This change means that your currently installed extensions will be removed, and you’ll have to reinstall the ones you want from the Store. Then in future updates, your extensions will be automatically re-downloaded and installed.</p>
+
+<p>We also have some new extensions available for you to try out. We are excited to announce that starting with this build, both AdBlock and Adblock Plus are now available for download in the Windows Store in addition to Pin It Button, Mouse Gestures, Reddit Enhancement Suite, Microsoft Translator, and OneNote Web Clipper. It is recommended that you only install one of either AdBlock or Adblock Plus as having them both running at the same time can cause issues with viewing websites in Microsoft Edge.</p>
+
+<p><i>Important note: There is a bug in this build that occurs if you turn off all extensions without uninstalling them, you may not be able to close the browser or get context menus to work. To avoid this issue, uninstall any extensions you no longer want to use instead of turning them off. If you do hit this issue, to get out of this state you will need to turn on one or more extensions or uninstall all extensions, kill any Microsoft Edge processes running in Task Manager, and restart Microsoft Edge.</i></p>
+
+<p><b>Real-time web notifications in Microsoft Edge:</b> Microsoft Edge now supports real-time web notifications, which allow participating websites to send notifications to you via Action Center, with your permission. For example, when your friend sends you a message on <a href="https://web.skype.com/"><b>Skype for Web</b></a> while you’re busy in the Xbox app, you won’t miss a thing. A notification from the website will appear in Windows, just like an app might send. Click on the notification and you’ll be right back in Microsoft Edge at the site that sent it!</p>
+
+<p><b>Swipe navigation in Microsoft Edge:</b> Since the release of Windows 10 Mobile, our top feedback request for Microsoft Edge has been asking for the return of the swipe gesture to navigate back and forward. It’s also been one of our top 10 requests on PC. With this build, you can now swipe from anywhere on the page to get back to your previous page. This will be coming in the next Mobile build as well! </p>
+
+<p><b>Bash on Ubuntu on Windows Improvements:</b></p>
+
+<p>· Symlinks within the Windows Subsystem for Linux are now functional on the mounted Windows directories. This fix helps support many scenarios including the npm installer.</p>
+
+<p>· Users with non-Latin Windows usernames are now able to install Bash on Ubuntu on Windows.</p>
+
+<p>· Many more improvements can be found in the WSL release notes <a href="https://msdn.microsoft.com/en-us/commandline/wsl/release_notes">here</a>! </p>
+
+<p><b></b></p>
+
+<p><b>Skype UWP Preview Update: </b>The Skype UWP Preview app has been response to your feedback. In this release, you have the ability to set a dark theme and can switch between different Skype accounts. You can expect mobile release in the next few weeks.</p>
+
+<p><b>Updated Windows Ink Workspace icon: </b>We have updated the Windows Ink Workspace icon on the taskbar. The new icon shows a more expressive ink stroke and is more consistent with other icons in the notification area. The new icon also looks better at wider range of sizes.<b> </b></p>
+
+<p><b>Updated visuals for User Account Control dialog: </b>The UAC dialog now supports dark mode! As part of this work, we’ve updated also the header color from yellow to blue.</p>
+
+<p><img src="http://compass.microsoft.com/assets/57/67/57677c4a-e488-416c-ab36-cd834f494367.png?n=WIP14342_dark-mode-uac.png" width="351" height="280" /></p>
+
+<p><b>Middle-click for dismiss in Action Center: </b>Action Center now supports the popular dismiss model of middle-clicking on a notification via the middle button scroll wheel on your mouse to a single notification. Middle-clicking on an app’s name will dismiss all the notifications listed for that app. <b></b></p>
+
+<p><b>Apps for websites:</b> As <a href="https://channel9.msdn.com/Events/Build/2016/B831">we discussed at Build 2016</a>, you will soon be able to redirect certain websites to open with an app instead. While there are currently no apps that support this, in preparation for their availability we have added a new page at Settings &gt; System &gt; Apps for websites where you will be able to manage them. Please stay tuned!</p>
+
+<p><b>Feedback Hub improvements:</b> We’ve heard from you that it can sometimes be hard to find which category your feedback belongs in. Now when you create new feedback, the Feedback Hub will suggest categories and subcategories based on the title and description you entered. If you see a suggestion that looks right, just click it to fill in the menus and get your feedback to the right engineers quickly.</p>
+
+<p><b>Here’s what’s fixed for PC</b></p>
+
+<ul>
+  <li>We have fixed the issues blocking the Desktop App Converter Preview (Project Centennial). You can now run the converter on the Enterprise edition as well as Pro edition of Windows. You will need the latest converter and base image <a href="http://aka.ms/converter">from here</a> to take advantage of all the improvements which will be available later today. </li>
+
+  <li>We fixed the issue causing Tencent online games from not working in current builds from the Development Branch. </li>
+
+  <li>We have fixed the issue causing DRM-protected content from services like Groove Music, Microsoft Movies &amp; TV, Netflix, Amazon Instant Video or Hulu from being playable with playback with 0x8004C029 or 0x8004C503 errors. </li>
+
+  <li>We fixed an issue resulting in audio crashes for users who play audio to a receiver over S/PDIF or HDMI, and use a driver that supports real-time encoding via technologies like Dolby Digital Live or DTS Connect. </li>
+
+  <li>Polished the animation when invoking Cortana on the Lock screen. And also resolved an issue where tapping the link to fix mic issues wouldn’t fix them. </li>
+
+  <li>We fixed an issue resulting in the ok/cancel buttons in the network flyout being clipped on high DPI devices. </li>
+
+  <li>We fixed an issue where you might see Windows Hello messages on the screen while you were already logging in with a fingerprint. </li>
+
+  <li>We fixed the issue where if you were in an app and clicked on a link with a URL longer than 260 characters, it would bring up the “Open with…” dialog instead of opening with your default browser. </li>
+
+  <li>We fixed an issue resulting in not being able to use your mouse in the Photos app to either move photo while zoomed or adjust crop region. </li>
+
+  <li>They ALT + Y keyboard shortcut to choose “yes” now works with the updated UAC UI. </li>
+
+  <li>Updated new Credential UI to add support for pasting into username and password fields </li>
+
+  <li>Polished icons used to identify pages in the Settings app – in particular, updated battery icon to be more consistent with the weight of the other icons. </li>
+
+  <li>Made some polish improvements to the Action Center, and resolved an issue where icon in Taskbar wasn’t displaying correctly at 175% DPI. </li>
+
+  <li>We fixed an issue where the image used in Screen Sketch would be rotated 90 degrees for native portrait devices (such as the Dell Venue 8 Pro). Also polished the experience of cropping images in Screen Sketch. </li>
+
+  <li>We fixed Clock and Calendar flyout issues on the taskbar with the 24-hour time format where the agenda items would display using 12-hour format instead of the 24-hour time format and certain items would be off by 12 hours. </li>
+
+  <li>We fixed an issue where the Clock and Calendar flyout couldn’t be dismissed by clicking on the date and time in the taskbar a second time. </li>
+
+  <li>We updated the “set location” notification so tapping anywhere in the notification will now enable you to set a default location. </li>
+
+  <li>We fixed an issue where certain shortcuts weren’t working in UWPs, for example CTRL + C, CTRL + V, and ALT + Space. </li>
+
+  <li>We fixed an issue where tapping the battery icon wouldn’t open the Battery flyout when in Tablet Mode. </li>
+
+  <li>We fixed an issue where clicking elements in the Start navigation pane might result in the Store opening instead. </li>
+
+  <li>We fixed an issue where background audio tasks might show up in the volume controls. </li>
+
+  <li>We added a “Clear Input History” option to the IME Settings page. </li>
+
+  <li>We fixed an issue where doing an action on a file in a folder pinned to Quick Access after using the address bar to get there might result in File Explorer unexpectedly navigating to Quick Access. </li>
+
+  <li>We fixed an issue resulting in Cortana crashing if you shared an avatar with Cortana from the Xbox Avatars app. </li>
+
+  <li>We fixed an issue causing the search box on the Language Settings page to not work. </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><b>Other items of note</b></p>
+
+<p>We have removed the Wi-Fi Sense feature that allows you to share Wi-Fi networks with your contacts and to be automatically connected to networks shared by your contacts. The cost of updating the code to keep this feature working combined with low usage and low demand made this not worth further investment. Wi-Fi Sense, if enabled, will continue to get you connected to open Wi-Fi hotspots that it knows about through crowdsourcing.</p>
+
+<p>As always – thank you for being Windows Insiders and make sure to send us feedback on any issues you run into with these builds in the <a href="http://aka.ms/windowsfeedbackapp">Feedback Hub</a>.</p>
+
+<p>Thanks, 
+  <br />g</p>

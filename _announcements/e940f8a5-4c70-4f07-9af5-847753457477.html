@@ -1,0 +1,102 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14915 for PC and Mobile'
+contentId: e940f8a5-4c70-4f07-9af5-847753457477
+date: 2016-08-31T00:00:00-07:00
+---
+<p>Hello Windows Insiders! </p>
+
+<p>It's been a busy few weeks here in Redmond. Last week, we had engineering reviews where each team presented their plans for the next few months to make sure that the customer scenarios we want to deliver are all prioritized appropriately. It was great to see all of the Windows leaders in the same room and the energy and excitement about this release was obvious by some of the live-tweeting that went on during the week. You will see the results of the reviews in the builds that will be coming out in the next few months. </p>
+
+<p>Now, onto the news you all have been waiting for! Today we are excited to be releasing Windows 10 Insider Preview Build 14915 for PC and Mobile to Windows Insiders in the Fast ring. </p>
+
+<p><b>Improving app and update downloads in Windows 10 with Delivery Optimization</b> 
+
+  <br />Starting today, Windows Insiders that have Delivery Optimization enabled will be able to download new Insider Preview builds, OS updates, and app updates from other PCs on their local network <i>as well as</i> from other PCs on the Internet. We introduced Delivery Optimization with the Windows 10 November Update giving users the ability to get updates from PCs on a local network and are now enabling the ability to get updates from PCs on the Internet. When enabled, your PC may also send parts of apps or updates that you have downloaded using Delivery Optimization to other PCs. To check your settings for Delivery Optimization, go to Settings &gt; Update &amp; security &gt; Windows Update &gt; Advanced options and choosing “Choose how updates are delivered.” <b></b></p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/42/46/4246c4ee-9dd3-47e3-b338-b02c60c1029d.png?n=14915delivery-optimization.png" width="551" height="500" /></p>
+
+<p>When Delivery Optimization is used on your PC to download apps and OS updates from other PCs on your network or the Internet for the first time, you will see a notification in the Action Center.</p>
+
+<p>In addition to downloading apps, app updates and OS updates from the Windows Update servers, Delivery Optimization will look for nearby PCs on your local network or on the Internet that have Delivery Optimization enabled and find the app or OS update you need that may be even closer to your PC. Rather than downloading an entire file from one machine, Delivery Optimization breaks the download into small pieces and uses what is assessed as the fastest, most reliable source for each piece of the file. Delivery Optimization is also mindful of local disk usage, use of cellular networks, battery life, and other network activity. It is also integrated with and builds on the existing security measures in Windows Update and Windows Store to check the authenticity of each file downloaded from other PCs. Particularly for PCs with challenging network conditions, this is designed to provide a better and more reliable download experience. </p>
+
+<p>Delivery Optimization is on by default. If you don’t wish to use Delivery Optimization, you can turn it off by going to Settings &gt; Update &amp; security &gt; Windows Update &gt; Advanced options and choosing “Choose how updates are delivered”. You can also choose instead to use Delivery Optimization only for your local network. And system administrators can use Group Policies or MDM policies to configure these settings as well as manage advanced settings such as extending the definition of a local network beyond the LAN to allow PCs in remote offices to collaborate seamlessly.</p>
+
+<p>Since introducing Delivery Optimization for PCs on your local network in the Windows 10 November Update, we have seen more and more people adopt and benefit from this feature in the past year, anywhere from small businesses to large enterprises with thousands of Windows 10 PCs. We have seen a 30% - 50% reduction in Internet bandwidth usage required to keep multiple PCs on the same local network up-to-date with the latest Insider Preview builds and apps from the Store.</p>
+
+<p>Please help us test this feature and <a href="http://windows-feedback/?contextid=158">share your feedback</a>! Today we are also publishing <a href="https://aka.ms/xhxi5u">a Quest</a> so more Windows Insiders can try this feature out on the next flight and provide additional feedback on this experience we can use during our development of Windows. For more information on Delivery Optimization in Windows 10 – <a href="https://privacy.microsoft.com/en-gb/windows-10-windows-update-delivery-optimization">check out this FAQ</a>.</p>
+
+<h3><b>Improvements and fixes for PC</b></h3>
+
+<ul>
+  <li>We fixed the issue with being unable to use the power button on the Start menu. </li>
+
+  <li>We fixed the issue causing Cortana’s text to speech capabilities to not work. Cortana should be able to read text messages out loud for you, tell jokes, sing, or give verbal prompts as expected. </li>
+
+  <li>We fixed the issue causing the Settings app to crash on certain editions of Windows 10 when navigating to different settings pages due to a missing .dll file. </li>
+
+  <li>We made a number of improvements to translations, including fixing an issue in Windows Update where it would say “your phone is up to date” in French when confirming that your PC was up to date. </li>
+
+  <li>Changing functionality via Settings &gt; Update &amp; security &gt; Windows Insider Program such as your ring settings should now work again on this build. For more information – <a href="https://aka.ms/14905pcrings">see this forum post</a>. </li>
+
+  <li>We fixed a compatibility issue from a recent platform change that causes apps such as Yahoo Mail, Trivia Crack, Google and the Skype Translator Preview app to crash. </li>
+
+  <li>We fixed an issue resulting in some Insiders experiencing a delay in Mail notification toasts appearing. </li>
+
+  <li>We fixed an issue where the “Open with” dialog's "Look for another app on this PC" link wasn't working if the dialog appeared after using the “Run” dialog to open a file with an unassociated file type. </li>
+
+  <li>We have updated the Connect flyout so that the clickable area for each device listed now spans across the full width of the flyout. </li>
+
+  <li>We fixed an issue where if a Chinese Input Method Editor is active it could result in logging in to not succeed after device goes into and is woken up from Connected Standby. </li>
+
+  <li>We fixed an issue where for certain websites in Microsoft Edge, using CTRL + A to select all text and then copying it and trying to paste it into Notepad wouldn't paste anything. </li>
+
+  <li>We fixed an issue where importing favorites into Microsoft Edge from Internet Explorer would fail if the Favorites folder had been redirected to another folder, for example "C:\Users\&lt;user&gt;\Documents\Favorites". </li>
+</ul>
+
+<h3><b>Improvements and fixes for Mobile</b></h3>
+
+<ul>
+  <li>We fixed the issue causing apps to get stuck in a pending state if you move apps between a SD card and internal storage (either direction). </li>
+
+  <li>We fixed the issue causing Cortana’s text to speech capabilities to not work. Cortana should be able to read text messages out loud for you, tell jokes, sing, or give verbal prompts as expected. </li>
+
+  <li>Changing functionality via Settings &gt; Update &amp; security &gt; Windows Insider Program such as your ring settings should now work again on this build. For more information – <a href="https://aka.ms/14905pcrings">see this forum post</a>. </li>
+
+  <li>We fixed a compatibility issue from a recent platform change that causes apps such as Yahoo Mail, Trivia Crack, Google and the Skype Translator Preview app to crash. </li>
+
+  <li>We made a number of improvements to translations, including fixing an issue with Store app install notifications, where the wrong verb was used in German when letting you know to check out the app. </li>
+
+  <li>We have updated "You need to fix your MSA" notification toast logic, so it will no longer notify you multiple times in quick succession. </li>
+
+  <li>We fixed an issue where examining Microsoft Edge's advanced settings would result in subsequent downloads in Edge saving to the default locations, rather the preferred locations set under Settings &gt; System &gt; Storage. </li>
+
+  <li>We fixed an issue for Continuum-capable devices that could result in being temporarily unable to connect to a previously paired Windows 10 PC. </li>
+
+  <li>We have updated the settings for sounds so that .mp3 or .wma files downloaded straight from OneDrive or copied from File Explorer to the phone's Ringtones folder will now display automatically in the list of available sounds for ringtones, alarms and notifications. </li>
+</ul>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/a5/a7/a5a71243-f336-493b-a764-b6ba592eb05c.jpg?n=14915WP_20160818_15_49_53_Rich.jpg" width="946" height="532" /></p>
+
+<p>Several of you have been asking what is next for the #WINsiders4Good effort. We have just completed a 4 city set of Create-A-Thons where we gathered together both technical and creative Insiders to form teams and tackle issues around: </p>
+
+<ul>
+  <li>(8/3-4) Seattle - homelessness </li>
+
+  <li>(8/11-13) Berlin – low-income housing </li>
+
+  <li>(8/16-19) Cologne – games for good </li>
+
+  <li>(8/22-23) London– low-income housing </li>
+</ul>
+
+<p>One piece of feedback we heard over and over again was that our motto of "arrive as strangers, leave as friends" resonated and people felt a connection with the other Insiders they did the 18 hour project with. This made us VERY happy. We want our Insiders to be leaders in their local communities and use the technology they love to eradicate the problems they hate. </p>
+
+<p>We will have a recap video for all of you once we gather the footage in one place. In September, we are also creating DIY Create-A-Thon kits so that any Insider can partner with a NGO, choose a topic, find some local Insider friends and organize an event to solve the problem. We will share news of this when it's ready. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/95/74/95744bf4-0aae-4a51-9a46-92773c930cb8.JPG?n=14915NINJA.JPG" /></p>
+
+<p>In the meantime...</p>
+
+<p>Keep hustling, 
+  <br />Dona &lt;3</p>

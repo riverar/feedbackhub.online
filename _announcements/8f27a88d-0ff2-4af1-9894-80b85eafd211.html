@@ -1,0 +1,71 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 10525'
+contentId: 8f27a88d-0ff2-4af1-9894-80b85eafd211
+date: 2015-08-18T00:00:00-07:00
+---
+<p>Hi everyone,</p>
+
+<p>It has been amazing to see the impact that Windows Insiders have made since we launched the program last year. Your feedback has helped us fix bugs and make changes which resulted in a better product because of your input. Thank you to all of the Windows Insiders who have been with us so far. Now I’d like to talk a bit about what is next.</p>
+
+<p>With the general availability of Windows 10, the Windows Insider Program will focus on <a href="http://blogs.windows.com/bloggingwindows/2015/01/21/the-next-generation-of-windows-windows-10/">building and delivering Windows as a service</a> by updating Windows 10 with new features and functionality on an ongoing basis. As always, Windows Insiders will be the first to see these new features and changes.</p>
+
+<p>Feedback from Windows Insiders not only helps us build Windows 10 – it also helps us shape how we run the program. For example, Windows Insiders have asked us to improve the flighting cadence and to keep the Windows Feedback app in the product – which we have done. We’re also evaluating the Windows Insider rings, and considering whether we should make changes there. Over the past few months we’ve been looking at feedback to see what changes we want to make going forward. We’re putting plans together now, so you won’t see any changes immediately, but they will come over time. We’ll be doing our best to make sure that we improve every aspect of the program, from build distribution to the Feedback app and Insider Hub. And of course we’ll be looking to do more fun things for Windows Insiders as well, like our Insiders to Campus event, Ninja Cat goodies, special wallpapers and more.</p>
+
+<h4><strong>Getting started with new Windows 10 Insider Preview builds: </strong></h4>
+
+<p>If you’re already a Windows Insider and have been running Windows 10 Insider Preview builds – there is nothing you need to do. You will automatically be upgraded or you can upgrade your build via Windows Update. If you want to get a Windows 10 Insider Preview build installed on a PC running Windows 7 or Windows 8.1, you should first upgrade to Windows 10 using the free upgrade <a href="http://windows.com/windows10upgrade">offer</a>* available to qualified, genuine Windows 7 and 8.1 devices. From there, you can opt in to the Windows Insider Program via Settings app &gt; Update &amp; Security &gt; Advanced options under “Get Insider builds”.</p>
+
+<p>Windows 10 Insider Preview is intended to be installed on genuine Windows 10 devices – before upgrading to Windows 10 Insider Preview Builds or reinstalling Windows 10 please ensure your device is activated. To confirm go to Settings &gt; Update &amp; security &gt; Activation. With the launch of Windows 10 we introduced device based activation. If you’ve previously activated a genuine copy of Windows 10 on your device, you’ll be able to activate Windows 10 Insider Preview builds of the same edition without the need to enter a product key. This will also enable you to re-install the latest public release of Windows 10 without entering a product key if you no longer want Windows Insider Preview on your device.</p>
+
+<h4><strong>Windows Feedback app and Insider Hub: </strong></h4>
+
+<p>We have decided to include the Windows Feedback app in the released version of Windows 10 for all our customers. This was a very popular Windows Insider suggestion – one of our top 10 upvotes. At the same time, we wanted to continue giving our Windows Insiders an exclusive and premium experience when it comes to sending us feedback. So, here’s what you can expect from the Feedback app going forward:</p>
+
+<p><a href="http://az648995.vo.msecnd.net/win/2015/08/PC-build-image-1.jpg"><img src="http://compass.microsoft.com/assets/a1/b0/a1b08c82-fb23-4d94-b22c-78f89a6a1997.jpg?n=FeedbackFeatures10525.jpg" width="344" height="273" /> 
+
+    <br /></a><em>* Insiders will see special mini-surveys that are only offered to them 
+    <br /></em><em>** Only available in select categories</em></p>
+
+<p>We have also cleared out the older feedback that we received early on in our product development cycle from the default search results that get returned in the app. You might wonder what’s going to happen to all the feedback you left. The feedback you’ve previously provided is still stored in our internal engineering tools. Engineers are using it to find and filter on key feedback for their areas.&nbsp; This blog post that we previously published <a href="http://blogs.windows.com/bloggingwindows/2015/06/12/how-windows-insider-feedback-influences-windows-10-development/">describes what we do with your feedback</a>.</p>
+
+<p>We’ll still give you credit in Insider Hub for the feedback you’ve previously left. &nbsp;You will be able to view a full history of <em>your</em> feedback under “My feedback” with a special marking called “Archive” for pre-release feedback.</p>
+
+<p><img src="http://compass.microsoft.com/assets/39/80/3980f991-e2eb-4ac0-8462-f08eabec2a96.jpg?n=WindowsFeedback.jpg" width="606" height="429" /></p>
+
+<p>We’ll get better at aging out feedback with future enhancements to our app, but for now we want to clear the deck, so that the newest, most relevant feedback is finding its way to the top of the search results that you see in the Feedback app.</p>
+
+<p>The Insider Hub is again included in the build by default.</p>
+
+<h4><font style="FONT-WEIGHT: bold">Build 10525</font></h4>
+
+<p>The most exciting news in this post is that we have a new build for PCs we’re releasing today to Windows Insiders in the Fast ring – <strong>Build 10525</strong>.</p>
+
+<p>This is our first new build since the release of Windows 10, and I’m very happy to talk about one new thing that you’ll see because it really highlights both how your feedback influences the product development as well as illustrating how some things will get implemented at different times depending on when we’re trying to stabilize and drive quality vs. when we’re open for new feature work.</p>
+
+<h4><strong>Updated color options!</strong></h4>
+
+<p>We got a lot of feedback on the default color for Start, Acton Center, Taskbar, and Title bars and that you wanted to be able to change to reflect your preferences. This feature is now available (though still early) in build 10525 for you to try. This is off by default, but you can turn it on by toggling this (Settings &gt; Personalization &gt; Colors):</p>
+
+<h4><a href="http://az648995.vo.msecnd.net/win/2015/08/Color-Option.png"><img src="http://compass.microsoft.com/assets/c1/0e/c10e83bd-5fd1-4187-a0a2-1421d8fd3c79.png?n=Color-Option-10525.png" width="342" height="466" /> 
+
+    <br /></a><strong>Memory Manager Improvements:</strong></h4>
+
+<p>In Windows 10, we have added a new concept in the Memory Manager called a compression store, which is an in-memory collection of compressed pages. This means that when Memory Manager feels memory pressure, it will compress unused pages instead of writing them to disk. This reduces the amount of memory used per process, allowing Windows 10 to maintain more applications in physical memory at a time. This also helps provide better responsiveness across Windows 10. The compression store lives in the System process’s working set. Since the system process holds the store in memory, its working set grows larger exactly when memory is being made available for other processes. This is visible in Task Manager and the reason the System process appears to be consuming more memory than previous releases.</p>
+
+<h4>We do have a few known issues with this build.</h4>
+
+<p>Part of the fun of being a Windows Insider is getting to tinker with prerelease software before the rest of the world, but you should be very aware as an Insider that prerelease software will come with bugs and things that are incomplete. Make sure you know and accept what you’re opting in to when you join the program, and of course make sure to back up all of your personal data before you begin.</p>
+
+<ul>
+  <li>Mobile hotspot doesn’t work in this build. When sharing the Internet from your device with mobile broadband using Mobile Hotspot, it will fail to get a valid IP address from your device and will show no internet access. </li>
+
+  <li>An update to Movies &amp; TV application from the Store will be required to fix an issue with video playback. </li>
+
+  <li>Optional languages packs will not be available during the initial launch of this flight, it will be available later this week. </li>
+</ul>
+
+<p>I’m very excited to be able to officially welcome you to the next phase of the Windows Insider program and bring you a new build today. I hope that you have fun with it, and be sure to keep sending in your feedback via the Windows Feedback app!</p>
+
+<p>Thanks, 
+  <br />g</p>

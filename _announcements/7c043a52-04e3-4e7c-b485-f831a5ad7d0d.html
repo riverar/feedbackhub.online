@@ -1,0 +1,140 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14332 for PC and Mobile'
+contentId: 7c043a52-04e3-4e7c-b485-f831a5ad7d0d
+date: 2016-04-26T00:00:00-07:00
+---
+<p><em>UPDATE 4/27: The server-side issues should be resolved. Cortana should be able to search your Office 365 content.</em></p>
+
+<p>Hi everyone,</p>
+
+<p>Today we are releasing Windows 10 Insider Preview Build 14332 for both PC and Mobile to Windows Insiders in the Fast ring. Some languages and editions are still being propagated at the time of going live with this flight, but we expect these to be <a name="_GoBack"></a>available within the hour.</p>
+
+<h3><b>The Bug Bash begins!</b></h3>
+
+<p>With this new build today for PC and Mobile – we’re officially kicking off the Bug Bash with Windows Insiders we <a href="https://blogs.windows.com/windowsexperience/2016/04/22/announcing-windows-10-insider-preview-build-14328-for-pc-and-mobile/">mentioned last week</a>. Over the course of the next 4 days, we will be publishing multiple Quests inside Feedback Hub that will highlight different areas of the product each day. We will be looking for feedback on each Quest, but you can also just use the parts of Windows and our apps you are most passionate about – the key is just to work together now through Sunday to get the best bug reports possible!</p>
+
+<p>The Quests that you will see for the Bug Bash are not traditional Quests that list steps of trying a feature or scenario out. Many of them are open ended intentionally so that you can perform the steps that come naturally to you in order to finish the Quest and give us feedback on it. Many of them also list more than one scenario that can be tried out to finish the Quest. All the Quests for the Bug Bash will lead back to Feedback Hub so that you can upvote existing feedback or give new feedback based on your experience of completing the Quest. Please make sure to search for existing feedback to upvote before entering a new report. </p>
+
+<p>We are also doing a few different types of Quests:</p>
+
+<p><b>LIMITED TIME Quests</b>: Quests marked as “LIMITED TIME” will expire within 24hrs of being published so make sure you get to these before the time runs out and they’re replaced with new Quests.</p>
+
+<p><b>ADVANCED Quests:</b> Quests marked as “ADVANCED” are more technical and may require changing the system configuration on your device and require an understanding on how to revert the changes after the Quest is done. You should only perform Quests that you feel comfortable doing, if something goes wrong you’ll need to be able to troubleshoot how to get back to a good state on your PC. </p>
+
+<p>After you get this new build installed, open up Feedback Hub and get started. We’re REALLY excited about being able to include you for the first time on something that is part of our internal engineering culture at Microsoft. As I’ve been talking to people all week, I keep seeing big smiles and lots of excitement as people talk about how awesome it is to include Insiders as part of our activities. We hope you have fun as well, and send us some great bug reports. For more information on this week’s Bug Bash – <a href="http://aka.ms/wipbugbash">see this post in Feedback Hub from Mike Fortin</a>. </p>
+
+<h3><b>Here’s what’s new in Build 14332</b></h3>
+
+<p><b>Bash and Command Prompt Improvements: </b>In previous builds, you may have experienced networking issues that prevented tools running in Bash on Ubuntu on Windows from being able to access the Internet. For example, you may have seen apt-get fail to find its servers and download apps. This release fixes these issues and users should no longer need to modify their resolv.conf file by hand. We also fixed an issue when calling mv between the /mnt and non-/mnt drives - files and directories will now move correctly between the two points. For more information about the Bash updates in this build, check out our release notes.</p>
+
+<p>For Command Prompt, we’ve made several improvements including improved windows scaling on PCs with High-DPI displays, better font selection and rendering for international characters, several cursor rendering and hiding improvements, improved background color painting, as well as improved scrolling for nano &amp; EMACS editors. </p>
+
+<p><b>Cortana can now search Office 365: </b>On your PC,<b> </b>Cortana can now search your content in Office 365 including your emails, contacts, calendar as well as files in OneDrive for Business and SharePoint. To get started, just add your Office 365 work or school account in the Connected Accounts section of Cortana’s Notebook. When you search, choose the appropriate filter (email, contacts, calendar, or documents) at the top to see relevant Office 365 search results. Try this out and let us know what you think!</p>
+
+<p><i>UPDATE: Due to server-side issues happening at the moment, this capability may not work. We’re working to get these server-side issues resolved shortly. We’ll update this post once that happens!</i></p>
+
+<p><b>Improved Battery Life for Connected Standby PC’s</b>: We’ve integrated the same underlying technology that Battery Saver uses to quiet down some of the less-valuable activity that occurs during Connected Standby while still keeping your PC connected to the Internet and allowing key connectivity scenarios to work. As a result, if you’re using a Surface or other Connected Standby PC, many of you will notice improved and more consistent standby battery life.</p>
+
+<p><i>Tip: To see if you are running a PC with Connected Standby, you can run the “powercfg /a” command from an admin Command Prompt. If the first state listed says “Standby (S0 Low Power Idle) Network Connected”, you’re running on a PC capable of Connected Standby.</i></p>
+
+<p>While we have worked hard to get the technology behind this to work optimally for what we think will be the vast majority of users, we’d like your feedback. If you notice any major issues (things you expected to work in Connected Standby but that do not), you have 2 options:</p>
+
+<p>1. Go into Settings &gt; System &gt; Battery and enable the app that you want to run during Connected Standby to “Always allowed” in the background. You can read more about these battery settings in <a href="https://blogs.windows.com/windowsexperience/2016/04/22/announcing-windows-10-insider-preview-build-14328-for-pc-and-mobile/">last week’s blog post</a>.</p>
+
+<p>2. If you want to revert fully back to the old behavior in Connected Standby, you can run the following command lines from an admin Command Prompt:</p>
+
+<p>powercfg /setdcvalueindex SCHEME_CURRENT SUB_ENERGYSAVER ESPOLICY 0</p>
+
+<p>powercfg /setactive scheme_current</p>
+
+<p>Note: To re-enable the new Connected Standby behavior, you can run the same command lines as above but just change ‘0’ to ‘1’.</p>
+
+<p>If you find that a scenario you depend on doesn’t work in the way you expect it to, please send us feedback via the Feedback Hub!</p>
+
+<h3><b>Here’s what’s fixed for PC</b></h3>
+
+<ul>
+  <li>We fixed the issue causing some PCs to bluescreen (bug check) when entering Connected Standby after updating to the latest build from the Development Branch. </li>
+
+  <li>We fixed the issue where some large downloads may appear to get stuck at 99% completion in Microsoft Edge. </li>
+
+  <li>We fixed an issue which made it look like you couldn't drag and drop to reorder your favorites on the Favorites Bar. </li>
+
+  <li>We fixed the issue causing Groove Music to crash on launch at the splash screen. </li>
+
+  <li>We fixed an issue where adding a song to Groove Music’s Now Playing list might cause the current song to stop playing and start over. </li>
+
+  <li>We fixed the issue where PCs are unable to go back to a previous Insider Preview build via “Go back to an earlier build” under Settings &gt; Update &amp; security &gt; Recovery if they have BitLocker/Device Encryption enabled. </li>
+
+  <li>We've made improvements to the share UI for Cortana Reminders. The experience is much more polished now. </li>
+
+  <li>We improved reliability of the Chinese IME. </li>
+
+  <li>Going forward (from this build), apps for which you've selected "Show windows from this app on all desktops" will be remembered after you update to a new build. </li>
+
+  <li>We fixed an issue where the taskbar's overflow tray for notification area (systray) icons was not being padded correctly for certain multi-monitor setups. </li>
+
+  <li>We fixed an issue where the Game Bar would not appear if the DPI had been changed from 150% to 100%. </li>
+
+  <li>We fixed an issue where notifications with more content sometimes could not be expanded in the Action Center. </li>
+
+  <li>We fixed an issue where tiles on the Start menu might flash at the wrong size after exiting tablet mode. </li>
+
+  <li>We fixed an issue where the battery icon in the notification area might display incorrectly after a DPI change. </li>
+
+  <li>We fixed an issue where clicking on the "X" button on a window in Task View removed the thumbnail, but the title and X button would still be shown. </li>
+
+  <li>When an app is displayed in the Start menu with the name "@{&lt;app package name&gt;}"), there will now be an option to uninstall it. </li>
+
+  <li>We fixed an issue where re-directed folder Libraries would appear as duplicate folder entries in the File Explorer navigation pane. </li>
+
+  <li>We fixed an issue for multi-monitor users, where launching a desktop (Win32) app from Start would result in the full screen video being played on the other monitor getting minimized. </li>
+
+  <li>We fixed an issue where the Settings app would crash if you tried to pin a settings page to Start. </li>
+
+  <li>We fixed an issue where opening Windows Defender from the Settings app would fail. </li>
+
+  <li>We fixed an issue resulting in blurry and/or overlapped text in Start's All apps list. </li>
+
+  <li>We fixed an issue where the touch keyboard might not come up in the password field after you switched users on the Lock screen. </li>
+
+  <li>We fixed an issue where Windows Spotlight wouldn't remember if you had already said you liked that image the last time you locked your PC. </li>
+</ul>
+
+<h3><b>Here’s what’s fixed for Mobile</b></h3>
+
+<ul>
+  <li>We've made improvements to the share UI for Cortana Reminders. The experience is much more polished now. </li>
+
+  <li>We fixed an issue where a press and hold on the Camera Quick Action in Action Center wouldn't do anything. Now it will launch the Camera app. </li>
+
+  <li>We fixed an issue resulting in the Lumia 435, 532, 535 and 540 being unable to take photos with the Camera app. </li>
+
+  <li>We fixed an issue where typed text would be invisible in Cortana when the OS was set to light mode under Settings &gt; Personalization &gt; Colors. </li>
+
+  <li>We fixed an issue with the Italian keyboard where certain words would get auto-capitalized after a comma (acting as it would if it was a period instead). </li>
+
+  <li>Improved the performance of opening Settings &gt; Update &amp; security &gt; For developers. </li>
+
+  <li>We fixed an issue where Cyrillic characters would be lowercase in list headers (for example, in the All apps list). </li>
+
+  <li>We fixed an issue where pulling your headphones out to answer a call would result in the music playing out loud once the call had ended. </li>
+
+  <li>For phones that support adjusting the brightness automatically, this setting will now be enabled by default after a restore or hard reset. </li>
+
+  <li>You can now set the time for how long it should be for Windows to require you to sign in again via Settings &gt; Accounts &gt; Sign-in options with Windows Hello set up. </li>
+
+  <li>We fixed an issue that blocked you from renaming your device. </li>
+
+  <li>We fixed an issue where the Lock screen quick status numbers might appear drawn under the navigation bar. </li>
+</ul>
+
+<h3>&nbsp;</h3>
+
+<p>As a reminder – we release builds for Mobile from our Development Branch to <a href="http://windows.microsoft.com/en-us/windows/preview-supported-phones">the list of devices that will be capable of receiving updates as part of the Windows Insider Program</a>. As we stated previously, only devices which are eligible to receive the Windows 10 Mobile upgrade will be able to get preview builds from the Development Branch going forward.</p>
+
+<p>As always – thank you for being Windows Insiders and make sure to send us feedback on any issues you run into with these builds in the <a href="http://aka.ms/windowsfeedbackapp">Feedback Hub</a>.</p>
+
+<p>Thanks, 
+  <br />g</p>

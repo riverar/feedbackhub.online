@@ -1,0 +1,21 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Insider Preview Build 11102'
+contentId: d9e0770c-64a4-43df-82c5-c98f23ce9ae3
+date: 2016-01-21T00:00:00-08:00
+---
+<h4><b></b></h4>
+
+<p>When we went live with last week’s PC build, Insiders discovered a bug where the cache for Insider Hub wasn’t properly refreshing – preventing new content from showing up in a timely manner. We’ll include known issues with our blog posts as well as in Insider Hub until the bug is resolved.</p>
+
+<ul>
+  <li>Some PC games will crash switching from windowed mode to full screen, upon game resolution change, or upon launch due to a bug in Windows graphics stack. We have observed this with The Witcher 3, Fallout 4, Tomb Raider, Assassin's Creed, and Metal Gear Solid V but it may occur with other titles as well. </li>
+
+  <li>With this build (and with the last build), applications such as Narrator, Magnifier, and third-party assistive technologies may experience intermittent issues or crashes. If you rely on screen readers or other software, you should not use this build. This issue will be fixed with the next build.</li>
+
+  <li>You might see a WSClient.dll error dialog after logging in. We’re working on a fix for this but as a workaround, you can run the following in Command Prompt with administrative rights: schtasks /delete /TN "\Microsoft\Windows\WS\WSRefreshBannedAppsListTask" /F</li>
+
+  <li>While attempting to update to this build, your PC may show a message that your wireless card is not compatible with Windows 10. The workaround is to visit the support page for your PC or wireless card and install the newest driver that is available. </li>
+
+  <li>The Connect button does not show up in Action Center. </li>
+</ul>

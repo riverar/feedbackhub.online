@@ -1,0 +1,97 @@
+---
+layout: page
+title: 'Made by you - Windows 10 Audio Troubleshooting'
+contentId: 48201000-590b-4124-b591-466f9c931161
+date: 2016-03-14T00:00:00-07:00
+---
+<p>Hello Windows Insiders!</p>
+
+<p><a href="http://answers.microsoft.com/en-us/profile/33286fab-21e8-4661-95bb-94fa63f92357#user-profile-tab-profile">John Wink</a>&nbsp;here, along with some of my great colleagues (Matt van Eerde, a.k.a. "<a href="http://answers.microsoft.com/en-us/profile/fd011e5a-a27d-4fb4-ada8-23ed5113dd55#user-profile-tab-profile">maurits</a>" and Ikemefuna Udeze a.k.a. "<a href="http://answers.microsoft.com/en-us/profile/45ba7b13-daba-4b50-b8bd-cecd1da15f71#user-profile-tab-activity">Ike</a>" from <a href="http://answers.microsoft.com/">Answers Forums</a>) from the Windows Audio team. Audio was a bit of a roller-coaster ride in the early months of Windows 10, but it has improved dramatically thanks to the amazing collaboration we received from the Windows Insider Community. I’m very proud to say that, thanks to you, we have been able to make significant audio improvement. Many thanks for your contributions!</p>
+
+<p>I wanted to give a quick review of the work that we’ve done to stabilize audio and move it forward with Windows 10, and in particular I wanted to highlight the many places where you, the Windows Insiders, made valuable contributions to this effort.</p>
+
+<p><b>Audio Improvements</b></p>
+
+<p>The main issue we heard from Windows Insiders is that you would upgrade to Windows 10 and audio would not work as expected. There were a number of secondary issues, for example faulty detection of the headphone jack, low audio quality, broken surround-sound and others but the main problem always revolved around a complete lack of audio. To figure this problem out we needed data, and lots of it.</p>
+
+<p><strong>Windows Insiders in the Microsoft Community</strong> (<a href="http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices-insiderplat_pc?tab=Threads">Answers Forums</a>)</p>
+
+<p>We began our journey by talking directly with a lot of you in the answers forums, and you got us started with great information. We soon realized that we were dealing with more than one issue.</p>
+
+<ul>
+  <li>Audio services had a tendency to crash in certain situations </li>
+
+  <li>Some drivers from older OS’s didn’t play well with Windows 10 </li>
+
+  <li>Some drivers were okay, but their add-on APOs (audio processing objects) weren’t </li>
+
+  <li>Sometimes changing the playback bitrate and depth broke (or conversely fixed) audio </li>
+</ul>
+
+<p>The really neat thing about working with you in the <a href="http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices-insiderplat_pc?tab=Threads">forums</a> is that we had a great opportunity to talk about the problems in depth – symptoms, conditions under which the problems occurred, what kind of hardware and drivers you had. And we were also able to try out some solutions together and track how those solutions applied across a broader set of machines. It was this kind of back-and-forth conversation that helped us to really understand the underlying causes of the main audio issues that we were facing in Windows 10.</p>
+
+<p><img style="FLOAT: left; MARGIN: 0px 10px 10px 0px; DISPLAY: inline" src="http://compass.microsoft.com/assets/1b/5f/1b5fe627-7b8f-4064-a23f-11b1c00f7d49.png?n=MBY-audio%20issue.png" width="475" align="left" height="403" /></p>
+
+<p>I want to pause for a second and talk about that statement, “a broader set of machines”. The Windows operating system runs on a simply mind-boggling array of hardware from many different component and system manufacturers. Here at Microsoft we make an effort to stock our test labs with representative hardware to cover the majority of the machines that exist “out in the wild”, but the reality is that we couldn’t possibly have “one of everything”. It just wouldn’t be practical. And even though the same audio chip can be used by many manufacturers, their driver implementations and APOs can be quite different, enough so that a positive result on one machine doesn’t necessarily translate to a positive result on another with the same audio subsystem. The fact that we have you, the Windows Insiders, running the latest Windows 10 bits on a huge variety of machines (some of them pretty esoteric!) means that we can get test results from a much higher percentage of the machines out in the wild. When you see my colleagues and me in the forums saying things like, “We couldn’t do this without you!” this is a big part of what we’re talking about.</p>
+
+<p>It was through our discussions with you that we identified many of the problematic drivers and APOs. I received many reports on audio issues with corresponding hardware IDs, driver versions and machine make and model. Our first line of attack to rectify this problem was to switch out your audio driver for the built-in Windows audio driver (known as “HdAudio.Sys”) using the process documented in my colleague Matt’s excellent <a href="http://blogs.msdn.com/b/matthew_van_eerde/archive/2010/08/23/troubleshooting-how-to-install-the-microsoft-hd-audio-class-driver.aspx">blog post</a>. As the positive results poured in, this list of problematic machines became the basis for our “driver block” list, which enabled us to block the problematic drivers during the Windows 10 upgrade process and put the HdAudio.Sys driver in place right from the beginning. This was probably the single biggest gain we made in solving the audio problems and you were a big part of it. </p>
+
+<p>The whole idea of changing (or resetting) the playback bitrate and depth also came initially from the Community, and in fact that piece of information led us to understand the underlying cause of that particular audio problem. Without your help I think it would have taken quite a lot longer for us to find that problem for ourselves. Similarly, the idea of disabling APO’s (commonly known as “disabling enhancements”) was worked out through great collaboration with members of the Windows Insider Community. Give yourselves a pat on the back!</p>
+
+<p>&nbsp;</p>
+
+<p><b><b><img style="FLOAT: left; MARGIN: 0px 10px 10px 0px; DISPLAY: inline" src="http://compass.microsoft.com/assets/15/3e/153e6ccf-39ee-4f0d-8fa3-939b25196cac.png?n=MBY-windows%20feedback%20app.png" width="581" align="left" height="363" /></b>The Windows Feedback App (aka “UIF”)</b></p>
+
+<p>In addition to our work together in the Answers forums, we also collaborated through the Windows Feedback tool. I’ve discussed this tool from time to time in the Answers forums, but I’d like to restate a few things here so you know just how valuable your feedback really is. The Windows Feedback App runs an engine called “User-Initiated Feedback”, or UIF for short. When you submit feedback through this tool, you select a category and sub-category like “Hardware, Devices and Drivers / Audio, sound and volume”. When you submit your new feedback or “upvote” someone else’s feedback under this category, some diagnostic data is also included with your submission. We receive:</p>
+
+<ul>
+  <li>A DxDiag report from your machine </li>
+
+  <li>An export of the audio section of your registry showing audio endpoints, drivers and APOs </li>
+
+  <li>Details on local audio stack failures </li>
+</ul>
+
+<p>We have some great aggregation and data processing tools here that let me ask questions like, “Looking at everyone that has submitted audio feedback on the latest build, what driver and version are they all using?” When I can easily find answers to these kinds of questions, I know exactly where to dig to fix the most machines possible. It’s really rewarding to, for example, add a particular machine to the driver block list and see complaints for that machine drop to virtually zero.</p>
+
+<p><b>Addressing Audio errors </b></p>
+
+<p>We also collect a limited amount of data from you system that helps us solve a number of audio issues in Windows 10. These details provide us with reliability information on what’s happening in the audio stack on your computer so that we can diagnose problems. For example, if you load Groove Music and start playing a song, if there are issues, we see the errors that occurred along the way.&nbsp; This allows us to look at it in aggregate and see patterns across different device types and diagnose issues like, “Groove Music seems to frequently glitch between songs on machine X from manufacturer Y” and this lets us dig into, and ultimately solve, a lot of problems.</p>
+
+<p>&nbsp;</p>
+
+<p><b>Solutions</b><b></b></p>
+
+<p><img style="FLOAT: right; MARGIN: 0px 0px 0px 10px; DISPLAY: inline" src="http://compass.microsoft.com/assets/d0/aa/d0aa71f1-8756-415f-8d80-74617fe5b2a6.png?n=MBY-audio%20diagnostic.png" width="508" align="right" height="392" /></p>
+
+<p>As we figured out many of these problems, we started distributing the known fixes and workarounds in the Answers forums, through <a href="http://blogs.technet.com/b/mediaq/">blog posts</a> and through results on Bing Search. Many of you passed these solutions on, helping countless other Windows 10 users. We even saw several independent media outlets quoting us and some of you in their articles. But we had one more step to take with the solutions that we developed together with you.</p>
+
+<p>As these fixes became more well-known and more reliable, we started integrating them into the Windows 10 Audio Troubleshooter. The latest version of the troubleshooter gets posted online (the current version is <a href="http://aka.ms/diag_cssemerg69319">here</a>) so that you can run it through its paces before we integrate it directly into the Windows operating system. Over the past several months we integrated many of the top fixes directly into this troubleshooter including:</p>
+
+<ul>
+  <li>Restarting the audio services </li>
+
+  <li>Disabling enhancements </li>
+
+  <li>Resetting the audio playback bitrate/depth </li>
+
+  <li>Switching to the built-in HdAudio.Sys driver </li>
+</ul>
+
+<p>As people run the troubleshooter, it helps us understand how effective each of the included solutions works to resolve audio issues. We then go back and tweak the fixes to continuously improve their effectiveness.</p>
+
+<p><img src="http://compass.microsoft.com/assets/3a/eb/3aeb30ac-e64a-4593-886f-777690a11465.png?n=JohnReply.png" width="492" height="475" /></p>
+
+<p><b>Conclusion and Next Steps</b></p>
+
+<p>To summarize, audio issues </p>
+
+<p>Going forward, the audio team would like to continue our great collaboration with you. I have personally moved to a new team within Microsoft, working on understanding “upgrade and update” feedback from our Enterprise customers. However, my colleagues on the Audio team will continue to work with you, both in the forums and in working through your Windows Feedback submissions.</p>
+
+<p><img src="http://compass.microsoft.com/assets/92/b4/92b41a9b-0f37-42ac-8d06-b647e12bd99f.png?n=NewFeedback.png" width="993" height="426" /></p>
+
+<p>Speaking of feedback, one of the best ways to help the team is to continue submitting via the Windows Feedback app. If you have an audio issue, please submit the feedback in the “<a href="windows-feedback://?contextid=68)">Hardware, Devices, and Drivers / Audio, sound, and volume</a>” category . The best piece of feedback is one that gives us useful keywords like "Realtek", "glitch", "no audio", "static" and such and that provides detailed steps on how we can reproduce the issue and that uses the “Reproduce” option (available when you select “Problem”) in the Windows Feedback tool. The data collected with this option is invaluable in analyzing any given problem.</p>
+
+<p>Thanks, as always, for your contribution to making Windows 10 great!</p>
+
+<p><a href="http://answers.microsoft.com/en-us/profile/33286fab-21e8-4661-95bb-94fa63f92357#user-profile-tab-profile">John Wink [MSFT]</a></p>

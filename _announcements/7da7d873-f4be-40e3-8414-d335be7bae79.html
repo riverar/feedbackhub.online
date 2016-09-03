@@ -1,0 +1,55 @@
+---
+layout: page
+title: 'PROCESS1_INITIALIZATION_FAILED bluescreen error after installing Windows Update KB3105208'
+contentId: 7da7d873-f4be-40e3-8414-d335be7bae79
+date: 2015-10-24T00:00:00-07:00
+---
+<p>Question: </p>
+
+<p>After installing Windows Update KB3105208 on Insider Preview, the system restarts and then fails with a bluescreen error:</p>
+
+<p>PROCESS1_INITIALIZATION_FAILED</p>
+
+<p>Automatic Repair is unable to fix the issue, and System Restore hangs after restarting.</p>
+
+<p><strong>How do I restore my system?</strong> </p>
+
+<p>Our apologies to everyone for the impact this update has had for our Insiders.&nbsp; The Windows Servicing team has pulled this update to prevent further Insiders from experiencing this issue.&nbsp; </p>
+
+<p>For those of you who are experiencing this error, the steps for restoring your system depends on whether or not you tried to run System Restore after the bluescreen error occurred.</p>
+
+<p>If you have NOT tried to run System Restore:</p>
+
+<ul>
+  <li>Boot into UEFI and disable Secure Boot</li>
+
+  <li>Enter your Bitlocker key, if required.&nbsp; </li>
+
+  <li>Boot into Windows</li>
+
+  <li>Uninstall KB3105208</li>
+
+  <li>Reboot the computer to ensure that the KB is fully uninstalled.</li>
+
+  <li>Boot into UEFI and re-enable Secure Boot</li>
+</ul>
+
+<p>If you have tried to run System Restore, you will instead need to try these steps to repair your system:</p>
+
+<ul>
+  <li>The computer will attempt a repair after the bluescreen error occurs.</li>
+
+  <li>Launch <b>Advanced Troubleshooting</b>.&nbsp; </li>
+
+  <li>Enter your Bitlocker key, if required</li>
+
+  <li>Select a restore point prior to installing KB3105208.&nbsp; (Any restore point on or before October 22 will work.)</li>
+
+  <li>Boot into Windows, even if you see a message that the System Restore attempt failed</li>
+
+  <li>Once you are booted into Windows, you will notice that Store doesn’t launch and many apps don’t launch</li>
+
+  <li>Re-launch System Restore and use the same restore point you used in the previous step</li>
+
+  <li>Reboot the computer.&nbsp; You should now be back up and running.</li>
+</ul>

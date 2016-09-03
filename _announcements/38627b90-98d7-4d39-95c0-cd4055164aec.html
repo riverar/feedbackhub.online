@@ -1,0 +1,169 @@
+---
+layout: page
+title: 'Made by you - Display Scaling in Windows 10 '
+contentId: 38627b90-98d7-4d39-95c0-cd4055164aec
+date: 2016-01-06T00:00:00-08:00
+---
+<p>Today we are introducing a new series of articles titled ‘Made by you’. If you have feedback on this type of content or other aspects of the Windows Insider Program, please let us know via the <a href="windows-feedback:?contextid=529" target="_blank">Feedback App</a>.&nbsp;&nbsp;</p>
+
+<p>‘Made by you’ highlights how we are addressing feedback from Windows Insiders, how we investigated this feedback to shape Windows, and why we have made&nbsp;these improvements.</p>
+
+<h3>Overview/Introduction </h3>
+
+<p>Windows 10 is an important release for Windows display scaling. It implements a unified approach to display scaling across all SKUs and devices aimed at these goals: </p>
+
+<ol>
+  <li>Our end users enjoy a mix of UWP and classic desktop applications on desktop SKUs which reliably provide content at a consistent size </li>
+
+  <li>Our developers can create UWP applications that deliver high quality reliably-sized content across all display devices and all Windows SKUs </li>
+</ol>
+
+<p>Windows 10 also delivers desktop and mobile UI which looks polished and crisp across a wider range of display densities and viewing distances than we have ever before supported on Windows. Finally, Windows 10 drives support for high quality multi-monitor scaling for docking and projection into more of both our desktop and our mobile UI. </p>
+
+<p>&nbsp;We want to thank the Windows Insider Community for providing feedback to help us make these changes.&nbsp; Some quotes on the feedback we got and addressed: </p>
+
+<blockquote>
+  <p>I attached a high-DPI (2560x1440) monitor to my surface 3 - everything works great except Office 2013, which looks blurry - it seems like Office is trying to set itself in high-dpi mode, the result is awful.&nbsp; (from <a href="http://answers.microsoft.com/en-us/office/forum/office_2013_release-office_install/blurry-outlook-on-high-dpi-monitor/8b7ed864-cc30-4781-8d66-3f0445255b5f?auth=1" target="_blank">http://answers.microsoft.com/en-us/office/forum/office_2013_release-office_install/blurry-outlook-on-high-dpi-monitor/8b7ed864-cc30-4781-8d66-3f0445255b5f?auth=1</a>&nbsp;) </p>
+
+  <p>I have a Surface Pro 3 with an external HD monitor running Windows 10. The Surface screen is scaled to 150% DPI, the HD monitor, which is the main screen, is in native 100% scaling.&nbsp; </p>
+
+  <p>Powerpoint 2016 does not scale its windows when it is dragged to the high-res Surface screen, but all the fonts and UI elements remain tiny at 100% size. (from <a href="http://answers.microsoft.com/en-us/office/forum/office_2016-powerpoint/powerpoint-2016-desktop-does-not-scale-interface/1e858775-46f8-4ad8-860a-9490bb6d825e" target="_blank">http://answers.microsoft.com/en-us/office/forum/office_2016-powerpoint/powerpoint-2016-desktop-does-not-scale-interface/1e858775-46f8-4ad8-860a-9490bb6d825e</a> ) </p>
+
+  <p>Changing the display DPI to 125% makes some programs blurry or with the wrong DPI settings. Windows 10 needs Windows 7 DPI or XP type scaling.&nbsp; (from Windows Feedback App) </p>
+</blockquote>
+
+<p>This article covers the basics of scaling in Windows 10, how it works, and how users will benefit from the work we have done. It wraps up by charting the course forward and show what we want to tackle in future updates to Win10.&nbsp;&nbsp; </p>
+
+<h3>Our vision for display scaling </h3>
+
+<p>For our end users, display scaling is a platform technology ensuring that content is presented at a consistent and optimal--yet easily adjustable--size for readability and comprehension on every device. For our developers, display scaling is an abstraction layer in the Windows presentation platform, making it easy for them to design and build apps which look great on both high and low density displays.&nbsp; </p>
+
+<h3>Basic concepts and terms </h3>
+
+<p>We need a basic glossary of terms and some examples to show why scaling is important: </p>
+
+<p><img src="http://compass.microsoft.com/assets/a5/97/a5971a0d-a029-4bbe-9852-222cfa3fb711.png?n=DPIBasicConcepts.png" /></p>
+
+<p><img src="http://compass.microsoft.com/assets/d9/c3/d9c3913c-8387-4d38-bde7-8c9e72f0b28a.png?n=DPIBasicConcepts2.png" /></p>
+
+<p><img src="http://compass.microsoft.com/assets/76/b0/76b01ebb-8fd0-4c2a-bb73-ed82ece4b9e8.png?n=DPIViewingDistance.png" /></p>
+
+<p><img src="http://compass.microsoft.com/assets/e4/d9/e4d9ddf0-f561-481b-ba27-adcb88c29cb7.png?n=DPIViewingDistance2.png" /></p>
+
+<p>While these examples use phones for the sake of simplicity, the same concepts apply to wearables, tablets, laptops, desktop displays and even conference room wall-mounted TVs and projectors.&nbsp;&nbsp; </p>
+
+<h3>Dynamic scaling scenarios </h3>
+
+<p>Note that more than one display may be used on the same device—either all at the same time, or at different times in sequence.&nbsp; Scale factor and effective resolution are therefore <strong><em>dynamic</em></strong> concepts and depend on where content is displayed at a particular time. </p>
+
+<p>Some everyday scenarios where this dynamic scaling can take place include projecting, docking, moving apps between different monitors, and using remote desktop to connect your local display to a remote device.&nbsp; </p>
+
+<h3>Who does the scaling, and how do they do it </h3>
+
+<p>Because Windows supports many different kind of applications and presentation platforms, scaling can occur in different places. This table illustrates the major scaling categories: </p>
+
+<p><img src="http://compass.microsoft.com/assets/aa/78/aa78aafa-cd64-40d2-990c-bd3bf1372922.png?n=DPIScalingClass.png" /></p>
+
+<p>What this means for the user: </p>
+
+<ol>
+  <li>UWPs and most Windows UI looks great on high DPI displays and in any multi-mon scenarios where different display scale factors are in play </li>
+
+  <li>A few important classic desktop apps (and all WPF apps) look great on high DPI primary displays but a little blurry on other secondary displays </li>
+
+  <li>A large number of older classic desktop apps look blurry on high DPI displays. </li>
+</ol>
+
+<h3>What we have done in Windows 10 </h3>
+
+<p>Now we can talk about the work done in Windows 10 to improve our support for both high DPI displays and for dynamic scaling scenarios. This works falls into several major areas: </p>
+
+<ol>
+  <li>Unifying how content is scaled across all devices running Windows to ensure it consistently appears at the right size </li>
+
+  <li>Extending the scaling system and important system UI to ensure we can handle very large (8K) and very dense (600 DPI) displays </li>
+
+  <li>Adding scaling support to the mobile UX </li>
+
+  <li>Improve Windows support for dynamic scaling: more OS and application content scales dynamically, and the user has greater control over each display’s scaling </li>
+</ol>
+
+<p>Let’s take a closer look at each of these. </p>
+
+<h3>Unified and extended scaling system </h3>
+
+<p>In Windows 8.1 the set of supported scale factors was different for different kinds of content.&nbsp; Classic desktop applications scaled to 100%, 125%, 150%, 200% and 250%; Store apps scaled to 100%, 140% and 180%.&nbsp; As a result, when running different apps side by side in productivity scenarios, content could have inconsistent sizes in different apps. In addition, on very dense displays, the scaling systems “capped out” at different points, making some apps too small on them.&nbsp;&nbsp; </p>
+
+<p>This chart shows the complexity and limits of the 8.1 scaling systems: </p>
+
+<p><img src="http://compass.microsoft.com/assets/29/53/2953096f-9042-49f1-815d-7407f6869918.png?n=DPIScalingClass2.png" /></p>
+
+<p>For Windows 10, we unified all scaling to a single set of scale factors for both UWP and classic applications on both the Desktop and Mobile SKU: </p>
+
+<p><img src="http://compass.microsoft.com/assets/45/85/45854410-3c57-4f70-89c8-95c35e3e8120.png?n=DPIScalingClass3.png" /></p>
+
+<p>In Windows 8.1 all scaling topped out at 180% or 250%.&nbsp; For Windows 10 we knew that devices like 13.3” 4K laptops and 5.2” and 5.7” QHD phones would require even higher scale factors. Our unified scaling model for Windows 10 runs all the way to support 450%, which gives us enough headroom to support future displays like 4K 6” phones and 23” 8K desktop monitors. </p>
+
+<p>As part of this effort, Windows 10 has polished the most commonly used desktop UI to look beautiful and clear even at 400% scaling. </p>
+
+<h3>Making the mobile shell scalable </h3>
+
+<p>We have also overhauled our Mobile SKU so that the mobile shell UI and UWP apps will scale to the Windows 10 scale factors.&nbsp; This work ensures that UWP apps run at the right size on phones and phablets as well as desktop displays, and that the mobile shell UI is presented at the right size on phones of different sizes, resolutions and pixel densities. This provides our users with a more consistent experience, and makes it easier to support new screen sizes and resolutions.&nbsp; </p>
+
+<h3>Improve Windows’ support for dynamic scaling </h3>
+
+<p>When we added dynamic scaling support in Windows 8.1, there was relatively little inbox UI that worked well with dynamic scaling, but in Windows 10, we have done work in many areas of the Windows UI to handle dynamic scaling.&nbsp; </p>
+
+<h5>UWP application dynamic scaling </h5>
+
+<p>As noted above, UWP HTML and XAML apps are designed to be dynamically scalable.&nbsp; As a result, these applications render crisply and with the right size content on all connected displays.&nbsp; </p>
+
+<h5>Windows “classic” desktop UI </h5>
+
+<p>Windows 10 makes large parts of the most important system UI scale properly in multi-monitor setups and other dynamic scaling scenarios so that it will be the right size on any display.&nbsp; </p>
+
+<h5>Start Experience </h5>
+
+<p>For example, the desktop Start and Cortana experiences are built on the XAML presentation platform, and because of that, they scale crisply to the right size on every display.&nbsp; </p>
+
+<h5>File Explorer </h5>
+
+<p>File Explorer—a classic desktop application built on the Win32 presentation platform—was not designed to dynamically rescale itself. In Windows 10, however, the file explorer app has been updated to support dynamic scaling.&nbsp; </p>
+
+<h5>Windows Taskbar</h5>
+
+<p>In Windows 8.1 the Windows taskbar had similar historical limitations. In Windows 10, the taskbar renders itself crisply at every scale factor and the correct size on all connected displays in all different scenarios. Secondary taskbar UI like the system clock, jumplists and context menus also scale to the right size in these scenarios. </p>
+
+<h5>Command shells et al. </h5>
+
+<p>We have done similar work elsewhere in commonly used parts of the desktop UI.&nbsp; For example, in Windows 10 “console windows” like the command prompt scale correctly on all monitors (provided you choose to use scalable fonts), and other secondary UI like the “run dialog” now scales correctly on each monitor.&nbsp; </p>
+
+<h5>Mobile shell and frameworks </h5>
+
+<p>In Windows 10 the mobile platform also supports dynamic scaling scenarios. In particular, with Continuum, the phone can run apps on a second attached display.&nbsp; In most cases external monitors have different scale factors than the phone’s display. UWP apps and shell UI can now scale to a different DPI on the secondary display applications so that Continuum works correctly at the right size on the Mobile SKU.&nbsp; </p>
+
+<h5>User scaling setting </h5>
+
+<p>Windows 8.1 users reported frustration with the user setting for scaling: </p>
+
+<p>1) There was a single slider for multiple monitors. The slider changed the scale factor for every connected monitor, making it impossible to reliably tweak the scale factor for only one of the displays. </p>
+
+<p>2) Users found it confusing that there were two scale settings, one for modern apps/UI and another for classic apps/UI, and that the two settings worked in significantly different ways. </p>
+
+<p>In Windows 10 there is a single scale setting that applies to all applications, and the user applies it to a single display at a time. In the fall update, this setting has been streamlined to apply instantly. </p>
+
+<h3>What we didn’t get to </h3>
+
+<p>We are already seeing a number of common feedback issues that we’re working on for future releases of Windows. Here are some of the biggest ones we are tracking for future releases: </p>
+
+<h5>Unscaled content: Lync, desktop icons </h5>
+
+<p>Some applications (for example, Lync) choose to disable bitmap scaling for a variety of technical reasons, but do not take care of all their own scaling in dynamic scaling scenarios. As a result, these apps can display content that is too large or too small. We are working to improve these apps for a future release. For example, desktop icons are not per-monitor scaled in Windows 10, but in the fall update they are properly scaled in several common cases, such as docking, undocking, and projection scenarios. </p>
+
+<h5>Blurry bitmap-scaled content: Office apps </h5>
+
+<p>Although the UWP Office applications are fully per-monitor scaled in Windows 10, the classic desktop apps are “System scale factor apps”, as described in the table above. They generally look great on a high DPI device, but when used on secondary displays at different scale factors (including docking and projection), they may be somewhat blurry due to bitmap scaling. A number of popular desktop applications (Notepad++, Chrome, Firefox) have similar blurriness issues in these scenarios. We have ongoing work on improving migration tools for developers with these complex Win32 desktop applications. </p>
+
+<h3>Conclusion </h3>
+
+<p>Scaling is a complex problem for the open Windows ecosystem, which has to support devices ranging in size from roughly 4” to 84”, with densities ranging from 50DPI to 500DPI. In Windows 10 we took steps to consolidate and simplify our developer story for scaling and to improve the end-user visual experience. Stay tuned for future releases! </p>

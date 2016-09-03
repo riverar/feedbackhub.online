@@ -1,0 +1,49 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14257'
+contentId: 952cf382-f2d8-4854-a5ff-7ed3eea53abf
+date: 2016-02-03T00:00:00-08:00
+---
+<p>Hi everyone, </p>
+
+<p>Today, we are releasing Build 14257 Windows Insiders in the Fast ring. </p>
+
+<p>As I mentioned last week, we’re at the beginning of a new development cycle for our next feature update to Windows 10. Teams are still early in their new feature work and changes in this build are mostly about laying the foundation for those features to start coming into builds. So you won’t see many visible changes quite yet. Also, the increased pace of the Fast ring (You’ll note that this build is only 6 revs newer than the last build we sent to the Fast ring) means that there will be fewer big changes between builds as opposed to this time last year when builds were about 30 days apart. There is a ton of coding work going on, but I want to set your expectations on how it will show up for you at our increased Fast ring pace. </p>
+
+<p>We are seeing lots of bug fixes coming in from teams, including some which were reported by Insiders: </p>
+
+<ul>
+  <li>The issue of periodic app crashes or other memory related app errors due to a memory management change has been resolved. If you were having issues launching the Git client for Windows, you should now be able to launch it in this build. </li>
+
+  <li>The Connect button now shows up again in Action Center. </li>
+
+  <li>F12 Developer Tools will now load correctly Microsoft Edge.&nbsp; </li>
+
+  <li>We fixed an issue where suggested apps were being shown on the Start menu even though "Occasionally show suggestions in Start" was turned off under Settings &gt; Personalization &gt; Start.&nbsp; </li>
+
+  <li>We fixed an issue where if you try to change the Lock screen picture with “Get fun facts, tips, tricks and more on your lock screen” turned on it will revert back to the default.&nbsp; </li>
+
+  <li>We fixed an issue where the positions of desktop icons get jumbled up after switching DPI settings from 100% to 150% or 175%.&nbsp; </li>
+
+  <li>We also fixed an issue where pasting files into a new .zip file (compressed folder) in File Explorer by either right-clicking or Control-V would not work. You should be able to paste tiles into new .zip files just fine now.&nbsp; </li>
+</ul>
+
+<p>Known issues: </p>
+
+<ul>
+  <li>If you choose “Reset This PC” under Settings &gt; Update &amp; Security &gt; Recovery – your PC will be in an unusable state. There is no workaround if your PC gets into this state and you will need to reinstall Windows. This issue will be fixed in the next build. You can still rollback to the previous build if for some reason this build doesn’t work out for you. This bug also existed in Build 14251 so please avoid resetting your PC on these builds.&nbsp; </li>
+
+  <li>You might see a WSClient.dll error dialog after logging in. We’re working on a fix for this but as a workaround, you can run the following in Command Prompt with administrative rights: schtasks /delete /TN “\Microsoft\Windows\WS\WSRefreshBannedAppsListTask” /F. This issue will be fixed in the next build.&nbsp; </li>
+
+  <li>The front-facing camera is unusable on PCs with Intel RealSense resulting in being unable to use Windows Hello or any other apps that utilize the front-facing camera.&nbsp; </li>
+
+  <li>After logging in to your PC, you may hit a UI issue in which Airplane Mode will incorrectly show as “on” even though your PC’s Wi-Fi is powered on. This is due to a timing issue between how the UI communicates and waits for the underlying platform to respond. The UI for Airplane Mode essentially does not wait long enough for the device’s physical radios to power on before reporting the current state.&nbsp; You can toggle the Airplane Mode on and off to get Airplane Mode back to showing the correct state. </li>
+</ul>
+
+<p>As always – thank you for being Windows Insiders and make sure to send us feedback on any issues you run into with this build in the <a href="http://aka.ms/windowsfeedbackapp" target="_blank">Windows Feedback app</a>. </p>
+
+<p>We know a lot of Windows Insiders will be celebrating the Lunar New Year this coming weekend. Building off our Ninja Cat heritage, we wanted to provide a fun new set of images to celebrate the Year of the Monkey – you can <a href="https://www.microsoft.com/en-us/download/details.aspx?id=50823" target="_blank">click here to download</a>. Happy Year of the Monkey from the Windows Insider Program! </p>
+
+<p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=50823" target="_blank"><img src="http://compass.microsoft.com/assets/c9/a1/c9a1400f-ebf7-464f-aff3-272244f8f416.jpg?n=Windows_Insider_Ninjamonkey-800x1280.jpg" width="312" height="312" /></a></p>
+
+<p>Thanks, g </p>

@@ -1,0 +1,17 @@
+---
+layout: page
+title: 'Known issue for PC flight 14251'
+contentId: 4d74f798-b712-404e-b6b8-c82b49547b52
+date: 2016-02-01T00:00:00-08:00
+---
+<ul>
+  <li>After choosing “Reset This PC” under Settings &gt; Update &amp; Security &gt; Recovery – your PC will be in a unusable state. There is no workaround if your PC gets into this state and you will need to reinstall Windows. </li>
+
+  <li>You might see a WSClient.dll error dialog after logging in. We’re working on a fix for this but as a workaround, you can run the following in Command Prompt with administrative rights: schtasks /delete /TN “\Microsoft\Windows\WS\WSRefreshBannedAppsListTask” /F </li>
+
+  <li>The Connect button does not show up in Action Center. The workaround is to press Windows key + P and then click “Connect to a wireless display”. </li>
+
+  <li>Due to a recent memory management change, you may see periodic app crashes or other memory related app errors.&nbsp;Rebooting your PC may correct the issue.&nbsp;Due to this issue, the Github client will not launch. If you need to use the Github client – the workaround is to rollback to the previous build. </li>
+
+  <li>F12 Developer Tools will not load in Microsoft Edge. Should be fixed in the next build.</li>
+</ul>

@@ -1,0 +1,39 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Insider Preview Build 14385 for PC'
+contentId: 0c340cf0-94b5-44b0-a425-89327d5d45c5
+date: 2016-07-09T00:00:00-07:00
+---
+<h3>Known issues for PC</h3>
+
+<ul>
+  <li>A recent fix went into place for the Hyper-V firmware that will that affect the ability to boot <a href="https://technet.microsoft.com/en-us/library/dn765472.aspx?f=255&amp;MSPPError=-2147217396">Windows Server 2016 Tech Preview 5</a> VMs with Secure Boot enabled.&nbsp;A fix for TP5 builds has been developed however, due to release schedules, the Insider Preview build changes will be released before the TP5 fix is released. During that time, if you try to boot a new TP5 VM with Secure Boot enabled, it will fail. The workaround is to disable Secure Boot during this period.</li>
+
+  <li>After you install this build (as well as Build 14383) on a PC using a non-EN-US language, you may get error code 0x80004005 when enabling Developer Mode on the “For Developers” Settings Page. Even after seeing this error message, your machine is in developer mode and you should still be able to use Visual Studio to develop Universal Windows Applications. In most cases, this error indicates that extra components required by the operating system to enable additional debugging features in Visual Studio or the Windows Device Portal could not be installed automatically. </li>
+</ul>
+
+<p>To fix this: </p>
+
+<ol>
+  <li>Open the Settings app.</li>
+
+  <li>Click on “Apps &amp; features”</li>
+
+  <li>Choose “Manage Optional features”</li>
+
+  <li>Press the button “Add a feature”</li>
+
+  <li>Select the package for Windows Developer Mode</li>
+
+  <li>Click “Install”</li>
+
+  <li>Reboot your PC</li>
+
+  <li>Launch Command Prompt as Administrator</li>
+
+  <li>Run: sc config debugregsvc start=auto</li>
+
+  <li>Run: sc start debugregsvc</li>
+</ol>
+
+<p>Finally, return to the “For Developers” Settings page. You will still see the error code, 0x80004005 but you should now be able to enable Windows Device Portal and the Device Discovery features.</p>

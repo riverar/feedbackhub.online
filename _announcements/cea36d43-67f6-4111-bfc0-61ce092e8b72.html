@@ -1,0 +1,200 @@
+---
+layout: page
+title: 'Inside WDG - Branches and Rings'
+contentId: cea36d43-67f6-4111-bfc0-61ce092e8b72
+date: 2016-02-10T00:00:00-08:00
+---
+<p>Today, we’re kicking off a new series of articles we’ll publish regularly to Insider Hub called Inside WDG. WDG is short for the Windows and Devices Group which is the group at Microsoft responsible for Windows as well as Microsoft’s devices such as Surface, Xbox, Lumia, and Band. And with Inside WDG, we want to give Insiders a behind-the-scenes look at how we’re building Windows. It will also give us the opportunity go into greater detail on specific topics that we know are of interest to Insiders. For our first Inside WDG article, we’re going to talk about our Windows branches and rings.</p>
+
+<p>Throughout Windows 10 development and over the past year of the Windows Insider Program, we have evolved how we develop and release Windows. We have learned a lot from our Windows Insiders and customers and have made significant improvements to our product and the tools we use to develop them. Therefore, we would like to take the time to give Windows Insiders some background on how our development process supports the Windows Insider Program and some upcoming changes. </p>
+
+<h4>Windows as a service</h4>
+
+<p>We often talk about offering Windows 10 as Windows as a service. This means we are continuously adjusting our plans, developing new features, and improving the existing features of all of our Windows-based products. The service isn’t just one component, but a combination of the software that gets installed on various types of hardware like PC’s, Phones, Xbox’s, and HoloLens; the applications coming from the Windows Store; and all the cloud services that these devices connect to.</p>
+
+<p>How often each component of the service is updated varies depending on each customer’s configuration of that component (e.g. enabling auto-updates or not), the deployment channel they’re on (e.g. Fast vs. Slow), and whether the component is integrated into the OS or a standalone component like an app. For some of our enterprise customers on the Long Term Servicing Branch (LTSB), they may only receive security updates a few times a year, as they become available, while some of our cloud services get updates via <a href="https://en.wikipedia.org/wiki/Continuous_delivery">Continuous Deployment</a>, any time a change is made.</p>
+
+<h4>Windows Branches</h4>
+
+<p>We use branches to signify different versions of Windows. We use these branches to distinguish:</p>
+
+<ul>
+  <li>Feature Upgrades – that contain new and updated features such as Windows 10, Windows 10 November Update (Version 1511), etc. </li>
+
+  <li>Servicing Updates/Cumulative Updates – that contain updates to a specific Windows build to improve overall system reliability. </li>
+</ul>
+
+<p>As we develop new Feature Upgrades we regularly increment the major build number (Build Release Version), such as 10586, 11102, to distinguish between each build; for Servicing Updates\Cumulative Updates to each version of Windows we increment the minor build number (Service Release Version), such as 10586.18, 10586.63, 10586.107.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>
+  <table cellSpacing="0" cellPadding="5" border="1" unselectable="on"><tbody>
+      <tr>
+        <td vAlign="top" width="367">
+          <p><b>Branch</b></p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p><b>What’s in it</b></p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p><b>Key benefits</b></p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p><b>Build Numbers (as of Feb 10th, 2016)</b></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="367">
+          <p><b><u>Development</u></b><b><u> Branch</u></b></p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Early access to new and improved features that are still under development</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Early preview of new features that will be made available in Windows, including the ability to give feedback during development.</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>11000+ (before Jan 22<sup>nd</sup>) </p>
+
+          <p>14250+ (after Jan 22<sup>nd</sup>)</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="367">
+          <p>Current Branch (CB)</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>The latest Feature Upgrade e that contains new and improved features</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Makes newly developed and improved features available to users as soon as possible</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Windows 10 November Update 
+            <br />(Version 1511)</p>
+
+          <p>10586 based builds </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="367">
+          <p>Current Branch for Business (CBB)</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>The latest Feature Upgrade to Windows, approximately 4 months after first published by Microsoft</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Provides additional time to test new and improved features<del dateTime="2016-01-23T10:58" cite="mailto:TJ%20Rhoades">,</del> before deployment within an enterprise or small business</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Windows 10 (July)</p>
+
+          <p>10240 based builds</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="367">
+          <p>Long-Term Servicing Branch (LTSB)</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>The latest version of Windows Enterprise LTSB</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Enables long-term deployment of selected Windows&nbsp;10 releases in low-change configurations</p>
+        </td>
+
+        <td vAlign="top" width="367">
+          <p>Windows 10 (July) 
+            <br />Enterprise LTSB Only</p>
+
+          <p>10240 based builds</p>
+        </td>
+      </tr>
+    </tbody></table>
+</p>
+
+<p>Windows Store apps, cloud services, and device firmware and drivers are maintained across various team and technology repositories and will have their own versioning. The Windows Insider Program has focused on providing Windows builds primarily from the Development Branch, but at times will also receive preview releases of Servicing Updates in the Current Branch. </p>
+
+<h4>Flighting Rings</h4>
+
+<p>We are also updating how we use our flighting rings in the Windows Insider Program from what we previously <a href="https://blogs.windows.com/windowsexperience/2015/03/09/frequency-and-predictability-of-builds-for-windows-insiders/">had been doing</a>. Flighting rings are used to evaluate the quality of our software as it is released to progressively larger audiences. We will flight a Feature Update, application, etc. to the first ring if it passes all required automated testing in the lab. The flight will continue to be evaluated against a set of criteria to ensure it is ready to progress to the next ring. In order to get faster builds to Insiders, we are changing the ordering of how we promote builds between rings, the ring progression criteria, and also adding a new ring.</p>
+
+<p><img src="http://compass.microsoft.com/assets/0a/6f/0a6fa0f8-46ad-4631-b4d2-be7ed8285cc1.JPG?n=RingDiagram.JPG" /></p>
+
+<p>In the past<ins dateTime="2016-01-22T14:02" cite="mailto:Brandon%20LeBlanc">,</ins> we often would hold builds from Windows Insiders when there were issues that we thought could block a subset of users from using common features or applications. Going forward, Windows Insiders with devices in the <b><u>Fast ring</u></b> should be prepared for more issues that may block key activities that are important to you or may require significant workarounds. Because we are also validating a build on a smaller set of devices before going to Fast, there is also a chance that some features may work on some devices but may fail in other device configurations. Windows Insiders should be ready to reinstall Windows using the <a href="http://go.microsoft.com/fwlink/?LinkId=691209">Media Creation Tool</a> or <a href="http://go.microsoft.com/fwlink/p/?LinkId=522381">Windows Device Recovery Tool</a> when you are significantly blocked (after reporting the issue to us in the Windows Feedback app or the Windows Insider forums, of course! :-) ). The benefit of being in Fast is that you will be able to use and provide feedback on new and improved features first! </p>
+
+<p>Builds are sent to the <b><u>Slow ring</u></b> after feedback has been received from Insiders within the Fast ring and analyzed by our Engineering teams. These builds will include updates to fix key issues that would prevent many Windows Insiders from being able to use the build on a daily basis. These builds are still from the Development Branch and may have issues that would be addressed in a future flight. If you are looking for a more stable build on the Development Branch<ins dateTime="2016-01-22T14:49" cite="mailto:Anthony%20Kinsey">,</ins> you should move your devices to Slow.</p>
+
+<p>In the coming weeks for Windows Insiders that want to be on the Current Branch, but still get early access to updates, applications, and drivers without taking the risk of moving to the Development Branch – the new <b><u>Release Preview ring</u></b> will be your best option. It is also worth noting, that the Release Preview ring will only be visible when your Windows build version is the same as the Current Branch. The easiest way to go between the Development Branch to the Current Branch is to use the <a href="http://go.microsoft.com/fwlink/?LinkId=691209">Media Creation Tool</a> or <a href="http://go.microsoft.com/fwlink/p/?LinkId=522381">Windows Device Recovery Tool</a> to reinstall Windows. </p>
+
+<p>&nbsp;</p>
+
+<p>
+  <table cellSpacing="0" cellPadding="5" border="1" unselectable="on"><tbody>
+      <tr>
+        <td vAlign="top" width="197">
+          <p><b></b></p>
+
+          <p><b>Ring</b></p>
+        </td>
+
+        <td vAlign="top" width="774">
+          <p><b>Description</b></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="197">
+          <p>Fast</p>
+        </td>
+
+        <td vAlign="top" width="774">
+          <p>Best for Insiders who enjoy being the first to get access to builds and feature upgrades, with some risk to their devices in order to identify issues, and provide suggestions and ideas to make Windows software and devices great.</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="197">
+          <p>Slow</p>
+        </td>
+
+        <td vAlign="top" width="774">
+          <p>Best for Insiders who enjoy getting early access to builds and feature upgrades, with less risk to their devices, and still want to provide feedback to make Windows software and devices great. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td vAlign="top" width="197">
+          <p><b><u>Release Preview </u></b></p>
+        </td>
+
+        <td vAlign="top" width="774">
+          <p>Best for Insiders who enjoy getting early access to updates for the Current Branch, Microsoft applications, and drivers, with minimal risk to their devices, and still want to provide feedback to make Windows devices great. </p>
+        </td>
+      </tr>
+    </tbody></table>
+</p>
+
+<p>As with any part of the Windows Insider Program, we will continue to evaluate your feedback to make improvements to Windows and the Windows Insider Program. </p>
+
+
+<p>If you have feedback on this type of content or other aspects of the Windows Insider Program, please let us know via the <a href="windows-feedback:?contextid=529">Feedback App</a>.&nbsp;</p>

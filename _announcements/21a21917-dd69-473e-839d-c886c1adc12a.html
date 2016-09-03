@@ -1,0 +1,117 @@
+---
+layout: page
+title: 'Inside WDG – Localization Process'
+contentId: 21a21917-dd69-473e-839d-c886c1adc12a
+date: 2016-03-31T00:00:00-07:00
+---
+<p>Hello Windows Insiders!</p>
+
+<p>My name is Miki Albertson and I’m a Program Manager from Windows Localization team. Today I would like to give you a behind-the-scenes look at how WDG products are made available to Windows Insiders in their language. By the way, we call this process “Localization”.</p>
+
+<p>If you have ever wondered about how our products are made available in your markets and in your language, please read on!"</p>
+
+<p>This is a simplified view, but it will give you an overview into main aspects of Localization process.</p>
+
+<p>Each process is explained in detail below. </p>
+
+<p><img src="http://compass.microsoft.com/assets/dc/e6/dce6952d-4a6b-4ce4-afae-4b789139f526.png?n=Localization%20Process.png" width="765" height="220" /></p>
+
+<p><b>Feature Development:</b><b></b></p>
+
+<p>The process starts with our feature development teams.&nbsp;They design and engineer new features (or modify existing ones) to deliver to customers in the next update of Windows 10. Many partner teams are involved in this process - including the Marketing Team, the Design Team, the User Research Team, and of course valuable feedback from our wonderful Insiders! And yes, we in the Localization Team are one of their important partners. As part of our translation process, we also help influence their feature designs to make sure they are meeting International standards as well as being “localizable”.</p>
+
+<p><b>Resource Validation:</b><b></b></p>
+
+<p>Once the feature set is coded, one of the many checks the various feature teams and the Localization Team does is to see if the “resources” (text strings and other information used in the UI) are localizable and/or likely to produce other issues like truncations.&nbsp;</p>
+
+<p>To do this, we often use a tool called “Pseudo Localization”.&nbsp;Pseudo Localization is a tool that allows us to pre-test Localization aspects of our products before we send them for translation. It works in two main ways. </p>
+
+<p><b>1. </b><b>Pseudo Build</b></p>
+
+<p>First, we use a fictitious language to artificially localize the entire Windows 10 build to include some of the most problematic characteristics of localized text and adding unique identifiers to each resource so that we can identify affected resources easily when we find issues. It also increases the string length to make it easier to find potential truncation issues before we even see the translated strings. This version of the tool is mainly used by the feature teams. Here is the picture shows the unique identifier and the fictitious language with the problematic characters.</p>
+
+<p><img src="http://compass.microsoft.com/assets/57/af/57afda18-36b0-4abc-938b-72fa6d022866.png?n=Pseudosettings.png" /></p>
+
+<p><b>2. </b><b>Pseudo Enhancement</b></p>
+
+<p>Second, we use a process known as “pseudo enhancement” within the existing localized builds to allow us to mark new or changed UI strings that have been exposed to localization, but have not yet been localized. For some non-Latin based languages, this can involve adding some random localized characters at the start of the unlocalized string as an identifier; or in the case of Latin-based languages we replace the existing characters in the string with accented versions. If there are unlocalized (i.e. English) strings in the build that don’t have those characters, this is potentially a bug and could potentially delay the project. (Please see below for examples of “Pseudo Enhancement”)</p>
+
+<p><b>Non-Latin based language example:</b></p>
+
+<p><b><img src="http://compass.microsoft.com/assets/ed/57/ed577147-1a07-4371-8531-c6c6d9e192b2.png?n=PseudoLatinSettings.png" /></b></p>
+
+<p><b></b></p>
+
+<p><b>Latin based language example:</b><b></b></p>
+
+<p><b></b></p>
+
+<p><img src="http://compass.microsoft.com/assets/a9/74/a9742537-f6e3-4958-8d0b-b9407ebb02bd.png?n=Pseudoprofile.png" /></p>
+
+<p>With Windows as a Service, validation through the Pseudo Localization Tool is often done parallel to our translation work.&nbsp;Once those resources have been translated, Pseudo-enhanced characters that were added to the resources will be removed. Also, for those resources that are not yet localized, the process is to turn off Pseudo Localization tool before we release to Insiders, but sometimes due to this not being done as expected, you might see the pseudo strings in the Insider Preview builds.</p>
+
+<p><b>Localization (Translation + Localization Engineering):</b><b></b></p>
+
+<p>Now, it’s time for localization!&nbsp;Localization of new and updated resources is done on a periodic basis. Our translators receive the resources/strings to be localized and localize them according to instructions received for the feature area. A series of validation checks are performed on the localized content when translators have completed their work. Once the translation work is complete, the updated resources are checked-in and a new localized build is created with those changes. In addition to the validation checks that are performed on the translations themselves, there are also validation checks at the time that the new build is created. If there are any issues found, those fixes will appear in a future build.</p>
+
+<p>What languages are available as Insider Preview Build?</p>
+
+<p><b></b></p>
+
+<p>Desktop &amp; Mobile:</p>
+
+<p>Arabic (Saudi Arabia), Catalan (Catalan), Chinese (Simplified, China), Chinese (Traditional, Taiwan), Czech (Czech Republic), Dutch (Netherlands), English (United Kingdom), English (United States), Finnish (Finland), French (Canada), French (France), German (Germany), Hindi (India), Italian (Italy), Japanese (Japan), Korean (Korea), Polish (Poland), Portuguese (Brazil), , Russian (Russia), Spanish (Mexico), Spanish (Spain, International Sort), Swedish (Sweden), Thai (Thailand), Turkish (Turkey), Vietnamese</p>
+
+<p>Mobile Only: (Addition to above language set, below are available to Mobile devices)</p>
+
+<p>Afrikaans (South Africa), Albanian (Albania), Amharic, Azerbaijani (Latin, Azerbaijan), Bangla (Bangladesh), Basque, Belarusian (Belarus), Bulgarian (Bulgaria), Croatian (Croatia), Danish (Denmark), Estonian (Estonia), Filipino (Philippines), Galician (Galician), Greek (Greece), Hausa (Latin, Nigeria), Hebrew (Israel), Hungarian (Hungary), Icelandic, Indonesian (Indonesia), Kannada, Kazakh (Kazakhstan), Khmer (Cambodia), KiSwahili, Lao (Laos), Latvian (Latvia), Lithuanian (Lithuania), Macedonian (Former Yugoslav Republic of Macedonia), Malay (Malaysia), Malayalam, Norwegian, Bokmål (Norway), Persian, Portuguese (Portugal), Romanian (Romania), Serbian (Latin, Serbia), Slovak (Slovakia), Slovenian (Slovenia), Tamil (India), Telugu, Ukrainian (Ukraine), Uzbek (Latin, Uzbekistan)</p>
+
+<p><b>Localization Validation:</b><b></b></p>
+
+<p>Once the build is available, our Quality team engages in validating the Localized build quality.&nbsp;They start with a very simple but very important quality check known as a “BVT (Build Verification Test)”, and if the build passes that test then they can move onto more advanced testing of the overall functionality and localization quality of the build. While our translators have checked for Linguistic quality when doing the translation work, the Quality team also periodically checks the linguistic quality of those UI changes using native speakers.&nbsp;If the Quality team finds linguistic issues, they report them and our translators review those bugs and fix them at the earliest possible time through the above “Check-in” cycles.</p>
+
+<p><b>Iterate, re-iterate and Release:</b><b></b></p>
+
+<p>This whole process is repeated numerous times during our product cycles to improve quality of our products before delivering to our customers.</p>
+
+<p>By the way, if you are a developer and would like more information on how to build global-ready applications (like UWP App), please make sure to check out the additional info on the Windows Dev Center at <a href="http://dev.windows.com/internationalization">http://dev.windows.com/internationalization</a>. </p>
+
+<p>Now, let’s talk about Insider Preview Builds</p>
+
+<p><b></b></p>
+
+<p><b>Insider Preview Builds:</b><b></b></p>
+
+<p>It is our desire to get Insider Preview builds out into your hands as quickly as features are available, even before our translation process had a chance to catch up with some recent UI/resource changes.&nbsp;Our translation process can take somewhere from 4 days to possibly many weeks depends on the technical challenges the new feature set may have and get resolved. Rather than making Insiders wait until translation is ready, Insiders can get their hands on the new features as soon as they are available. Meanwhile, the Localization process continues and eventually it will catch up in future builds.</p>
+
+<p>&nbsp;</p>
+
+<p><img src="http://compass.microsoft.com/assets/b6/78/b678eff6-1d06-48b8-b455-00025f2305b4.png?n=Insider%20Localization%20Process.png" width="626" height="303" /></p>
+
+<p>&nbsp;</p>
+
+<p>Because of this, periodically, some updated text in the UI of Insider Preview builds will not be translated into all available languages and will instead appear in English.&nbsp;While text will be translated in a future build, we do actively seek your feedback on the translated UI in the Insider Preview builds.</p>
+
+<p><b>Feedback:</b><b></b></p>
+
+<p>We DO look at your valuable feedback, and a BIG THANK YOU to all of you Insiders! You have helped us identify many issues because of your feedback!</p>
+
+<p>Your feedback helps influence how features are designed and also helps improve the overall experience for other customers. And from the Localization point of view, your feedback helps us to improve language quality and in-market experiences for our customers world-wide.&nbsp;As we love to hear your thoughts on the Localization/translation quality, here is how you can help us.</p>
+
+<ul>
+  <li>First of all, please look for similar feedback first and Upvote.&nbsp;One of the first things we assess when we review a piece of feedback is how many votes it has.&nbsp;The higher the Upvote counts, the higher the chance we will take action on your feedback. </li>
+
+  <li>When you select a category for your feedback, please select the feature/App that you are giving feedback on </li>
+
+  <li>In a near future, there will be an option to highlight that your feedback is about translation when submitting.&nbsp;This will notify us that it is about a translation issue and will enable us to quickly take action based on your feedback! We will announce this change when it becomes available so stay tuned. </li>
+</ul>
+
+<p>On behalf of my team, THANK YOU so much Insiders for your willingness to support Microsoft by providing valuable feedback to improve the quality of our products World-Wide!</p>
+
+<p>Miki Albertson</p>
+
+<p><img src="http://compass.microsoft.com/assets/c3/ac/c3ac0ba9-c71d-4927-80e4-dcb500b9c7a6.png?n=LocalizationTeam.png" width="814" height="502" /></p>
+
+<p>&nbsp;</p>
+
+<p><em>Thank you for your feedback! – Here’s the small portion of the Redmond team that works on the Windows Localization. (Our team is a world-wide, as Insiders are</em><em>.</em><em>)</em></p>
