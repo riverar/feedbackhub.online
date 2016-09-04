@@ -37,6 +37,7 @@
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>
+          <p class="navbar-text navbar-right">Last updated: <span id="last-updated-datetime">{{ site.time }}</span></p>
         </div>
       </div>
     </nav>
@@ -56,6 +57,9 @@
 
             $(val).wrap(link);
         })
+
+        var lastUpdated = $("#last-updated-datetime");
+        lastUpdated.text(new Date(lastUpdated.text()).toLocaleString());
     })
 </script>
   </body>
