@@ -1,0 +1,94 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14936 for PC and Mobile'
+contentId: 460fdefc-7969-4c90-b2e4-c341af4bef04
+date: 2016-09-28T00:00:00-07:00
+---
+<p>Hello Windows Insiders!</p>
+
+<p>Today we are excited to be releasing Windows 10 Insider Preview Build 14936 for PC to Windows Insiders in the Fast ring.</p>
+
+<h4><strong>New Extensions in Microsoft Edge</strong></h4>
+
+<p>We’re working with partners on adding new extensions and want our Insiders to try them out first! We have another new release which we need your help testing and giving feedback on before we publish to the general public: <a href="https://www.microsoft.com/en-us/store/p/turn-off-the-lights-for-microsoft-edge/9nblggh52lrr">Turn Off the Lights</a> is a lightweight and useful add-in designed for a more comfortable video experience. We also need some more help testing our other preview extensions: <a href="https://www.microsoft.com/en-us/store/p/tampermonkey/9nblggh5162s">Tampermonkey</a> is a popular userscript manager that lets users customize the content of pages across the web. <a href="https://www.microsoft.com/en-us/store/p/microsoft-personal-shopping-assistant/9nblggh51vmd">Microsoft Personal Shopping Assistant</a> is your smart shopping cart across the web, which collects your browsed products and lets you get price alerts for saved products and compare products between sellers. You can install this at the links above and try them out on any Anniversary Update build – send feedback to the Feedback Hub or <a href="https://twitter.com/msedgedev">@MSEdgeDev on Twitter</a>.</p>
+
+<h4><strong>Authentication changes affecting connectivity to NAS devices and home file servers</strong></h4>
+
+<p>After updating to the latest Insider Preview builds, you may have noticed that shared devices on your home network have disappeared from your home network folder. You may have also noticed your mapped network drives are not available. If you change your network to “private” or “enterprise”, it should start working again. For more information on this behavior change, <a href="https://technet.microsoft.com/library/security/MS16-110">see this Microsoft Security Bulletin</a>.</p>
+
+<h4><strong>Windows Subsystem for Linux (WSL) Updates</strong></h4>
+
+<p>WSL will install Ubuntu version 16.04 (Xenial) instead of Ubuntu 14.04 (Trusty) in an upcoming release.&nbsp;This change will apply to Insiders installing new instances (lxrun.exe /install or first run of bash.exe).&nbsp;Existing instances with Trusty will not be upgraded automatically. Users can upgrade their Trusty image to Xenial using the do-release-upgrade command. Full WSL release notes can be found <a href="https://msdn.microsoft.com/en-us/commandline/wsl/release_notes">here</a>.</p>
+
+<h3><strong>Other improvements and fixes for PC</strong></h3>
+
+<ul>
+  <li>We fixed the issue causing Narrator to continually speak the progress of a song e.g. update with the current time of the progress bar every second if you navigate to the progress bar while a song is playing in Groove Music. </li>
+
+  <li>We fixed the issue where using the tab key to navigate the Settings app wouldn’t work. </li>
+
+  <li>We fixed an issue resulting in Explorer.exe frequently crashing for some Insiders, particularly for those with multiple network switches. </li>
+</ul>
+
+<h3><strong>Known issues for PC</strong></h3>
+
+<ul>
+  <li>Optional components may not work after upgrading to this build. To get it working again, go to “Turn Windows features on or off”, scroll down and check the right optional component and click ok.&nbsp; After a reboot, the optional component will be enabled again. </li>
+
+  <li>Tencent apps and games will cause your PC to bugcheck (bluescreen). </li>
+
+  <li>Running sfc /scannow in an elevated command prompt will fail at 20% with the error “could not perform the requested operation.” </li>
+</ul>
+
+<h3><strong>Other improvements and fixes for Mobile</strong></h3>
+
+<ul>
+  <li>We fixed the issue causing the pin pad to not be visible to unlock the phone even after rebooting the phone. </li>
+
+  <li>We fixed the issue where some phones lose the ability to use their SIM cards. </li>
+
+  <li>We fixed the mobile hotspot issue where it works the first time but subsequent attempts to use the feature won’t work until the phone is rebooted. </li>
+
+  <li>We fixed an issue causing some devices such as the Lumia 650 from failing to install a new build with Error 0x80188308. </li>
+
+  <li>We fixed the issue causing some build updates to fail with an 800703ed error code. </li>
+
+  <li>We fixed the issue where Action Center no longer closes if you swipe up on the empty space (area of Action Center that doesn’t show any notifications). </li>
+
+  <li>We fixed an issue where notifications were unexpectedly showing the app logo within the notification when viewed in Action Center. </li>
+
+  <li>We fixed an issue for devices that shipped with Windows Phone 8.1, such as the Lumia 930 and 1520, where if you plugged in a headset during an ongoing call, the audio would not be routed to the headset. </li>
+</ul>
+
+<h3><strong>Known issues for Mobile</strong></h3>
+
+<ul>
+  <li>If you have your default storage set to a SD card for apps, installation of apps like WhatsApp, Facebook Messenger and WeChat will fail with an error. As a workaround, set your default location to your device’s onboard storage. </li>
+</ul>
+
+<h3><strong><u>Another</u> very important reminder about build expiration</strong></h3>
+
+<p>We want to continue to remind Windows Insiders about the upcoming expiration of old Insider Preview builds. Since September 15th, PCs running really old Insider Preview builds started to see build expiration notifications once a day. <strong>Starting on October 1st, these PCs will start rebooting every 3 hours and then on October 15th – these PCs will stop booting all together.</strong> If your PC is running one of these old Insider Preview builds, please make sure <strong><u>you update to the latest build available</u></strong> via Settings &gt; Update &amp; security &gt; Windows Update. Build 14926 and newer has an updated expiration date of May 1st, 2017. If your PC is running the Windows 10 Anniversary Update (Build 14393) in the Slow and Release Preview rings today – this does not apply to you and you will not be notified of your build expiring.</p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/ec/a9/eca9cab4-2fdd-4575-8604-cc75b60a3ed9.png?n=WindowsActivation2.png" width="532" height="434" /></p>
+
+<p>&nbsp;</p>
+
+<h3><strong>Team Updates</strong></h3>
+
+<p>Our team has been all over the world lately, enjoying meeting Windows Insiders globally and learning about their specific tech needs. This week, Director of Program Management, Windows Insider Program &amp; OS Fundamentals (and our boss!), <a href="https://twitter.com/Billkar44">Bill Karagounis</a> enjoyed meeting lots of our Windows Insiders at <a href="https://ignite.microsoft.com/">Microsoft Ignite</a> in Atlanta. He addressed several audiences as he spoke about the year ahead for the program and our philosophy around Co-Creating with our Community. His talk was fittingly called CoCreate(Community).&nbsp; #nerds4life </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/49/48/4948af47-d830-4908-8d60-af29bca4d515.jpg?n=BillIgnite.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p>We worked with the wonderful <a href="https://twitter.com/SurfaceSmiths">Surface Smiths</a> to record many of the interviews with the Windows Insiders and we will be sharing out these stories on our channels soon.</p>
+
+<p>In another part of the world, Director of Quality, OS Fundamentals <a href="https://twitter.com/BSofola">Bambo Sofola</a>, <a href="https://twitter.com/jeremiahmarble">Jeremiah Marble</a>, Thomas Trombley and I spent the week in Lagos, Nigeria last week launching the #WINsiders4Good Fellowship – Lagos. While there, we also met with several key business and IT decision makers to understand the current landscape for tech usage in their companies as well as their goals for the coming year. From us they learned…the ways of the #NinjaCat.</p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/85/78/8578b738-ae2b-44f0-820b-9fa188b2f9f0.jpg?n=Ninja.jpg" /></p>
+
+<p>We’ll have a lot more to share in the upcoming weeks about what we all learned on our global treks and what we’ll do with these learnings to build a better product for ALL of us.</p>
+
+<p>Thank you everyone and keep hustling, 
+  <br />Dona &lt;3</p>
