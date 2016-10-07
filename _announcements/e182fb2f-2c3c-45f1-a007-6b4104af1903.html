@@ -1,0 +1,146 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14942 for PC'
+contentId: e182fb2f-2c3c-45f1-a007-6b4104af1903
+date: 2016-10-07T00:00:00-07:00
+---
+<p>Hello Windows Insiders!</p>
+
+<p>Today we are excited to be releasing Windows 10 Insider Preview Build 14942 for PC to Windows Insiders in the Fast ring.</p>
+
+<h3><b>What’s new in Build 14942</b></h3>
+
+<p><b>Hide app list on Start:</b> We are releasing a new feature that enables you to collapse the app list in the Start menu. This has been a top feedback request from Windows Insiders. You can try it out by going to Settings &gt; Personalization &gt; Start and turning on “Hide app list in Start menu”. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/8b/77/8b77ee1b-c9bd-484a-bf30-f1c24eed7b11.png?n=hide-app-list.png" width="700" height="566" /></p>
+
+<p><b>Photos app update: </b>With the latest Photos app update on your PC, the Photos app on your PC is now more beautiful and easier to navigate!</p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/aa/7e/aa7eca3d-e5fe-4a1f-8a95-0f329d54fbab.png?n=photos-app-update.png" width="765" height="495" /></p>
+
+<ul>
+  <li>Photos now has a horizontal navigation bar that makes it easier to view memories by Albums and Folders. </li>
+
+  <li>Let your photo collection shine! We’ve got a new, light viewing mode for your pics.&nbsp;You can always go back to the dark theme in settings. </li>
+
+  <li>When viewing photos in full screen, we’ve added new animations in and out of the Collection view, making it easier to keep track of where you are browsing. </li>
+
+  <li>See individual photos more quickly with your mouse—and now we support full screen. </li>
+</ul>
+
+<p><b>Plus, the Photos app is now available on your Xbox One! </b>Show off a slideshow of all your OneDrive photos in your living room. Simply make sure you are signed in with your Microsoft account to see all your OneDrive photos on the big screen.&nbsp;</p>
+
+<p><b>Refining your precision touchpad experience:</b> Based on the feedback we have received, we have made some adjustments to our gesture and click detection on precision touchpads. This includes enhancing detection and disambiguation of left and right clicks, making two finger taps and clicks a bit easier, reducing false positives in our two-finger tap detection and improving our pinch to zoom detection. We have also made algorithm changes in an effort to reduce inadvertent zooming when panning. If you have a precision touchpad on your device, please take the opportunity try out with this build and let us know how it feels with these changes.&nbsp;</p>
+
+<p><b>Improving the PC upgrade experience: </b><a href="https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/#2tjRClglwZRwzpvw.97">Starting with build 14926</a>, we announced that if you uninstall one of the preinstalled apps on Windows, that state will now be preserved after upgrade. With today’s build, we’re happy to let you know that we’ve taken that work a step further: after upgrading from 14942, if an IT-Pro has de-provisioned an app from your OS image (and you haven’t reinstalled it yourself), that provisioning status will now be preserved after upgrade, and the app will not reinstall. We appreciate everyone who shared feedback with us about this – if you have any other feedback about your upgrade experience, please don’t hesitate to log it - we’re listening! </p>
+
+<p><b>New Windows Update icon:</b> We have introduced a new Windows Update icon to match the rest of the new iconography in Windows 10. After installing this build, you will see the new icon when Windows Update notifications appear and via Action Center. You can also manage notifications from Windows Update via Settings &gt; System &gt; Notifications. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/05/14/0514ac03-dbf7-4767-91ee-041271c97d32.png?n=new_WindowsUpdate_icon_black.png" /></p>
+
+<p><b>Service hosts are split into separate processes on PCs with 3.5 GB+ of RAM: </b>If your PC has 3.5+ GB of memory, you may notice an increased number of processes in Task Manager. While this change may look concerning at first glance, many will be excited to find out the motivation behind this change. As the number of preinstalled services grew, they began to get grouped into processes known as service hosts (svchost.exe’s) with Windows 2000. Note that the recommended RAM for PC’s for this release was 256 MB, while the minimum RAM was 64MB. Because of the dramatic increase in available memory over the years, the memory-saving advantage of service hosts has diminished. Accordingly, ungrouping services on memory-rich (3.5+ GB of RAM) PCs running Windows now offers us the opportunity to do the following: </p>
+
+<p>1. Increase reliability: When one service in a service host fails, all services in the service host fail. In other words, the service host process is terminated resulting in termination of all running services within that process. Individual service failure actions are then run. As you may have noticed in Task Manager before, service hosts can contain a lot of services: </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/38/be/38be1d9d-aa8e-482e-8bcc-5e1cf01f95a2.PNG?n=services_1.PNG" /></p>
+
+<p>2. Increase transparency: Task Manager will now give you a better view into what is going on behind the scenes. You can now see how much CPU, Memory, Disk &amp; Network individual services are consuming. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/e1/a3/e1a398e7-41be-48c6-b941-cede7b1ee04c.PNG?n=services_2.PNG" width="884" height="182" /></p>
+
+<p>To see the name of the service, click on the left-most arrow such that the Display name drops down.&nbsp;Alternatively, right-click on the header and select 'Command Line' to add the Command Line column. Service names will be listed in the format 'svchost.exe -k &lt;svchost name&gt; -s &lt;service name&gt;.' </p>
+
+<p>3. Reduce servicing costs: Following reports of instability, service engineers, IT admins, and Microsoft engineers can rapidly pinpoint issues to the exact service and fix it. </p>
+
+<p>4. Increase security: Process isolation and individual permission sets for services will increase security. </p>
+
+<p>Note that critical system services (services whose recovery require system restarts), as well as a couple of select service hosts, will remain grouped. </p>
+
+<p><b>Expanding the Active Hours default range:</b> We’ve heard the feedback that you like the control Active Hours provides over when your PC restarts for updates, however feel that that the default 12 hour range on PC is too limited. We want to accommodate various enterprise environments and schedules including those where employees have double shifts, so starting with Build 14942, we've changed this range for PCs on Pro, Enterprise, or Education editions to 18 hours. This means Insiders using these editions can now set active hours up to 18 hours from the selected start time (same as Mobile). We've added text to the active hours dialog so users always know what the default range is when choosing their times. We've also added the ability for the default range to be configured via new group and MDM policies (configurable up to 18 hours). New text will be displayed on the active hours dialog to indicate when the default range is configured via the policy. PCs using Home edition will continue to have a default range of 12 hours. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/d7/6e/d76eb0c7-337e-4695-9522-5e578de9b16b.png?n=active-hours-change.png" width="342" height="276" /></p>
+
+<p><b>Form field navigation in Narrator: </b>We are excited to announce that this build introduces form field navigation to Narrator.<b> </b></p>
+
+<ul>
+  <li>In Scan Mode, you can now use the following commands to jump to form fields:&nbsp; 
+    <ul>
+      <li>F and Shift + F: Jump to next/previous form field </li>
+
+      <li>C and Shift + C: Jump to next/previous combo box </li>
+
+      <li>E and Shift + E: Jump to next/previous edit box </li>
+
+      <li>X and Shift + X: Jump to next/previous check box </li>
+
+      <li>R and Shift + R: Jump to next/previous radio button </li>
+
+      <li>B and Shift + B: Jump to next/previous button </li>
+    </ul>
+  </li>
+</ul>
+
+<p><b></b></p>
+
+<p>Basically, the letter moves forward and Shift + letter moves in reverse. </p>
+
+<ul>
+  <li>Form Fields have been added to Narrator’s Search and Select feature which is available at any time by pressing Ctrl + Shift + Enter.&nbsp;Search and Select allows you to list items such as buttons, links, headings and other elements available in an app, webpage or document. </li>
+
+  <li>A new view is now available for form fields. The active view can be changed by pressing Caps Lock and using the up and down arrows to navigate the list of views on the keyboard, or single finger up/down flicks with touch. </li>
+</ul>
+
+<h3><b>Other improvements and fixes for PC</b></h3>
+
+<ul>
+  <li>We’ve updated Narrator’s reading order for Windows 10 apps which display an app bar on the bottom of the app, for example OneDrive, so now the contents of the page will be read before the contents of the app bar. </li>
+
+  <li>We fixed an issue where running sfc /scannow in an elevated command prompt would fail at 20% with the error “could not perform the requested operation.” </li>
+
+  <li>We fixed an issue resulting in certain areas of Windows 10 app notifications not doing anything when clicked, rather than opening the corresponding app. </li>
+
+  <li>We fixed an issue resulting in Personalization &gt; Background Settings page crashing or showing a blank context menu when right clicking one of the recent images . </li>
+
+  <li>Fixed an issue resulting in Windows Defender’s Antimalware Service Executable sometimes using an unexpectedly large amount of CPU. </li>
+
+  <li>We fixed an issue resulting in the Devices and Printers page in Control Panel loading slowly for users with certain audio devices. </li>
+
+  <li>We fixed an issue resulting in a small set of users seeing the NTFS partition of their external hard drive incorrectly showing up as RAW format. </li>
+
+  <li>Going forward from Build 14942, custom printer names will be preserved across upgrades. We’ve also addressed an issue where the printer queue name wasn’t preserved across upgrade for some printers. </li>
+
+  <li>Improved framerates when Game Bar is enabled for full screen games. </li>
+</ul>
+
+<h3><b>Other items of note</b></h3>
+
+<h4><b><u>Another</u> very important reminder about build expiration (last reminder)</b></h4>
+
+<p>We want to continue to remind Windows Insiders about the upcoming expiration of old Insider Preview builds. Since October 1<sup>st</sup>, PCs running really old Insider Preview builds have started to<b> </b>reboot every 3 hours.<b> Starting on October 15th – these PCs will stop booting all together.</b> If your PC is running one of these old Insider Preview builds, please make sure <b><u>you update to the latest build available</u></b> via Settings &gt; Update &amp; security &gt; Windows Update. Build 14926 and newer has an updated expiration date of May 1st, 2017. If your PC is running the Windows 10 Anniversary Update (Build 14393) in the Slow and Release Preview rings today – this does not apply to you and you will not be notified of your build expiring.</p>
+
+<h3><b>Team Updates</b></h3>
+
+<p>Once upon a time, you used to draw. Remember? You were 2 or 3 years old and you created the <b>original selfie</b>: a stick figure of you with your family. Maybe some clouds. But one day, someone said, "that's not very good." And some of you stopped drawing. Why is that? Imagine if the same thing happened if someone had criticized your reading or math. Would you have stopped? Of course not. Reading and math are important, right? Everyone needs to know these things. But why is creation different? At an early age, many of us seem to be taught that creating is not that important. We have a different belief. We believe that creating IS one of those important things.</p>
+
+<p>We're here to ask for your help in reigniting the creative side in yourself and others. We need you to doodle again. <b>The world needs it.</b></p>
+
+<p>Look around: the same social problems that have been around for generations are growing ever more complex. It's time to use both sides of ourselves, BOTH the creative and the technical skills we all have to solve some of these.</p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/7c/fb/7cfbc4c6-ee10-45b3-96f5-488ae0ee6fdd.jpg?n=GiveMonthKickoff.jpg" width="281" height="351" /></p>
+
+<p>Today, in partnership with <b>the Microsoft retail stores</b>, the Windows Insider Team is honored to announce <b>#WINsiders4Good Give Month</b>. October has always been a very important month for Microsoft. Every employee is encouraged to use their technical and creative selves to solve social problems they are passionate about and this year we want to extend that to our Windows Insiders as well. </p>
+
+<p>During the month of October, if you are not registered, we invite you to join the Windows Insiders program at insider.windows.com and work alongside us for Give month. Each retail store will host a Create-A-Thon, and pull together technical and creative people from the local community along with a non-profit organization to tackle a long-standing problem. The goal of each store's group is to drive creative solutions for this problem during the course of the month using modern technology.</p>
+
+<p>Each group will present the solution on November 8th in a global live stream across all retail stores. This relationship will deepen and grow over the next many months as our partners start to use your solutions.</p>
+
+<p>For you NYC based Insiders, I really hope to see you at the Microsoft Store (677 5th Ave, New York, NY 10022) on Saturday October 8<sup>th</sup> at 10 am for the <b>global kickoff</b> of #WINsiders4Good GIVE month where we will use Windows to tackle the lack of affordable after-school care for the NY communities. I’ll be there and I hope you will too!</p>
+
+<p>For those of you who do NOT live near retail stores, we have something for you too! You told us you were inspired by the #WINsiders4Good Create-A-Thons and wanted to host them in your own cities. We heard back from THOUSANDS of you in our last survey. <a href="https://insider.windows.com/Home/Give">We are VERY excited to announce the first flight of our #WINsiders4Good Create-A-Thon DIY Kit</a>.</p>
+
+<p>Please download the kit and organize CAT events in your own cities. Do get in touch with us and let us know what you're doing and we will amplify with your fellow Windows Insiders in your city so you can meet, work together and truly be a community of people who use your tech and creativity to solve problems—together. We are actively looking for feedback on our DIY Kit, so please share your experiences. </p>
+
+<p>Have an amazing weekend everyone, I will be looking forward to meeting many of you at the flagship Microsoft Store in NYC on Saturday 10/8.</p>
+
+<p>Thank you everyone and keep hustling, 
+  <br />Dona &lt;3</p>

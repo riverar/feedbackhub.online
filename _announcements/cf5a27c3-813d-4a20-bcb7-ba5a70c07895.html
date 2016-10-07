@@ -1,0 +1,22 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Desktop Insider Preview Build 14942'
+contentId: cf5a27c3-813d-4a20-bcb7-ba5a70c07895
+date: 2016-10-07T00:00:00-07:00
+---
+<p>Known issues for PC</p>
+
+<ul>
+  <li>Insiders doing web development may find themselves their local intranet server unreachable, as service host separation will leave the IIS World Wide Web Publishing Service (W3Svc) unable to start successfully. To fix this issue:</li>
+</ul>
+
+<p>1. Run the following from an admin cmd line (or edit the registry accordingly):</p>
+
+<blockquote>
+  <p>a. REG ADD HKLM\SYSTEM\CurrentControlSet\Services\W3SVC /v SvcHostSplitDisable /t REG_DWORD /d 1 /f </p>
+
+  <p>b. REG ADD HKLM\SYSTEM\CurrentControlSet\Services\WAS /v SvcHostSplitDisable /t REG_DWORD /d 1 /f </p>
+</blockquote>
+
+<p>2. Reboot the system, so that the W3Svc and WAS services share a service host process. 
+  <br /></p>
