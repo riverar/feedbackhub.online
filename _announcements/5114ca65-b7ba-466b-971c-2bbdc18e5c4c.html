@@ -1,0 +1,124 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 14951 for Mobile and PC'
+contentId: 5114ca65-b7ba-466b-971c-2bbdc18e5c4c
+date: 2016-10-19T00:00:00-07:00
+---
+<p>Hello Windows Insiders!</p>
+
+<p>Today we are excited to be releasing Windows 10 Insider Preview Build 14951 for Mobile and PC to Windows Insiders in the Fast ring.</p>
+
+<h3><b>What’s new in Build 14951</b></h3>
+
+<p><b>Refining the customization experience for precision touchpad (PC)</b><b>: </b>Since <a href="https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/">last week</a>, we’ve continued working in this space, and have another set of improvements headed your way. To start with, we’ve hooked up our keyboard shortcut picker, so now if you choose that option on the Advanced gestures page, you’ll be presented a recorder so you can capture your favorite key combo - &nbsp;perhaps WIN + Alt + D or WIN + F to start with? Secondly, we’ve added a Change audio and volume option to the set of basic swipe gestures you can pick from. Finally, we’ve updated the reset button to now has a progress circle and display a check mark when it is finished. We’ve also heard your feedback from the last flight, and fixed a few issues including that the reset button wasn’t clearing the settings listed on the advanced gestures page, that the 4-fingure gesture graphic was visible on devices that only supported 3-contact points, and that some of the advanced gestures options weren’t working as expected. If you have any more feedback for us, please let us know!<b></b></p>
+
+<p><b>Windows Ink Improvements (PC):</b> Starting with this build, pen dropdowns in Windows Ink Workspace will let you change both color and width without having to open it twice. After you make all the adjustments to your favorite pen, start drawing right away and we will dismiss the dropdown for you. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/2c/8e/2c8e4bbf-a6c1-48dd-ac6c-d06342403fc0.png?n=protactor.png" width="484" height="323" /></p>
+
+<p>We are also introducing <b>Stencils</b>. Windows Ink protractor tool combines functions of both protractor and compass into one – now you can draw an arc or a complete circle of an arbitrary size with little effort. A familiar two-finger pinch gesture resizes the protractor to the desired size and a degree readout follows your pen, mouse, or finger as you draw along the side of the protractor displaying arc degrees. In this preview build, ruler also got a small update – its degree readout shows a numerical value of the angle, making drawing angles even easier.</p>
+
+<p><b>Simplified, more familiar camera interface (PC &amp; Mobile):</b> The Camera app received a big update this week for Insiders. We've redesigned the Camera interface for ease and accessibility. Check out some of our new features:</p>
+
+<ul>
+  <li>Enjoy taking photos, videos, and panoramas with our higher-contrast capture buttons. </li>
+
+  <li>Set a photo timer right from the camera dashboard with our new toggle control. </li>
+
+  <li>Get to Settings faster! Now, launch into Settings directly from the camera UI. </li>
+
+  <li>Access your camera roll with one hand from its new spot on the screen. </li>
+
+  <li>Zoom more easily with the new zoom slider. </li>
+
+  <li>Make sure you nailed the shot, with a more noticeable capture animation. </li>
+
+  <li>Change between front- and rear-facing cameras with a more prominent button control. </li>
+
+  <li>On PC, use the spacebar as a shortcut to take pictures. </li>
+</ul>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/ab/97/ab97b8fc-7c17-44d6-b2c6-c5826c10f3c7.png?n=CamerSpaceBarShortcut.png%202" /></p>
+
+<p>You can now experience the magic of living images on your Surface, now enabled on Surface Book, Surface Pro 4, Surface Pro 3, and Surface 3! With living images, extend your still captures with a snippet of video. These are created automatically whenever your shots feature motion—just navigate to Settings and turn on Capture living images.</p>
+
+<p>And this release features a variety of performance improvements to enhance your experience. We've added faster shot-to-shot support, improved feedback for saving large videos to SD cards, and improved camera startup time, among other improvements.</p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/2a/ea/2aea6192-d26c-4e26-b5e0-8df194775723.png?n=CameraPerf.png%202" /></p>
+
+<p><b>Simplifying your developer experience (PC):</b> We’ve done some underlying work, and now you’ll no longer have to reboot your PC after turning on Developer Mode! This means that you can start using Device Portal and Device Discovery as soon as the Windows Developer Mode package has finished installing, rather than having to reboot first. </p>
+
+<p><b>Narrator improvements:</b> This build includes a number of improvements to Narrator including multiple fixes to continuous reading when used in tables and on web pages, a fix for the Caps Lock + W reading experience so dialogs and other elements are read correctly again, and a fix so that reading hint text does not interrupt the reading of information by Narrator but comes after the main information is read. And Narrator now properly indicates when it is exiting. </p>
+
+<p><b>Windows Subsystem for Linux:</b> Today we are happy to announce two large updates to WSL!</p>
+
+<ul>
+  <li><b>Official Ubuntu 16.04 support. </b>Ubuntu 16.04 (Xenial) is installed for all new Bash on Ubuntu on Windows instances starting in build 14951.&nbsp; This replaces Ubuntu 14.04 (Trusty).&nbsp; Existing user instances will not be upgraded automatically.&nbsp; Users on the Windows Insider program can upgrade manually from 14.04 to 16.04 using the do-release-upgrade command.<b></b> </li>
+
+  <li><b>Windows / WSL interoperability. </b>Users can now launch Windows binaries directly from a WSL command prompt.&nbsp; This is the number one request from our users on the <a href="https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash">WSL User Voice</a> page.&nbsp; Some examples include: </li>
+</ul>
+
+<p>$ <b>export PATH=$PATH:/mnt/c/Windows/System32</b></p>
+
+<p>$ <b>notepad.exe</b></p>
+
+<p>$ <b>ipconfig.exe | grep IPv4 | cut -d: -f2</b></p>
+
+<p>$ <b>ls -la | findstr.exe foo.txt</b></p>
+
+<p>$ <b>cmd.exe /c dir</b></p>
+
+<p>More information can be found on the <a href="https://blogs.msdn.microsoft.com/wsl/">WSL Blog</a> and the <a href="https://msdn.microsoft.com/en-us/commandline/wsl/about">WSL MSDN</a> page. Other changes and more information can be found on the <a href="https://msdn.microsoft.com/en-us/commandline/wsl/release_notes">WSL Release Notes page</a>.</p>
+
+<h3><strong>Other improvements and fixes for Mobile</strong></h3>
+
+<ul>
+  <li>Following feedback discussing French punctuation rules, we’ve updated our French keyboards (with the exception of French (Canada), for which these rules don’t apply) to now add a space both before and after when using two-part punctuation marks, such as the semi-colon, the colon, the question mark and the exclamation mark. </li>
+
+  <li>We fixed an issue resulting in the Camera shutter sounds entry missing from the Sounds Settings page via Settings &gt; Personalization &gt; Sounds. </li>
+</ul>
+
+<h3><strong>Other improvements and fixes for PC</strong></h3>
+
+<ul>
+  <li>We fixed the issue causing PCs that are capable of Connected Standby such as the Surface Book and Surface Pro 4 to sometimes bugcheck (bluescreen) while in Connected Standby. </li>
+
+  <li>We fixed an issue resulting in Forza Horizon 3, Gears of War (and some 3rd party games) failing to install from the Store with the error code 0x80073cf9 when the system’s app install location was set to drive with native 4k Sectors (or 4k sector sized drive). </li>
+
+  <li>We fixed an issue resulting in larger Store games such as ReCore, Gears of War 4, Forza Horizon 3, Killer Instinct and Rise of the Tomb Raider possibly failing to launch. </li>
+
+  <li>We fixed an issue where the console window (which hosts Command Prompt, PowerShell, and other command-line utilities) might not snap correctly to the inside edges between two monitors with different DPI scaling. </li>
+
+  <li>We fixed an issue where all agenda items in the taskbar’s Clock and Calendar flyout were using the primary calendar’s color, rather than matching their respective calendar’s colors as selected in the Outlook Calendar app. </li>
+
+  <li>We fixed issue where the Add PIN button in Settings &gt; Accounts &gt; Sign-in Options was sometimes unexpectedly greyed out for domain-joined devices. </li>
+
+  <li>We fixed an issue resulting in Groove crashing if you tried to reorder the songs in a very large playlist. </li>
+
+  <li>We've updated our migration logic to now include custom scan code mappings. That means that going forward from this build, if you've used Registry Editor to remap certain keys (for example, Caps Lock key to null), that change will persist across upgrades. </li>
+
+  <li>We fixed an issue Insiders may have experienced resulting in Adobe Photoshop Express crashing after clicking on the 'correct' button when trying to edit a cropped image. </li>
+
+  <li>We fixed an issue resulting in .csv or .xlsx files downloaded from Microsoft Edge sometimes unexpectedly appearing to be locked for editing by “another user” when SmartScreen was enabled. </li>
+
+  <li>We fixed an issue where enabling the RemoteFX adaptor for a Virtual Machine would result in it failing to power on with the error 'Unspecified error' (0x80004005). </li>
+</ul>
+
+<h3>Upcoming Bugbash</h3>
+
+<p><b></b>
+
+  <br />Just a heads-up that we are planning to kick off our next bugbash starting on Tuesday, November 8th and finishing at the end of the day on Sunday, November 13th. I’ll have more details in the coming weeks. Looking forward to seeing a lot of participation from Insiders! </p>
+
+<h3><strong>Team Updates</strong></h3>
+
+<p>Last week was tremendously exciting for the #WINsiders4Good work that Windows Insiders are doing. We kicked off a series of Create-A-Thons at Microsoft Retail Stores in Oregon, Puerto Rico, New York, Boston among others. Some of our Insiders who did not have a retail store near them organized their own events in London and Germany! The top thing we learned was that the simplest solution is often the best. Some simple solutions we created were new logos for Red Barn, a resource center for homeless looking to rebrand themselves. a formula and model by which St. Francis House in Boston, a homeless shelter could decided if someone needed new clothing and a free resources list of software and learning tools for after-school care for underprivileged children at Educational Alliance...all using and running on Windows 10! The NGOs were so pleased at having such incredibly passionate people like the Windows Insiders participating in their events. It was amazing to watch Insiders travel across state lines to come attend these events (2 of our Insiders drove from Delaware to NYC for the event!). Again, if you’d like to participate in an event, START ONE! Many of our Insiders are starting <a href="https://insider.windows.com/Home/Give">to do this.</a> Just let us know what you are doing and we will do our best to help get the word out and support you remotely. </p>
+
+<p>For those who might have missed it, I wrote up an article about our #WINsiders4Good Nigeria fellowship for the Windows team and senior leadership, but decided that the Windows Insiders would like to <a href="https://sway.com/nKAQPnJkyivDmOtZ">see it as well.</a></p>
+
+<p>All of this leads to our Windows Insiders mission of using technology to learn, create and make a lasting impact on the world. I feel so fortunate to be a part of your community. </p>
+
+<p>I leave for New Zealand soon to keynote Ignite NZ and gave a <a href="https://channel9.msdn.com/Events/Ignite/New-Zealand-2016/CDS004">little preview on Channel 9 earlier.</a> I hope to meet many Windows Insiders there. I will be "legitly loitering" at the Microsoft Stand/Windows Insider section for much of the week so please do come say hi and help me press the button to ship a build. </p>
+
+<p>Thank you everyone and keep hustling, 
+  <br />Dona &lt;3</p>
