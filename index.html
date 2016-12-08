@@ -5,13 +5,11 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-<div class="row">
-  <h1 class="col-xs-12">Announcements</h1>
-  <div class="col-xs-12">
-    <ul class="list-group">
-      {% for announcement in site.announcements reversed %}
-        <li class="list-group-item"><span>{{ announcement.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ announcement.url }}">{{ announcement.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
+<div class="container">
+  <div class="titlebar">Latest Announcements<span id="switchTheme">Switch Theme</span></div>
+  <ul class="list-group">
+    {% for announcement in site.announcements reversed %}
+      <li class="list-group-item"><a href="{{ BASE_PATH }}{{ announcement.url }}">{{ announcement.title }}<span>{{ announcement.date | date_to_string }}</span></a></li>
+    {% endfor %}
+  </ul>
 </div>
