@@ -36,7 +36,7 @@
     
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><p>Last updated: <span id="last-updated-datetime">{{ site.time }}</span></p></li>
+                        <li><p>Last updated: <span id="last-updated-datetime">{{ site.time | date_to_xmlschema }}</span></p></li>
                     </ul>
                 </div>
             </div>
