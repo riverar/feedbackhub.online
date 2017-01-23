@@ -1,0 +1,65 @@
+---
+layout: page
+title: 'Made by you - Alarms break through Quiet Hours'
+contentId: 1086e0ff-469f-4555-a7f6-802fee6d2231
+date: 2016-12-19T00:00:00-08:00
+---
+<p>Hey Insiders, both app developers and users alike!</p>
+
+<p>As you can well imagine, there has been a long history of developer focus at Microsoft and our engineering team loves to engage with our developers as they innovate.&nbsp; At Microsoft we listen to customer feedback across many channels including <a href="windows-feedback:?categoryid=128">Feedback Hub</a> which ships on Windows, social media, and for our Windows developers we also listen on our <a href="https://wpdev.uservoice.com/">Windows Developer Feedback site</a> wpdev.uservoice.com.&nbsp; Customer feedback is a key driver for how we improve and redefine Windows, and we’re listening - in this article, we wanted to share with you how we made use of our Windows Developer Feedback site to improve a feature. &nbsp; </p>
+
+<p>Thanks to your feedback, we recently made a change so that third party apps would break through Quiet Hours, just like the inbox Alarms &amp; Clock app! I’m Andrew Bares, a Program Manager on the Windows Notifications developer platform team – our team owns the developer API’s for sending toast and live tile notifications. We needed to work closely with the devs on the Windows CoreUX team to bring you this improvement! </p>
+
+<p>We figured this would be a good time to walk through how your developer (and user) feedback impacts the developer story. We encourage you to continue sending more feedback to help improve the platform!</p>
+
+<h4>What was the issue with Quiet Hours and alarms?</h4>
+
+<p><img style="FLOAT: left; MARGIN: 5px 5px 5px 0px; DISPLAY: inline" src="https://compass-ssl.microsoft.com/assets/56/5d/565d9c80-7e00-4a48-b387-540952bec032.jpg?n=AlarmsQuietHours1.jpg" width="190" align="left" height="331" />Before Windows 10 Insider Preview build 14971, only the inbox Alarms &amp; Clock app could break through Quiet Hours. That means if you were using a third-party alarm app, and you had Quiet Hours enabled, your alarm would be muted! Quite frustrating, especially when you must wake up early but forget to adjust your Quiet Hours settings!</p>
+
+<h4>How did we fix it? </h4>
+
+<p>We now let any alarm, regardless of which app sent it, break through Quiet Hours. If you’re a developer, you’ll know that you send an alarm by specifying the scenario of your toast notification to be “alarm”. If we see that scenario in a toast, it breaks through Quiet Hours! Easy!</p>
+
+<h4>Why did we decide to fix it?</h4>
+
+<p>We made this fix specifically because of you, the developers and users. The developer of a popular third-party alarm app contacted us near the end of the development cycle of the Anniversary Update, informing us about this Quiet Hours issue, which we were completely unaware of.</p>
+
+<p>The Anniversary Update was already in the process of being shipped, so we asked the developer to submit their feedback in the <a href="https://wpdev.uservoice.com/">Windows Developer Feedback</a> site, so that other developers could vote on it.</p>
+
+<p>During this time, the developer of the third-party alarm app added a popup dialog to their app to informed users about the Quiet Hours issue, so they wouldn’t accidently miss an alarm. In addition to that, they included a link to vote on their suggestion in the Windows Developer Feedback site (clever!).</p>
+
+<p>This led to lots of users as well as developers voting! Typically, our Windows Developer Feedback site is used by Windows Platform *developers*, so an item that has 4,000 votes is quite unusual. It quickly became the top trending piece of feedback. </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/b6/47/b6476666-ea48-4630-bfef-8aedc13e3277.jpg?n=AlarmsQuietHours2.jpg" width="517" height="140" /></p>
+
+<p>Since we knew that 4,000 people wanted this feature, it was easy to explain why we needed to fix this during the Creators Update. If we didn’t have this strong feedback, we might have chosen to implement something else that more people were asking for. After all, our jobs are to make all of you happy, so we prioritize based on increasing your happiness J</p>
+
+<h4>How can YOU, an app developer, get your voice heard?</h4>
+
+<p>Use the <a href="https://wpdev.uservoice.com/">Windows Developer Feedback site</a>! Submit your feature requests there! Let us know what you need to make your app successful!</p>
+
+<p>Here’s some tips for submitting or voting on feedback…</p>
+
+<p>1) Include your app’s name</p>
+
+<p>2) Explain the scenario in which you would utilize the feature, so that we can understand exactly what you need</p>
+
+<p>3) When submitting new feedback, use a clear and concise title that accurately summarizes the feature</p>
+
+<p>4) When voting on existing feedback, submit a comment containing #1 and #2! That information is equally as useful as votes!</p>
+
+<h4>Who monitors Windows Developer Feedback?</h4>
+
+<p>The main champion and leader is Clint Rutkas, an awesome developer evangelist, and he watches everything submitted and dispatches feedback to the correct team if they’re not already aware.</p>
+
+<p>When we complete a feature we found through this channel, we put an update on the Windows Developer Feedback site, and any subscribers receive an email notifying them that the feature has been implemented! For example, here’s another item on our Windows Developer Feedback site , and as you can see we’re “working on it”, and will update the item when it’s completed! </p>
+
+<p><img src="https://compass-ssl.microsoft.com/assets/94/4b/944bf902-6142-4f2f-ba08-073f4c26dc06.png?n=AlarmsQuietHours3.jpg.png" width="540" height="205" /></p>
+
+<p>Of course, my team regularly looks at the top items on across many other channel including the Windows <a href="windows-feedback:?categoryid=128">Feedback Hub</a> and social media so we can prioritize our work based on what you are telling us. Please keep the feedback coming.</p>
+
+<p>Thank you!</p>
+
+<p>Andrew &amp; team.</p>
+
+<p><em>Got feedback on this article? <a href="https://aka.ms/Pcl0ct" target="_blank">Let us know</a>. </em></p>

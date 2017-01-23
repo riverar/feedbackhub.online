@@ -1,0 +1,59 @@
+---
+layout: page
+title: 'Known Issues - Windows 10 Desktop Insider Preview Build 15007'
+contentId: 560977df-9a0c-4fc6-a3ed-7712b0fd10eb
+date: 2017-01-12T00:00:00-08:00
+---
+<ul>
+  <li>After updating to this build, nonstop exceptions in the Spectrum.exe service may occur causing PCs to lose audio, disk I/O usage to become very high, and apps like Microsoft Edge to become unresponsive when doing certain actions. As a workaround to get out of this state, you can delete C:\ProgramData\Microsoft\Spectrum\PersistedSpatialAnchors and reboot. For more details, <a href="https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices/build-15007-no-audio-issue-workaround/c4c931ff-0201-42b5-8725-998a3e22c803?tm=1484261164604" name="_msoanchor_1">see this forum post/a> . </li>
+
+  <li>We are investigating certain situations in which PCs might bugcheck (GSOD) during the installation of new builds (15002+) causing the PC to rollback to the previous build. </li>
+
+  <li>When clicking on certain elements in&nbsp;desktop (Win32) games, the game minimizes and cannot be restored. </li>
+
+  <li>Desktop shortcuts containing the "%" character (usually URI shortcuts with escaped characters) will result in a cyclical explorer.exe crash. To resolve this, use Task Manager to open PowerShell, and edit the shortcut to not include a % in the path. </li>
+
+  <li>When projecting to a secondary monitor, if you set the connection to “Extended”, Explorer.exe may start crashing in a loop. If this happens, turn off your PC, disconnect the secondary monitor, then restart your PC. </li>
+
+  <li>Windows Insiders will unexpected see a “Holographic” entry on the main page of Settings. </li>
+
+  <li>Brightness changes made via Settings &gt; System &gt; Display will unexpectedly revert after closing the Settings app. For now, please use either Action Center, power flyout or brightness keys to change the brightness. </li>
+
+  <li>The list of apps in the Surface Dial “Add an app” page via Settings &gt; Devices &gt; Wheel may unexpectedly be empty. If that happens, tap the “Browse for an app” button at the bottom of the screen to pick the desired app instead. </li>
+
+  <li>Taskbar preview icons are unexpectedly small on high-DPI devices. </li>
+</ul>
+
+<ul>
+  <ul>
+    <li>Quicken will fail to run with an error stating .NET 4.6.1 is not installed. For Insiders familiar with Registry Editor, there is an optional workaround. Take ownership of the following registry keys and edit the “version” value to be 4.6.XXXXX instead of 4.7.XXXXX: </li>
+  </ul>
+
+  <li>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\NET Framework Setup\NDP\v4\Client </li>
+
+  <li>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\NET Framework Setup\NDP\v4\Full </li>
+</ul>
+
+<p><b>Note</b>: Please take caution when editing the registry. Changing the wrong value can have unexpected and undesirable results.</p>
+
+<ul>
+  <li>Cortana's cross-device scenarios won't work on this build (including notification mirroring, missed call, share photos, share directions, low battery, and find my phone). </li>
+
+  <li>Some websites in Microsoft Edge may unexpectedly show "We can’t reach this page". If you encounter this, please try accessing the site from an InPrivate tab. </li>
+
+  <li>Dragging apps from the all apps list to pin on Start’s tile grid won’t work. For now, please right-click on the desired app in order to pin it. </li>
+
+  <li>Using CTRL + C to copy in Command Prompt won't work. </li>
+
+  <li>Miracast sessions will fail to connect. </li>
+
+  <li>On certain hardware types (e.g.: Acer Aspire), the Netflix app crashes when starting a movie. </li>
+
+  <li>3rd party UWP apps would crash on devices if the DPI settings on the machine are &gt;=150% (Generally people do this on high resolution devices – Surface book etc.) </li>
+
+  <li>If you upgrade from Windows 8.1 directly to Build 15002, all your store apps are lost during upgrade process but you can go and re-download all the lost apps from the Store. </li>
+
+  <li>When using Microsoft Edge with Narrator, you may hear “no item in view" or silence while tabbing or using other navigation commands. You can use Alt + Tab when this happens to move focus away from and back to the Edge browser. Narrator will then read as expected. </li>
+
+  <li>Saying "Hey Cortana, play &lt;item&gt; on &lt;AppName&gt;" doesn’t work immediately after installing the app. Wait 5 minutes for indexing to begin and try again. </li>
+</ul>
