@@ -5,7 +5,7 @@ contentId: 560977df-9a0c-4fc6-a3ed-7712b0fd10eb
 date: 2017-01-12T00:00:00-08:00
 ---
 <ul>
-  <li>After updating to this build, nonstop exceptions in the Spectrum.exe service may occur causing PCs to lose audio, disk I/O usage to become very high, and apps like Microsoft Edge to become unresponsive when doing certain actions. As a workaround to get out of this state, you can delete C:\ProgramData\Microsoft\Spectrum\PersistedSpatialAnchors and reboot. For more details, <a href="https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices/build-15007-no-audio-issue-workaround/c4c931ff-0201-42b5-8725-998a3e22c803?tm=1484261164604" name="_msoanchor_1">see this forum post/a&gt; . </a></li>
+  <li>After updating to this build, nonstop exceptions in the Spectrum.exe service may occur causing PCs to lose audio, disk I/O usage to become very high, and apps like Microsoft Edge to become unresponsive when doing certain actions. As a workaround to get out of this state, you can delete C:\ProgramData\Microsoft\Spectrum\PersistedSpatialAnchors and reboot. For more details, <a href="https://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_devices/build-15007-no-audio-issue-workaround/c4c931ff-0201-42b5-8725-998a3e22c803?tm=1484261164604" name="_msoanchor_1">see this forum post/a> . </li>
 
   <li>We are investigating certain situations in which PCs might bugcheck (GSOD) during the installation of new builds (15002+) causing the PC to rollback to the previous build. </li>
 
@@ -19,22 +19,22 @@ date: 2017-01-12T00:00:00-08:00
 
   <li>Brightness changes made via Settings &gt; System &gt; Display will unexpectedly revert after closing the Settings app. For now, please use either Action Center, power flyout or brightness keys to change the brightness. </li>
 
-  <li>The list of apps in the Surface Dial “Add an app” page via Settings &gt; Devices &gt; Wheel may unexpectedly be empty. If that happens, tap the “Browse for an app” button at the bottom of the screen to pick the desired app instead. Taskbar preview icons are unexpectedly small on high-DPI devices. </li>
+  <li>The list of apps in the Surface Dial “Add an app” page via Settings &gt; Devices &gt; Wheel may unexpectedly be empty. If that happens, tap the “Browse for an app” button at the bottom of the screen to pick the desired app instead. </li>
 
-  <li>Quicken will fail to run with an error stating .NET 4.6.1 is not installed. For Insiders familiar with Registry Editor, there is an optional workaround. Take ownership of the following registry keys and edit the “version” value to be 4.6.XXXXX instead of 4.7.XXXXX: </li>
+  <li>Taskbar preview icons are unexpectedly small on high-DPI devices. </li>
 </ul>
 
-<blockquote>
-  <p>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\NET Framework Setup\NDP\v4\Client </p>
-</blockquote>
+<ul>
+  <ul>
+    <li>Quicken will fail to run with an error stating .NET 4.6.1 is not installed. For Insiders familiar with Registry Editor, there is an optional workaround. Take ownership of the following registry keys and edit the “version” value to be 4.6.XXXXX instead of 4.7.XXXXX: </li>
+  </ul>
 
-<blockquote>
-  <p>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\NET Framework Setup\NDP\v4\Full </p>
-</blockquote>
+  <li>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\NET Framework Setup\NDP\v4\Client </li>
 
-<blockquote>
-  <p><b>Note</b>: Please take caution when editing the registry. Changing the wrong value can have unexpected and undesirable results.</p>
-</blockquote>
+  <li>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\NET Framework Setup\NDP\v4\Full </li>
+</ul>
+
+<p><b>Note</b>: Please take caution when editing the registry. Changing the wrong value can have unexpected and undesirable results.</p>
 
 <ul>
   <li>Cortana's cross-device scenarios won't work on this build (including notification mirroring, missed call, share photos, share directions, low battery, and find my phone). </li>
