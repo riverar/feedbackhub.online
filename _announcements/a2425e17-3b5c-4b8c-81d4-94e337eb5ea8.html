@@ -1,0 +1,188 @@
+---
+layout: page
+title: 'Announcing Windows 10 Insider Preview Build 15042 for PC and Build 15043 for Mobile'
+contentId: a2425e17-3b5c-4b8c-81d4-94e337eb5ea8
+date: 2017-02-24T00:00:00-08:00
+---
+<p>Hello Windows Insiders!</p>
+
+<p>Today we are excited to be releasing Windows 10 Insider Preview Build 15042 for PC and Build 15043 for Mobile to Windows Insiders in the Fast ring. <del>We have discovered a bug that impacts our ability to release this build to PCs running 32-bit (x86) versions of Windows 10 Insider Preview builds. Because the majority of Insiders in the Fast ring have PCs running 64-bit (x64) – we decided to go ahead and release this build with 32-bit PCs blocked until our next flight.</del> UPDATE: PCs running 32-bit (x86) versions of Windows 10 Insider Preview builds should be able to receive this build just fine! We fixed the bug. <strong>Also – please read the known issues below.</strong></p>
+
+<h3>What’s new in Build 15042</h3>
+
+<p><strong>New Cortana animation in OOBE (PC):</strong> We know how much you love animations, so we wanted to share with you our updated Cortana persona that you’ll see when you land on the Cortana page in OOBE:</p>
+
+<p><img alt="" src="https://winblogs.azureedge.net/win/2017/02/oobe-cortanainout-loop.gif" width="235" height="274" /></p>
+
+<p><strong>Prompt to enable Flash in Microsoft Edge (PC):</strong> Back in Build 15002, <a href="https://blogs.windows.com/msedgedev/2016/12/14/edge-flash-click-run/">we introduced click-to-run Flash</a> by default in Microsoft Edge, for better security and performance across the Web. In today’s build, we’ve added a new dialog in the URL bar to make it clearer when Flash content has been blocked. Just click the puzzle icon to allow Flash once or every time you return to the same site.</p>
+
+<p><img alt="" src="https://winblogs.azureedge.net/win/2017/02/flash-edge.png" width="576" height="241" /></p>
+
+<p><strong>Improved reading experience with Microsoft Edge:</strong> You loved the new Edge reading experience and gave us a TON of feedback. Here are some we implemented:</p>
+
+<ul>
+  <li>When reading a locally saved EPUB book in Microsoft Edge on PC, a book icon will now be used in the place of the previous generic in the tab bar.</li>
+</ul>
+
+<p><img alt="" src="https://winblogs.azureedge.net/win/2017/02/book-icon.png" width="326" height="193" /><b></b><i></i><u></u></p>
+
+<ul>
+  <li>If you switch pages while an EPUB book is being read aloud in Microsoft Edge, the reader will now jump to that new location in the book. </li>
+
+  <li>If you’ve changed the read aloud settings when reading an EPUB in Microsoft Edge, those settings will now be preserved for subsequently opened books.</li>
+</ul>
+
+<h3>Other changes, improvements, and fixes for PC</h3>
+
+<ul>
+  <li>You should no longer see “Initializing…” when attempting to download new builds. </li>
+
+  <li>The download progress indicator shown when downloading new builds under Settings &gt; Update &amp; security &gt; Windows Update should be working as expected and it should no longer appear you are getting stuck at 0% or at other percentages. </li>
+
+  <li>We fixed the issue causing the Settings app to crash when navigating to Settings &gt; Devices and you should be able to pair a Bluetooth device without any issue. The Bluetooth quick action from Action Center should also now work again. This issue may also have resulted in generally decreased reliability in the quick action section of the Action Center. </li>
+
+  <li>You should be able to launch the Connect UX via Action Center, Win + K, or Settings again. </li>
+
+  <li>We fixed an issue where under Settings &gt; Update &amp; security &gt; Windows Update Insiders might see the text “Some Settings are managed by your organization” even though the PC wasn’t being managed by an organization. </li>
+
+  <li>We fixed an issue resulting in the Action Center sometimes appearing blank and transparent without color. </li>
+
+  <li>We fixed an issue where upgrading with an Xbox controller paired over Bluetooth could result in touch input not working and unexpected beeps when using the mouse. </li>
+
+  <li>We fixed an issue where items displayed in the autocomplete dropdown when filling form fields in Microsoft Edge would not insert when clicked. </li>
+
+  <li>We fixed an issue resulting in images unexpectedly being missing from certain PDFs when viewed in Microsoft Edge. </li>
+
+  <li>We fixed an issue resulting in web notifications not launching the associated website in Microsoft Edge after being clicked. </li>
+
+  <li>We fixed an issue from recent flights resulting in some downloads from Microsoft Edge unexpectedly getting stuck in the “Waiting to download” state. </li>
+
+  <li>We fixed an issue where the preview thumbnails for certain websites appeared blank as they were taken before the webpage ran its JavaScript / Ajax to fully draw its layout. </li>
+
+  <li>We fixed an issue where the calculator button on the keyboard wouldn’t work if Microsoft Edge was in focus. </li>
+
+  <li>We also fixed an issue where Win + Shift + left/right arrow wouldn’t work on Microsoft Edge after selecting text on the open website. </li>
+
+  <li>We fixed an issue where pressing Alt + C with text selected in Microsoft Edge didn’t open the Cortana pane on recent flights. </li>
+
+  <li>We fixed an issue resulting in Microsoft Edge not being able to open the file:// protocol with the AdBlock Plus extension enabled. </li>
+
+  <li>We fixed an issue where in Microsoft Edge, if you were already on a website associated with an app, clicking a link on that website to go somewhere else on the website’s domain would unexpectedly launch the associated app. </li>
+
+  <li>We fixed an issue resulting in not being able to insert words into certain text fields in Microsoft Edge when using the handwriting panel to enter text. </li>
+
+  <li>We fixed an issue resulting in the password placeholder text being unexpectedly shifted down in certain password text fields in Microsoft Edge. </li>
+
+  <li>The new Share icon is now visible in Microsoft Edge and the Windows Ink Workspace Sketchpad and Screen Sketch. </li>
+
+  <li>We fixed an issue we certain devices on recent builds where resuming from hibernation could result in a bug check. </li>
+
+  <li>We fixed an issue where sometimes a single notification toast might not pop up, only to be unexpectedly found duplicated in the Action Center. </li>
+
+  <li>We broadened our recent fix for an issue that had some PCs with older graphics chipsets seeing white or colored boxes in the place of text and some UI elements in UWP apps to cover more hardware. </li>
+
+  <li>If you right-click an app suggestion in Share, you’ll now find a context menu option to turn them off. </li>
+
+  <li>We fixed an issue where ink would go under the Windows Ink protractor when inking with the highlighter. </li>
+
+  <li>We fixed an issue where the first ink stroke into the Windows Ink Workspace Sketchpad wouldn’t enable the clear all button. </li>
+
+  <li>We fixed an issue where the sample ink stroke seen in the Windows Ink pen, pencil and highlighter flyout would appear to blink when the flyout was first opened. </li>
+
+  <li>We fixed an issue that could result in the new XAML scrollbar animation (as seen in Settings) becoming stuck in the transition state. </li>
+
+  <li>We fixed an issue resulting in “Microsoft Camera Front” and “Microsoft Camera Rear” unexpectedly showing up, with barcode scanner icons, as optional devices to connect to in Devices Settings on Surface Books. </li>
+
+  <li>We fixed an issue where explorer.exe might crash the first time an ISO file is double-clicked. </li>
+
+  <li>We fixed an issue from the last flight where if the gateway host name was of the form [ipv6address]::port, Remote Desktop couldn’t connect to the gateway. </li>
+
+  <li>We fixed an issue where the bug check screen on high resolution displays wasn’t rendering the “Frowny” part of the frowny face. </li>
+
+  <li>We fixed an issue where night light might not turn on/off automatically if the device was asleep at the time at which the night light state was scheduled to change. </li>
+
+  <li>The night light on/off animation’s duration has been increased to 2 minutes – appreciate everyone who’s shared feedback for this feature, keep it coming! </li>
+
+  <li>Microsoft Edge’s “Inspect Element” and “View Source” options should launch correctly to the DOM Explorer and Debugger, respectively.</li>
+</ul>
+
+<h3>Other changes, improvements, and fixes for Mobile</h3>
+
+<ul>
+  <li>We fixed the issue causing the Settings app to crash when navigating to Settings &gt; Devices and you should be able to pair a Bluetooth device without any issue. The Bluetooth quick action from Action Center should also now work again. This issue could have also resulted in decreased Flashlight quick action reliability. </li>
+
+  <li>Using Continuum to connect to a display wirelessly should also work as expected. </li>
+
+  <li>We fixed an issue resulting in screen rotation sometimes unexpectedly not working on the last Insider flight. </li>
+
+  <li>We fixed an issue where live tiles were not updating some apps such as Outlook Mail and Calendar. </li>
+
+  <li>We fixed an issue where under Settings &gt; Update &amp; security &gt; Phone update Insiders might see the text “Some Settings are managed by your organization” even though the phone wasn’t being managed by an organization. </li>
+
+  <li>We fixed an issue from recent flights where you couldn’t paste or drag a folder from the PC to your phone </li>
+
+  <li>We fixed an issue where tapping the link for a website with an associated app would crash Microsoft Edge and not open the associated app. </li>
+
+  <li>We fixed an issue where downloads from Microsoft Edge directly to an SD card might unexpectedly use space on the local phone storage as well. </li>
+
+  <li>We fixed an issue where the keyboard might dismiss after a second when opening a new tab in Microsoft Edge and quickly starting to type. </li>
+
+  <li>We’ve fixed an issue that could result in your personal typing dictionary being unexpectedly deleted and having to train the keyboard from scratch. </li>
+
+  <li>We fixed an issue where, during the download of a phone update, after disconnecting then reconnecting to Wi-Fi due to low reception you might get an error saying the download needs a better connection to continue, despite currently being connected to a good Wi-Fi connection. </li>
+
+  <li>We’ve improved the video playback experience when using Continuum for phone wirelessly over Miracast. </li>
+
+  <li>The icon for Windows Insider Program under Settings &gt; Update &amp; security should be no longer a square.</li>
+</ul>
+
+<h3>Known issues for PC</h3>
+
+<ul>
+  <li>A small percentage of PCs may fail to update to this build due to a corrupt registry key. If your PC appears to be at the spinning dots black screen during boot for an unusual amount of time while updating to this build, hard reboot your PC and then run the following commands in an admin Command Prompt: 
+    <p><code>reg delete HKEY_LOCAL_MACHINE\system\setup\upgrade\nsimigrationroot /f</code></p>
+
+    <p><code></code></p>
+
+    <p><code>netsh int ipv6 set locality state=disabled</code></p>
+
+    <p><code></code></p>
+
+    <p><code>reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nsi\{eb004a01-9b1a-11d4-9123-0050047759bc}\28 /f</code></p>
+
+    <p>For more information on this issue, <a href="http://aka.ms/15042pcinstall">see this forum post</a>.</p>
+  </li>
+
+  <li>While we fixed the primary bug causing this issue, some Windows Insiders may still hit nonstop exceptions in the Spectrum.exe service causing their PC to lose audio, disk I/O usage to become very high, and apps like Microsoft Edge to become unresponsive when doing certain actions such as opening Settings. As a workaround to get out of this state, STOP the Spectrum.exe service and delete C:\ProgramData\Microsoft\Spectrum\PersistedSpatialAnchors and reboot. For more details, <a href="https://aka.ms/15007pcaudio">see this forum post</a>. </li>
+
+  <li>[GAMING] Some popular games might minimize to the taskbar when launched. You can click on the game on the taskbar to get the game back. </li>
+
+  <li>[GAMING] Certain hardware configurations may cause the broadcast live review window in the Game bar to flash Green while you are Broadcasting. This does not affect the quality of your broadcast and is only visible to the Broadcaster. </li>
+
+  <li>Microsoft Edge F12 tools may intermittently crash, hang, and fail to accept inputs. </li>
+
+  <li>The icon for Windows Insider Program under Settings &gt; Update &amp; security is shown as a square. </li>
+
+  <li>Windows Hello face authentication might not work, showing a “Camera couldn’t turn on” error on the lock screen, on some Surface Pro 4 and Surface Book devices</li>
+</ul>
+
+<h3>Known issues for Mobile</h3>
+
+<ul>
+  <li>Speech packs will be unable to download on this build. </li>
+
+  <li>Adding a new card / paying with an existing card will not work in Microsoft Wallet.</li>
+</ul>
+
+<h3>Community Updates</h3>
+
+<p>We spent last week at Ignite Australia for the Windows Insiders Program for Business announcement. For more details, <a href="https://blogs.windows.com/windowsexperience/2017/02/15/making-windows-insider-program-better-pro-business-customers/">please see Bill Karagounis’ blog on it</a>.</p>
+
+<p><img alt="" src="https://winblogs.azureedge.net/win/2017/02/FullSizeRender-58b0848599826.jpg" width="372" height="496" /></p>
+
+<p>We’re so happy to see such interest from all of you around wanting to run Insider builds in your enterprises and to connect deeper with other communities of IT Pros. You’ll be hearing a LOT more from us in the next few months about how we want to co-create solutions with you to help you do your jobs better, easier and faster. <a href="http://aka.ms/wip4itpros">Sign up here</a> if you want to learn more today!</p>
+
+<p>ALSO: I highly recommend <a href="https://blogs.windows.com/windowsexperience/2017/02/24/behind-scenes-windows-10-creators-update-bug-bash/">reading Anita’s blog post about the recent Bug Bash</a> we did and how awesome it was!</p>
+
+<p>Keep hustling team,
+  <br />Dona &lt;3</p>
